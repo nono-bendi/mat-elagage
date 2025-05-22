@@ -147,13 +147,15 @@
         <p>Vous avez une question, besoin d'un devis ou envie d’échanger sur un projet ? Remplissez ce formulaire et je
             vous recontacterai rapidement.</p>
 
-        <form name="contact" method="POST" data-netlify="true" action="/merci.html">
+        <input type="hidden" name="_next" value="https://luxury-froyo-386231.netlify.app/merci.html">
+
   <input type="text" name="Nom" placeholder="Votre nom" required>
   <input type="email" name="Email" placeholder="Votre adresse email" required>
   <input type="tel" name="Téléphone" placeholder="Votre numéro de téléphone" required>
   <textarea name="Message" placeholder="Votre message" rows="6" required></textarea>
   <button type="submit">Envoyer le message</button>
 </form>
+<br>
         <p>Ou contactez-moi directement au <strong>06 12 34 56 78</strong></p>
     </section>
     <!-- Section "Avis de nos clients" -->
