@@ -147,14 +147,18 @@
         <p>Vous avez une question, besoin d'un devis ou envie d’échanger sur un projet ? Remplissez ce formulaire et je
             vous recontacterai rapidement.</p>
 
-        <input type="hidden" name="_next" value="https://luxury-froyo-386231.netlify.app/merci.html">
-
+        <form action="https://formsubmit.co/laurent.duiverger@gmail.com" method="POST" class="contact-form">
   <input type="text" name="Nom" placeholder="Votre nom" required>
   <input type="email" name="Email" placeholder="Votre adresse email" required>
   <input type="tel" name="Téléphone" placeholder="Votre numéro de téléphone" required>
   <textarea name="Message" placeholder="Votre message" rows="6" required></textarea>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://luxury-froyo-386231.netlify.app/merci.html">
+
   <button type="submit">Envoyer le message</button>
 </form>
+
 <br>
         <p>Ou contactez-moi directement au <strong>06 12 34 56 78</strong></p>
     </section>
