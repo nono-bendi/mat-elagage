@@ -2,32 +2,71 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Merci !</title>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Merci pour votre message. Je vous recontacterai rapidement concernant votre projet d'élagage ou d'entretien paysager.">
+  <title>Merci</title>
+  ...
+</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: sans-serif;
+    .merci-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px;
+      height: 100vh;
+      padding: 20px;
       background-color: #FAF3E0;
-      color: #2F855A;
     }
-    a {
+
+    .merci-page h1 {
+      font-size: 3rem;
+      color: #6B8E23;
+      margin-bottom: 20px;
+    }
+
+    .merci-page p {
+      font-size: 1.2rem;
+      color: #4e4e4e;
+      margin-bottom: 30px;
+    }
+
+    .merci-page a {
       display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
       background-color: #6B8E23;
       color: white;
       padding: 12px 24px;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-    a:hover {
+
+    .merci-page a:hover {
       background-color: #557a1f;
+    }
+
+    @media (max-width: 768px) {
+      .merci-page h1 {
+        font-size: 2.2rem;
+      }
+      .merci-page p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Merci pour votre message !</h1>
-  <p>Je vous recontacte très rapidement.</p>
-  <a href="index.html">Retour à l'accueil</a>
+  <div class="merci-page">
+    <h1>✅ Merci pour votre message !</h1>
+    <p>Je vous recontacterai rapidement.</p>
+    <a href="index.html">Retour à l’accueil</a>
+  </div>
 </body>
 </html>
