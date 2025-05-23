@@ -1,0 +1,23 @@
+{
+  "name": "mat-ellagage",
+  "description": "",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {
+    "eslint": "^9.27.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nono-bendi/mat-elagage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nono-bendi/mat-elagage/issues"
+  },
+  "homepage": "https://github.com/nono-bendi/mat-elagage#readme"
+}
