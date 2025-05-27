@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Merci pour votre message. Je vous recontacterai rapidement concernant votre projet d'élagage ou d'entretien paysager.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Merci pour votre message. Je vous recontacterai rapidement concernant votre projet d'élagage ou d'entretien paysager." />
   <title>Merci</title>
-  ...
-</head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <style>
     .merci-page {
       display: flex;
@@ -25,9 +23,10 @@
     }
 
     .merci-page h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #6B8E23;
-      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
     .merci-page p {
@@ -54,7 +53,7 @@
 
     @media (max-width: 768px) {
       .merci-page h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
       .merci-page p {
         font-size: 1rem;
@@ -62,9 +61,18 @@
     }
   </style>
 </head>
+
 <body>
   <div class="merci-page">
-    <h1>✅ Merci pour votre message !</h1>
+    <lottie-player
+      src="image/animation-check.json.json"
+      background="transparent"
+      speed="1"
+      style="width: 150px; height: 150px;"
+      autoplay
+    ></lottie-player>
+
+    <h1>Merci pour votre message !</h1>
     <p>Je vous recontacterai rapidement.</p>
     <a href="index.html">Retour à l’accueil</a>
   </div>
