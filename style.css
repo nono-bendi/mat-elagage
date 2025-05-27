@@ -154,7 +154,8 @@ h1 {font-size: 2.5rem;
     color : #fafff0 ; 
     text-align: center;}
 
-h2, h3 {margin-bottom: 15px;
+h2, h3 {margin-bottom: 10px;
+    margin-top: 0;
     color: #1b5e20; 
     font-weight: 600;}
 
@@ -262,7 +263,7 @@ a:hover {text-decoration: underline;}
         opacity: 0;}
 
 }
-.services {padding: 80px 20px; 
+.services {padding: 40px 10px; 
     background-color: #FAF3E0;}
 
 .services-container {display: grid;
@@ -396,7 +397,22 @@ a:hover {text-decoration: underline;}
     color: #4e4e4e; 
     line-height: 1.6;}
 
-.cta {padding: 40px 20px;
+.cta {pad.realisations .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px; /* Augmente la valeur ici (ex: 24px ou 32px) */
+    margin-top: 20px;
+}.realisations .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px; /* Augmente la valeur ici (ex: 24px ou 32px) */
+    margin-top: 20px;
+}.realisations .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px; /* Augmente la valeur ici (ex: 24px ou 32px) */
+    margin-top: 20px;
+}ding: 40px 20px;
     background: url('image/arbre-fond.jpg') no-repeat center center/cover; 
     color: #fff;
     text-align: center;
@@ -427,7 +443,7 @@ a:hover {text-decoration: underline;}
 
 .main-header p {font-size: 1.2rem;}
 
-.realisations {padding: 40px 20px;
+.realisations {padding: 50px 20px;
     background-color: #FAF3E0; 
     text-align: center;}
 
@@ -533,6 +549,84 @@ a:hover {text-decoration: underline;}
 
   .social-icons {
     justify-content: center;
+  }
+}
+
+/* Réduit l'espacement vertical entre les sections principales */
+section,
+.about,
+.engagements,
+.services,
+.why-choose-us,
+.realisations,
+.contact-section,
+.testimonials-carousel,
+.pricing-section,
+.pricing-info {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Réduit l'espacement spécifique pour certains éléments */
+.services {
+  padding: 40px 10px;
+}
+
+.why-choose-us,
+.about,
+.engagements,
+.realisations,
+.contact-section,
+.testimonials-carousel,
+.pricing-section,
+.pricing-info {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Réduit l'espace entre les titres et les contenus */
+h2, h3 {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Réduit l'espace entre les éléments dans les containers */
+.services-container,
+.reasons-container,
+.engagement-list {
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* Réduit l'espace dans le footer */
+.footer {
+  margin-top: 20px;
+  padding: 14px;
+}
+
+/* Pour mobile, réduit encore plus les espaces */
+@media (max-width: 768px) {
+  section,
+  .about,
+  .engagements,
+  .services,
+  .why-choose-us,
+  .realisations,
+  .contact-section,
+  .testimonials-carousel,
+  .pricing-section,
+  .pricing-info {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .services {
+    padding: 18px 4px;
   }
 }
 
@@ -836,4 +930,16 @@ h2 {
   color: #fff;
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.phone-link, .phone-link-footer {
+  color: #2F855A;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 4px;
+}
+.phone-link:hover, .phone-link-footer:hover {
+  color: #DAA520;
+  text-decoration: underline;
 }

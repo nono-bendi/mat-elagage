@@ -45,6 +45,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="tarif.html">Tarifs</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li> <!-- ← Ajoute cette ligne -->
         </ul>
     </nav>
 
@@ -103,27 +104,27 @@
     <section id="services" class="services">
         <h2>Nos Services</h2>
         <div class="services-container">
-            <div class="service">
+            <a href="tarif.html" class="service">
                 <img src="image/elagage-abattage-arbres.jpg" alt="Élagage">
                 <div class="service-overlay">
                     <h3 class="service-title">Élagage</h3>
                     <p class="service-description">Service professionnel pour tailler vos arbres en toute sécurité.</p>
                 </div>
-            </div>
-            <div class="service">
-                <img src="image/abattage-arbre-1920x1282.jpg" alt="Abattage">
+            </a>
+            <a href="tarif.html" class="service">
+                <img src="image/abattage-arbre-1920x1282.jpg"  alt="Abattage">
                 <div class="service-overlay">
                     <h3 class="service-title">Abattage</h3>
                     <p class="service-description">Abattage d'arbres dangereux ou encombrants avec expertise.</p>
                 </div>
-            </div>
-            <div class="service">
+            </a>
+            <a href="tarif.html" class="service">
                 <img src="image/c_taille_haie_thermique_mobile_20250430_7204812bc4.avif" alt="Taille de haie">
                 <div class="service-overlay">
                     <h3 class="service-title">Taille de haie</h3>
                     <p class="service-description">Entretien et taille de vos haies pour un jardin impeccable.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -162,7 +163,7 @@
 
     <!-- Section "Contactez-nous" -->
     <section id="contact" class="contact-section">
-        <h2>Contactez-nous</h2>
+            <h2>Contactez mois</h2>
         <p>Vous avez une question, besoin d'un devis ou envie d’échanger sur un projet ? Remplissez ce formulaire et je
             vous recontacterai rapidement.</p>
 
@@ -180,7 +181,10 @@
         </form>
 
         <br>
-        <p>Ou contactez-moi directement au <strong>06 12 34 56 78</strong></p>
+        <p>
+          Ou contactez-moi directement au
+          <a href="tel:+33612345678" class="phone-link">📞 06 12 34 56 78</a>
+        </p>
     </section>
     <!-- Section "Avis de nos clients" -->
     <section class="testimonials-carousel">
