@@ -1,93 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifs - Mat Élagage</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Découvrez les tarifs professionnels de Mat Élagage pour vos travaux d'élagage, taille et entretien paysager dans le Var.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarifs – Mat Élagage</title>
+  <meta name="description" content="Tarifs indicatifs pour l'élagage, l'abattage, la taille de haies et l'entretien paysager à Fayence et alentours. Devis gratuit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-    }
-    .tarif-bouton {
-      font-family: 'Poppins', sans-serif;
-    }
+    :root{ --bg:#FAF3E0; --paper:#fff; --ink:#243222; --brand:#2F855A; --brand-2:#476930; --gold:#DAA520; --ring:#e6e6e6; --shadow:0 6px 24px rgba(47,133,90,.10) }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; padding:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; background:var(--bg); color:var(--ink)}
+    a{color:#1b5e20; text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(98vw,1320px); margin:0 auto}
+    /* NAVBAR (même DA) */
+    .navbar{position:sticky; top:0; z-index:1000; margin:12px 12px 24px; background:rgba(255,255,255,.8); backdrop-filter:saturate(1.1) blur(8px); border:1px solid var(--ring); border-radius:18px; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:var(--shadow); transition:box-shadow .3s, background .3s, transform .2s}
+    .navbar.scrolled{background:#fff; transform:translateY(-2px); box-shadow:0 12px 38px rgba(47,133,90,.18)}
+    .logo img{height:52px; width:auto; border-radius:12px; background:#fff; padding:4px 8px; border:2px solid #6B8E23; box-shadow:0 2px 8px rgba(107,142,35,.10)}
+    .nav-links{list-style:none; display:flex; gap:28px; margin:0; padding:0; align-items:center}
+    .nav-links a{display:inline-block; color:#476930; font-weight:600; padding:10px 14px; border-radius:10px; transition:background .2s, box-shadow .2s, transform .12s; position:relative; text-decoration:none}
+    .nav-links a:hover{background:rgba(47,133,90,.08); box-shadow:0 2px 8px rgba(107,142,35,.08); transform:translateY(-1px)}
+    .nav-links a::after{content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px; background:linear-gradient(90deg, var(--brand), var(--gold)); transform:scaleX(0); transform-origin:left; transition:transform .25s}
+    .nav-links a:hover::after, .nav-links a:focus-visible::after{transform:scaleX(1)}
+    .burger{display:none; font-size:1.8rem; background:none; border:1px solid var(--ring); color:#6B8E23; padding:6px 10px; border-radius:8px}
+    @media (max-width:900px){ .navbar{flex-wrap:wrap} .burger{display:block} .nav-links{display:none; width:100%; flex-direction:column; gap:14px; background:#fff; border-top:1px solid var(--ring); border-radius:0 0 18px 18px; box-shadow:0 4px 12px rgba(107,142,35,.10); padding:12px 0} .nav-links.show{display:flex} }
+
+    /* HERO / entête page tarifs */
+    .page-hero{padding:38px 0 18px}
+    .breadcrumbs{font-weight:600; color:#476930; font-size:.95rem}
+    h1{font-size:clamp(1.8rem,3.5vw,2.4rem); color:#1b5e20; margin:.25rem 0 .5rem}
+    .lead{max-width:820px; color:#4e4e4e}
+
+    /* Boutons (même DA que home) */
+    .button{appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.6rem; border:2px solid var(--brand); background:#fff; color:var(--brand); padding:12px 22px; border-radius:999px; font-weight:700; letter-spacing:.2px; box-shadow:0 6px 18px rgba(47,133,90,.16); transition:transform .12s, box-shadow .2s, background .2s, color .2s}
+    .button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(47,133,90,.22); background:var(--brand); color:#fff}
+
+    /* Grille de tarifs */
+    .pricing{padding:8px 12px 28px}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:18px}
+    .card{grid-column:span 4; background:var(--paper); border:1px solid var(--ring); border-left:4px solid var(--brand-2); border-radius:14px; padding:18px; box-shadow:0 8px 22px rgba(0,0,0,.06)}
+    .card h3{color:#2F855A; font-size:1.1rem; margin:.25rem 0 .35rem}
+    .price{color:#2D2D2D}
+    @media (max-width:1024px){ .card{grid-column:span 6} }
+    @media (max-width:680px){ .card{grid-column:span 12} }
+
+    /* Encadré d'infos */
+    .info{background:var(--paper); border:1px solid var(--ring); border-radius:12px; padding:16px; box-shadow:0 4px 10px rgba(0,0,0,.06); margin:8px 12px}
+    .info ul{margin:.25rem 0 .25rem 1rem}
+
+    /* Footer harmonisé */
+    footer{background:linear-gradient(180deg, var(--brand-2) 0%, var(--brand) 100%); color:#fff; border-radius:10px; padding:20px 0; margin:22px 0 0}
+    .footer-row{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; max-width:1320px; margin:0 auto; padding:0 12px}
+    .social{margin-top:10px}
+    .social a{color:#fff; font-size:1.35rem; margin-left:16px}
+    .social a:hover{color:var(--gold)}
   </style>
 </head>
-<body class="bg-[#FAF3E0] text-gray-800">
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <a class="logo" href="index.html" aria-label="Retour à l'accueil">
+      <img src="image/logo fond blanc.png" alt="Logo Mat Élagage" width="112" height="56" />
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="tarif.html">Tarifs</a></li>
+      <li><a href="index.html#realisations">Réalisations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
 
-  <header class="bg-white text-[#2F855A] py-6 shadow-md border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="image/logo fond blanc.png" alt="Logo Mat Élagage" class="h-20 w-auto">
-      </a>
-      <a href="index.html" class="text-sm bg-[#DAA520] hover:bg-yellow-400 text-white px-4 py-2 rounded font-semibold transition tarif-bouton">Retour à l’accueil</a>
-    </div>
+  <header class="page-hero container">
+    <div class="breadcrumbs">Accueil / Tarifs</div>
+    <h1>Tarifs indicatifs</h1>
+    <p class="lead">Des prestations adaptées à vos besoins, avec des prix **transparents**. Les montants ci‑dessous sont <strong>indicatifs</strong> : ils varient selon la hauteur, l’accès, la dangerosité, le volume de déchets verts, etc. Un <strong>devis gratuit</strong> permet d’affiner précisément.</p>
   </header>
 
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-extrabold text-[#2F855A] mb-4">Nos Tarifs</h2>
-      <p class="text-lg text-gray-700">Des prestations adaptées à vos besoins, avec des prix transparents</p>
-    </div>
+  <main class="container pricing">
+    <section class="grid" aria-label="Grille des tarifs">
+      <article class="card"><h3><i class="fa-solid fa-seedling"></i> Élagage arbuste (&lt; 5 m)</h3><p class="price">150€ à 300€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-tree"></i> Élagage arbre moyen (5–10 m)</h3><p class="price">350€ à 700€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-tree"></i> Élagage grand arbre (10–15 m)</h3><p class="price">500€ à 1000€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-tower-observation"></i> Très grand arbre (15–30 m)</h3><p class="price">800€ à 2000€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-scissors"></i> Taille de haie</h3><p class="price">3€ à 12€ / m linéaire</p></article>
+      <article class="card"><h3><i class="fa-solid fa-broom"></i> Débroussaillage</h3><p class="price">25€ à 50€ / heure</p></article>
+      <article class="card"><h3><i class="fa-solid fa-umbrella-beach"></i> Taille de palmier</h3><p class="price">80€ à 350€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-apple-whole"></i> Taille arbres fruitiers</h3><p class="price">150€ à 200€</p></article>
+      <article class="card"><h3><i class="fa-solid fa-axe"></i> Abattage d’arbre</h3><p class="price">250€ à 2500€</p></article>
+    </section>
+    <br>
 
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🌿 Élagage arbuste (moins de 5m)</h3>
-        <p class="text-gray-600">150€ à 300€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🌳 Élagage arbre moyen (5 à 10m)</h3>
-        <p class="text-gray-600">350€ à 700€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🌲 Élagage grand arbre (10 à 15m)</h3>
-        <p class="text-gray-600">500€ à 1000€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🌲🪓 Élagage très grand arbre (15 à 30m)</h3>
-        <p class="text-gray-600">800€ à 2000€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">✂️ Taille de haie</h3>
-        <p class="text-gray-600">3€ à 12€ / mètre linéaire</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🧹 Débroussaillage</h3>
-        <p class="text-gray-600">25€ à 50€ / heure</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🌴 Taille de palmier</h3>
-        <p class="text-gray-600">80€ à 350€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🍎 Taille des arbres fruitiers</h3>
-        <p class="text-gray-600">150€ à 200€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🫒 Taille des oliviers</h3>
-        <p class="text-gray-600">150€ à 200€</p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-[#6B8E23]">
-        <h3 class="text-xl font-bold text-[#2F855A] mb-2">🪓 Abattage d’arbre</h3>
-        <p class="text-gray-600">250€ à 2500€</p>
-      </div>
-    </div>
+    <section class="info" aria-label="Informations utiles">
+      <ul>
+        <li>Le <strong>déplacement</strong> est offert dans le canton de Fayence.</li>
+        <li>Évacuation et <strong>valorisation des déchets</strong> en option selon le volume.</li>
+        <li>Interventions <strong>sécurisées</strong> (EPI, rétention) – Assurance RC Pro.</li>
+      </ul>
+      <p><a class="button" href="index.html#contact"><i class="fa-solid fa-file-signature"></i> Demander un devis gratuit</a></p>
+    </section>
+  </main>
 
-    <div class="mt-12 text-center flex flex-col sm:flex-row justify-center gap-6">
-      <a href="index.html#contact" class="inline-block bg-[#6B8E23] text-white text-lg px-8 py-3 rounded-md font-semibold hover:bg-[#557a1f] transition tarif-bouton">Demander un devis gratuit</a>
-      <a href="index.html" class="inline-block bg-gray-200 text-[#2F855A] text-lg px-8 py-3 rounded-md font-semibold hover:bg-gray-300 transition tarif-bouton">Retour à l’accueil</a>
-    </div>
-  </section>
-
-  <footer class="bg-[#6B8E23] text-white py-6 mt-20">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p>&copy; 2025 Mat Élagage. Tous droits réservés.</p>
+  <footer>
+    <div class="container" style="max-width:1320px">
+      <div class="footer-row" style="justify-content:space-between; gap:32px">
+        <div>
+          <strong>Mat Élagage</strong><br>
+          Fayence & alentours<br>
+          <a href="tel:+33612345678" style="color:#fff;text-decoration:underline">06 12 34 56 78</a><br>
+          <a href="mailto:contact@mat-elagage.fr" style="color:#fff;text-decoration:underline">contact@mat-elagage.fr</a>
+        </div>
+        <div>
+          <nav aria-label="Liens pied de page">
+            <a href="index.html#about" style="color:#fff;margin-right:12px">À propos</a>
+            <a href="index.html#services" style="color:#fff;margin-right:12px">Services</a>
+            <a href="index.html#realisations" style="color:#fff;margin-right:12px">Réalisations</a>
+            <a href="index.html#contact" style="color:#fff">Contact</a>
+          </nav>
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;opacity:.9;margin-top:14px">&copy; 2025 Mat Élagage — Tous droits réservés.</p>
     </div>
   </footer>
 
+  <script>
+    const burger = document.getElementById('burger');
+    const links = document.getElementById('nav-links');
+    burger?.addEventListener('click', ()=>{
+      const open = links.classList.toggle('show');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    const nav = document.querySelector('.navbar');
+    const onScroll = ()=>{ if(window.scrollY > 20){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); } };
+    window.addEventListener('scroll', onScroll);
+  </script>
 </body>
 </html>
-
