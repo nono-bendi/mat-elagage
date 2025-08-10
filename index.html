@@ -18,18 +18,13 @@
 
   <style>
     :root{
-      --bg: #FAF3E0;           /* sable */
-      --paper: #ffffff;        /* fond cartes */
-      --ink: #243222;          /* texte principal (vert très sombre) */
-      --brand: #2F855A;        /* vert brand */
-      --brand-2: #476930;      /* vert secondaire */
-      --gold: #DAA520;         /* accent doré */
-      --ring: #e6e6e6;         /* bordures */
-      --shadow: 0 6px 24px rgba(47,133,90,.10);
+      --bg:#FAF3E0; --paper:#ffffff; --ink:#243222;
+      --brand:#2F855A; --brand-2:#476930; --gold:#DAA520;
+      --ring:#e6e6e6; --shadow:0 6px 24px rgba(47,133,90,.10);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0; padding:12px; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; background:var(--bg); color:var(--ink)}
+    body{margin:0; padding:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; background:var(--bg); color:var(--ink)}
     img,video{max-width:100%; height:auto; display:block}
     h1{font-size:clamp(2rem,4.5vw,2.75rem); margin:.25rem 0 1rem; color:#fafff0; text-align:center}
     h2{font-size:clamp(1.6rem,3.2vw,2.2rem); margin:.25rem 0 .75rem; color:#1b5e20; font-weight:700}
@@ -39,27 +34,28 @@
     a:hover{text-decoration:underline}
 
     /* NAVBAR */
-    .navbar{position:sticky; top:0; z-index:1000; margin-bottom:28px; background:rgba(255,255,255,.8); backdrop-filter:saturate(1.1) blur(8px); border:1px solid var(--ring); border-radius:18px; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:var(--shadow); transition:box-shadow .3s, background .3s, transform .2s}
-.navbar.scrolled{background:#fff; transform:translateY(-2px); box-shadow:0 12px 38px rgba(47,133,90,.18)}
-.nav-links a{display:inline-block; color:#2f5c3e; font-weight:600; letter-spacing:.2px; padding:10px 14px; border-radius:10px; position:relative}
-
-.nav-links a:hover:after{transform:scaleX(1)}
-.burger{display:none; font-size:1.8rem; background:none; border:1px solid var(--ring); color:#6B8E23; padding:6px 10px; border-radius:8px} 
-@media (max-width:900px){
-  .navbar{flex-wrap:wrap; padding:12px}
-  .burger{display:block}
-  .nav-links{display:none; width:100%; flex-direction:column; gap:14px; background:#fff; border-top:1px solid var(--ring); border-radius:0 0 18px 18px; box-shadow:0 4px 12px rgba(107,142,35,.10); padding:12px 0}
-  .nav-links.show{display:flex}
-}
+    .navbar{
+      position:sticky; top:0; z-index:1000; margin:12px; margin-bottom:24px;
+      background:rgba(255,255,255,.8); backdrop-filter:saturate(1.1) blur(8px);
+      border:1px solid var(--ring); border-radius:18px; padding:10px 16px;
+      display:flex; align-items:center; justify-content:space-between;
+      box-shadow:var(--shadow); transition:box-shadow .3s, background .3s, transform .2s
+    }
+    .navbar.scrolled{background:#fff; transform:translateY(-2px); box-shadow:0 12px 38px rgba(47,133,90,.18)}
     .navbar:hover{box-shadow:0 10px 34px rgba(47,133,90,.18)}
-    .logo{display:flex; align-items:center; gap:.75rem; font-weight:700; color:var(--brand)}
     .logo img{height:52px; width:auto; object-fit:contain; border-radius:12px; background:#fff; padding:4px 8px; border:2px solid #6B8E23; box-shadow:0 2px 8px rgba(107,142,35,.10)}
     .nav-links{list-style:none; display:flex; gap:28px; margin:0; padding:0; align-items:center}
-    .nav-links a{display:inline-block; color:#476930; font-weight:600; letter-spacing:.2px; padding:8px 14px; border-radius:8px; transition:background .2s, box-shadow .2s}
+    .nav-links a{position:relative; display:inline-block; color:#476930; font-weight:600; letter-spacing:.2px; padding:8px 14px; border-radius:8px; transition:background .2s, box-shadow .2s, transform .12s}
     .nav-links a:focus-visible{outline:3px solid var(--gold); outline-offset:2px}
     .nav-links a:hover{background:rgba(47,133,90,.08); box-shadow:0 2px 8px rgba(107,142,35,.08); transform:translateY(-1px)}
+    .nav-links a, .nav-links a:hover{ text-decoration:none }
+    .nav-links a::after{
+      content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px;
+      background:linear-gradient(90deg, var(--brand), var(--gold));
+      transform:scaleX(0); transform-origin:left; transition:transform .25s
+    }
+    .nav-links a:hover::after, .nav-links a:focus-visible::after{ transform:scaleX(1) }
     .burger{display:none; font-size:1.8rem; background:none; border:1px solid var(--ring); color:#6B8E23; padding:6px 10px; border-radius:8px}
-
     @media (max-width:900px){
       .navbar{flex-wrap:wrap; padding:12px}
       .burger{display:block}
@@ -68,14 +64,32 @@
     }
 
     /* HERO vidéo */
-    .video-section{position:relative; height:54vh; min-height:380px; overflow:hidden; border-radius:14px; background:#d9a066} @media (max-width:768px){.video-section{height:46vh; min-height:320px}}
+    .video-section{
+      position:relative; height:48vh; min-height:340px; overflow:hidden; border-radius:14px; background:#d9a066;
+      margin:0 12px;
+    }
+    @media (max-width:768px){ .video-section{ height:42vh; min-height:300px } }
     .background-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1}
     .video-section::before{content:""; position:absolute; inset:0; z-index:2; background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,0) 60%)}
     .video-section::after{content:""; position:absolute; inset:auto 0 0 0; height:20vh; z-index:2; background:linear-gradient(180deg, rgba(250,243,224,0) 0%, rgba(250,243,224,.65) 50%, var(--bg) 100%)}
-    .header-content{position:absolute; inset:0; z-index:3; display:grid; place-items:center}
+
+    /* CTA jamais coupé : padding & placement responsives */
+    .header-content{
+      position:absolute; inset:0; z-index:3; display:grid; justify-items:center;
+      align-content:center; padding: clamp(12px,3vw,24px) clamp(12px,4vw,28px) clamp(24px,8vh,72px);
+    }
+    @media (max-width:768px){
+      .header-content{ align-content:end; padding-bottom: clamp(28px,10vh,96px); }
+      .button{ padding:14px 24px }
+    }
     .header-inner{text-align:center; padding:0 20px}
+
     /* Hero text carousel */
-    .carousel-text{position:relative; height:90px; overflow:hidden; font-size:clamp(1.05rem,2.5vw,1.6rem); font-weight:700; color:#fff; text-shadow:2px 2px 6px rgba(0,0,0,.5); line-height:1.35; margin:6px auto 14px}
+    .carousel-text{
+      position:relative; height:90px; overflow:hidden;
+      font-size:clamp(1.05rem,2.5vw,1.6rem); font-weight:700; color:#fff;
+      text-shadow:2px 2px 6px rgba(0,0,0,.5); line-height:1.35; margin:6px auto 14px
+    }
     .carousel-text span{position:absolute; left:0; top:0; width:100%; opacity:0; animation:heroCarousel 9s infinite ease-in-out}
     .carousel-text span:nth-child(1){animation-delay:0s}
     .carousel-text span:nth-child(2){animation-delay:3s}
@@ -83,20 +97,27 @@
     @keyframes heroCarousel{0%{transform:translateY(100%);opacity:0}10%,30%{transform:translateY(0);opacity:1}40%,100%{transform:translateY(-100%);opacity:0}}
     @media (max-width:768px){.carousel-text{height:2.9em; font-size:1.05rem; padding:0 8px; line-height:1.4}}
 
-    /* Primary CTA button */
-    .button{appearance:none; border:1px solid #276a4a; background:#2F855A; color:#fff; padding:12px 20px; border-radius:12px; font-weight:700; letter-spacing:.2px; box-shadow:0 6px 18px rgba(47,133,90,.22); transition:transform .12s ease, box-shadow .2s ease, background .2s ease}
-    .button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(47,133,90,.28); background:#276a4a}
-    .button:active{transform:translateY(0); box-shadow:0 6px 14px rgba(47,133,90,.2); background:#21553a}
-    .button:focus-visible{outline:none; box-shadow:0 0 0 4px rgba(218,165,32,.35), 0 10px 24px rgba(47,133,90,.35)}
-    /* Réduire les animations si l'utilisateur le demande */
+    /* CTA button */
+    .button{
+      appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      border:2px solid var(--brand); background:#fff; color:#2F855A;
+      padding:12px 22px; border-radius:999px; font-weight:700; letter-spacing:.2px;
+      box-shadow:0 6px 18px rgba(47,133,90,.16);
+      transition:transform .12s ease, box-shadow .2s ease, background .2s ease, color .2s ease
+    }
+    .button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(47,133,90,.22); background:var(--brand); color:#fff}
+    .button:active{transform:translateY(0); box-shadow:0 6px 14px rgba(47,133,90,.18)}
+    .button:focus-visible{outline:none; box-shadow:0 0 0 4px rgba(218,165,32,.35), 0 10px 24px rgba(47,133,90,.28)}
+
     @media (prefers-reduced-motion: reduce){
       .carousel-text span{animation:none; position:relative; opacity:1}
       .background-video{display:none}
     }
 
     /* Sections utilitaires */
-    section{margin:16px 0; padding:18px 0} @media (max-width:768px){section{margin:12px 0; padding:14px 0}}
-    .container{max-width:1100px; margin:0 auto}
+    section{margin:16px 0; padding:18px 0}
+    @media (max-width:768px){section{margin:12px 0; padding:14px 0}}
+    .container{width:min(98vw,1320px); margin:0 auto; padding:0 12px}
 
     /* Services */
     .services{background:var(--bg)}
@@ -106,8 +127,26 @@
     .service:nth-child(2), .service:nth-child(3){grid-column:span 4}
     .service img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
     .service:hover img{transform:scale(1.04)}
-    .service .overlay{position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,0) 100%); color:#fff; display:flex; flex-direction:column; justify-content:flex-end; padding:20px 18px} 
+    .service .overlay{
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,0) 100%);
+      color:#fff; display:flex; flex-direction:column; justify-content:flex-end; padding:20px 18px
+    } 
     .service .title{font-size:1.35rem; font-weight:700; color:#FFE08A; text-shadow:0 2px 6px rgba(0,0,0,.6)}
+    .service .overlay p{color:#f0f7ef; text-shadow:0 2px 4px rgba(0,0,0,.45); margin:.35rem 0 0}
+
+    /* ✅ BULLES d'info (restaurées) */
+    .service .meta{
+      position:absolute; top:14px; left:14px; display:flex; gap:8px; flex-wrap:wrap; z-index:5
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:.45rem; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--ring);
+      background:rgba(20,24,22,.35); color:#fff; font-weight:700; font-size:.9rem;
+      -webkit-backdrop-filter:saturate(1.2) blur(6px); backdrop-filter:saturate(1.2) blur(6px);
+      box-shadow:0 4px 12px rgba(0,0,0,.18)
+    }
+    .chip i{color:#FFE08A}
 
     @media (max-width:768px){
       .services .grid{display:flex; flex-direction:column}
@@ -125,8 +164,6 @@
     @media (max-width:900px){.why .card{grid-column:span 12}}
 
     /* Réalisations */
-    .service .overlay p{color:#f0f7ef; text-shadow:0 2px 4px rgba(0,0,0,.45); margin:.35rem 0 0}
-    
     .realisations{background:var(--bg); text-align:center}
     .gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:24px; margin-top:18px}
     .gallery figure{margin:0}
@@ -155,41 +192,16 @@
     .slide.active{opacity:1; position:relative}
 
     /* Footer */
-    footer{background:linear-gradient(180deg, var(--brand-2) 0%, var(--brand) 100%); color:#fff; border-radius:10px; padding:20px 0}
+    footer{background:linear-gradient(180deg, var(--brand-2) 0%, var(--brand) 100%); color:#fff; border-radius:10px; padding:20px 0; margin:0 12px 12px}
     .footer-row{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; max-width:1320px; margin:0 auto; padding:0 12px}
     .social{margin-top:10px}
     .social a{color:#fff; font-size:1.35rem; margin-left:16px}
     .social a:hover{color:var(--gold)}
-  
-  /* === Overrides (as per latest feedback) === */
-  body{padding:0}
-  .container{width:min(98vw, 1320px); margin:0 auto}
-  .video-section{height:48vh; min-height:340px}
-  @media (max-width:768px){.video-section{height:42vh; min-height:300px}}
-  /* Header underline: keep ::after, remove simple underline */
-  .nav-links a, .nav-links a:hover{ text-decoration:none }
-  .nav-links a{ position:relative }
-  .nav-links a::after{ content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px; background:linear-gradient(90deg, var(--brand), var(--gold)); transform:scaleX(0); transform-origin:left; transition:transform .25s }
-  .nav-links a:hover::after, .nav-links a:focus-visible::after{ transform:scaleX(1) }
-  /* Hero button: pill outline -> fill */
-  .button{appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.6rem; border:2px solid var(--brand); background:#fff; color:var(--brand); padding:12px 22px; border-radius:999px; font-weight:700; letter-spacing:.2px; box-shadow:0 6px 18px rgba(47,133,90,.16); transition:transform .12s ease, box-shadow .2s ease, background .2s ease, color .2s ease}
-  .button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(47,133,90,.22); background:var(--brand); color:#fff}
-  .button:active{transform:translateY(0); box-shadow:0 6px 14px rgba(47,133,90,.18)}
-  .button:focus-visible{outline:none; box-shadow:0 0 0 4px rgba(218,165,32,.35), 0 10px 24px rgba(47,133,90,.28)}
-
-  /* ===== New harmonisation (services chips, divider, footer assurances) ===== */
-  .service .meta{position:absolute; top:14px; left:14px; display:flex; gap:8px; flex-wrap:wrap; z-index:5}
-  .chip{display:inline-flex; align-items:center; gap:.45rem; padding:6px 10px; border-radius:999px; border:1px solid var(--ring); background:rgba(255,255,255,.85); -webkit-backdrop-filter:saturate(1.1) blur(4px); backdrop-filter:saturate(1.1) blur(4px); font-weight:600; font-size:.9rem; color:var(--ink)}
-  .chip i{color:var(--brand)}
-
-  .divider svg{display:block; width:100%; height:auto}
-  .divider .fill-bg{fill:var(--bg)}
-
-  footer .assurances{display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:center; margin:12px auto 10px; opacity:.95}
-  footer .assurances .item{display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); padding:8px 12px; border-radius:999px}
-  footer .assurances i{color:#fff}
-  footer .assurances span{color:#fff; font-weight:600; font-size:.95rem}
-</style>
+    footer .assurances{display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:center; margin:12px auto 10px; opacity:.95}
+    footer .assurances .item{display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); padding:8px 12px; border-radius:999px}
+    footer .assurances i{color:#fff}
+    footer .assurances span{color:#fff; font-weight:600; font-size:.95rem}
+  </style>
 </head>
 <body>
   <!-- NAV -->
@@ -212,7 +224,7 @@
 
   <!-- HERO vidéo -->
   <section class="video-section" aria-label="Présentation Mat Élagage">
-    <video class="background-video" autoplay muted playsinline preload="auto" poster="image/hero-poster.jpg">
+    <video class="background-video" autoplay muted playsinline loop preload="auto" poster="image/hero-poster.jpg">
       <source src="image/1771850-hd_1920_1080_30fps.mp4" type="video/mp4">
       Votre navigateur ne supporte pas la vidéo HTML5.
     </video>
@@ -224,10 +236,11 @@
       </div>
     </div>
   </section>
-  <!-- petite vague séparatrice -->
-  <div class="divider" aria-hidden="true">
+
+  <!-- vague séparatrice -->
+  <div class="divider" aria-hidden="true" style="margin:0 12px">
     <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path class="fill-bg" d="M0,64 C240,96 480,0 720,32 C960,64 1200,96 1440,48 L1440,90 L0,90 Z"/>
+      <path fill="var(--bg)" d="M0,64 C240,96 480,0 720,32 C960,64 1200,96 1440,48 L1440,90 L0,90 Z"/>
     </svg>
   </div>
 
@@ -248,12 +261,12 @@
         <div class="card-eng">
           <div class="eng-ico"><i class="fa-solid fa-bolt"></i></div>
           <h3>Disponible & réactif</h3>
-          <p>Devis sous 24 h, créneaux rapides après intempéries (mistral, branches cassées).</p>
+          <p>Devis sous 24 h, créneaux rapides après intempéries (mistral, branches cassées).</p>
         </div>
         <div class="card-eng">
           <div class="eng-ico"><i class="fa-solid fa-shield-halved"></i></div>
           <h3>Matériel pro</h3>
-          <p>Démonte‑pièces, rétention, EPI complets et assurance RC pro pour une sécurité maximale.</p>
+          <p>Démonte-pièces, rétention, EPI complets et assurance RC pro pour une sécurité maximale.</p>
         </div>
       </div>
     </div>
@@ -267,7 +280,6 @@
         <!-- Élagage -->
         <a class="service" href="tarif.html">
           <img src="image/elagage-abattage-arbres.jpg" width="1200" height="800" alt="Élagage d'arbres" loading="lazy"
-               srcset="image/elagage-abattage-arbres-600.jpg 600w, image/elagage-abattage-arbres-900.jpg 900w, image/elagage-abattage-arbres.jpg 1200w"
                sizes="(max-width: 768px) 100vw, 66vw">
           <div class="meta">
             <span class="chip"><i class="fa-solid fa-clock"></i> Rapide</span>
@@ -339,22 +351,16 @@
     <div class="container">
       <h2>Mes réalisations</h2>
       <div class="gallery">
-        <figure>
-          <img src="image/2022-06-03.jpg" width="1000" height="667" alt="Taille d'un arbre" loading="lazy">
-        </figure>
-        <figure>
-          <img src="image/cellaaa.webp" width="1000" height="667" alt="Entretien paysager" loading="lazy">
-        </figure>
-        <figure>
-          <img src="image/real3.jpg" width="1000" height="667" alt="Abattage sécurisé" loading="lazy">
-        </figure>
+        <figure><img src="image/2022-06-03.jpg" width="1000" height="667" alt="Taille d'un arbre" loading="lazy"></figure>
+        <figure><img src="image/cellaaa.webp" width="1000" height="667" alt="Entretien paysager" loading="lazy"></figure>
+        <figure><img src="image/real3.jpg" width="1000" height="667" alt="Abattage sécurisé" loading="lazy"></figure>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
-    <h2>Contactez‑moi</h2>
+    <h2>Contactez-moi</h2>
     <p>Une question, besoin d'un devis ? Remplissez le formulaire, je vous réponds rapidement.</p>
     <form action="https://formsubmit.co/laurent.duiverger@gmail.com" method="POST" rel="noreferrer">
       <input type="text" name="Nom" placeholder="Votre nom" required>
@@ -365,7 +371,7 @@
       <input type="hidden" name="_next" value="https://luxury-froyo-386231.netlify.app/merci.html">
       <button class="button" type="submit">Envoyer le message</button>
     </form>
-    <p class="notice">Ou appelez‑moi directement au <a href="tel:+33612345678" class="phone-link">06 12 34 56 78</a></p>
+    <p class="notice">Ou appelez-moi directement au <a href="tel:+33612345678" class="phone-link">06 12 34 56 78</a></p>
   </section>
 
   <!-- Témoignages -->
@@ -390,7 +396,7 @@
         <div>
           <strong>Mat Élagage</strong><br>
           Fayence & alentours<br>
-          <a href="tel:+33612345678" style="color:#fff;text-decoration:underline">06 12 34 56 78</a><br>
+          <a href="tel:+33612345678" style="color:#fff;text-decoration:underline">06 12 34 56 78</a><br>
           <a href="mailto:contact@mat-elagage.fr" style="color:#fff;text-decoration:underline">contact@mat-elagage.fr</a>
         </div>
         <div>
@@ -433,17 +439,23 @@
       }, 3500);
     }
 
-    // Si l'utilisateur préfère moins de mouvement, pause vidéo
-    if(reduceMotion){
-      const vid = document.querySelector('.background-video');
-      if(vid && !vid.paused){ try { vid.pause(); } catch(e){} }
-    }
     // Header shrink on scroll
     const nav = document.querySelector('.navbar');
-    const onScroll = ()=>{
-      if(window.scrollY > 20){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
-    };
+    const onScroll = ()=>{ if(window.scrollY > 20){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); } };
     window.addEventListener('scroll', onScroll);
+
+    // Keep-alive vidéo (ne s'arrête jamais)
+    (function(){
+      const vid = document.querySelector('.background-video');
+      if(!vid) return;
+      vid.muted = true;
+      vid.loop = true;
+      const playVideo = () => vid.play().catch(()=>{});
+      vid.addEventListener('ended', playVideo);
+      window.addEventListener('focus', playVideo);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) playVideo(); });
+      playVideo();
+    })();
   </script>
 </body>
 </html>
