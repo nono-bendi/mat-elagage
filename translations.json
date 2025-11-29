@@ -1,0 +1,510 @@
+{
+  "fr": {
+    "nav": {
+      "services": "Services",
+      "realisations": "Réalisations",
+      "about": "À propos",
+      "tarifs": "Tarifs",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Élagage & entretien à Fayence",
+      "title": "Élagage & abattage propre et sécurisé",
+      "subtitle": "Jeune élagueur basé à Fayence, interventions rapides et chantiers propres dans tout le canton.",
+      "cta": "Devis gratuit sous 24h",
+      "badges": {
+        "insured": "Assurance RC Pro",
+        "fast": "Intervention rapide",
+        "clean": "Chantier propre"
+      },
+      "stats": {
+        "clients": "clients satisfaits",
+        "villages": "villages du canton",
+        "quote": "pour le devis"
+      }
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Des prestations adaptées à tous vos besoins d'entretien paysager",
+      "elagage": {
+        "title": "Élagage Raisonné",
+        "desc": "Tailles de formation, éclaircissage, réduction de couronne. Intervention dans le respect de la biologie de l'arbre pour garantir sécurité et longévité."
+      },
+      "abattage": {
+        "title": "Abattage Contrôlé",
+        "desc": "Démontage par rétention en milieu contraint, abattage directionnel. Évacuation des branches et rognage de souche inclus."
+      },
+      "haies": {
+        "title": "Taille de Haies",
+        "desc": "Entretien régulier pour un jardin net et harmonieux. Formes géométriques ou naturelles selon vos préférences."
+      },
+      "debroussaillage": {
+        "title": "Débroussaillage DFCI",
+        "desc": "Terrain dégagé selon normes réglementaires pour la prévention incendie. Intervention rapide dans tout le canton."
+      },
+      "fruitiers": {
+        "title": "Taille Fruitiers",
+        "desc": "Olivier, figuier, agrumes : taille adaptée au calendrier de chaque essence pour optimiser la production."
+      },
+      "urgences": {
+        "title": "Urgences Tempête",
+        "desc": "Branche cassée, arbre dangereux : mise en sécurité immédiate. Disponible 7j/7 pour les situations d'urgence."
+      }
+    },
+    "piliers": {
+      "title": "Nos Engagements",
+      "subtitle": "Ce qui fait notre différence au quotidien",
+      "proprete": {
+        "title": "Chantiers impeccables",
+        "desc": "Évacuation complète et nettoyage minutieux"
+      },
+      "rapidite": {
+        "title": "Réactivité",
+        "desc": "Devis sous 24h, intervention rapide en cas d'urgence"
+      },
+      "securite": {
+        "title": "Matériel professionnel",
+        "desc": "Démonte-pièces, techniques de rétention, équipements certifiés"
+      }
+    },
+    "realisations": {
+      "title": "Nos Plus Belles Interventions",
+      "subtitle": "Quelques exemples de nos réalisations à Fayence et alentours"
+    },
+    "about": {
+      "title": "Mathis Duverger",
+      "subtitle": "Élagueur-Grimpeur professionnel à Fayence",
+      "text_1": "Passionné par le métier d'élagueur-grimpeur, j'interviens principalement dans le <strong>canton de Fayence</strong> et ses alentours. Chaque chantier est réalisé avec <strong>sérieux et professionnalisme</strong> : respect de l'arbre, sécurité maximale, et travail soigné.",
+      "text_2": "Je collabore avec des particuliers, hôtels, restaurants, centres équestres et agences immobilières. <strong>Intervention possible hors zone</strong> selon disponibilités — n'hésitez pas à me contacter pour un devis personnalisé."
+    },
+    "testimonials": {
+      "title": "Ce Que Disent Nos Clients",
+      "subtitle": "Témoignages de particuliers et professionnels",
+      "t1": {
+        "text": "Mathis a sauvé notre chêne centenaire avec une taille d'une précision chirurgicale. Chantier impeccable, conseils précieux.",
+        "author": "Sophie Renard",
+        "location": "Fayence"
+      },
+      "t2": {
+        "text": "Ponctuel, pro et efficace. Mon jardin n'a jamais été aussi net. Je recommande sans hésiter.",
+        "author": "Julien Terrier",
+        "location": "Tourrettes"
+      },
+      "t3": {
+        "text": "Belle intervention d'élagage, rapide et soignée. Un vrai professionnel passionné par son métier.",
+        "author": "Mme Lopez",
+        "location": "Callian"
+      }
+    },
+    "contact": {
+      "title": "Prenons Rendez-Vous",
+      "subtitle": "Une question, besoin d'un devis ? Je vous réponds rapidement",
+      "form": {
+        "label_name": "Nom",
+        "label_email": "Email",
+        "label_phone": "Téléphone",
+        "label_message": "Message",
+        "submit": "Envoyer Ma Demande"
+      },
+      "info": {
+        "phone_label": "Téléphone",
+        "email_label": "Email",
+        "zone_label": "Zone d'intervention",
+        "zone_text": "Fayence & Canton"
+      }
+    },
+    "footer": {
+      "brand_desc": "Jeune élagueur passionné basé à Fayence. Interventions rapides, chantiers propres et conseils personnalisés pour vos arbres.",
+      "nav_title": "Navigation",
+      "contact_title": "Contact",
+      "location": "Fayence & alentours",
+      "copyright": "&copy; 2025 Mat Élagage — Tous droits réservés.",
+      "certs": {
+        "rc": "RC Pro",
+        "epi": "EPI & sécurité",
+        "invoice": "Devis & facture"
+      }
+    }
+  },
+  "en": {
+    "nav": {
+      "services": "Services",
+      "realisations": "Projects",
+      "about": "About",
+      "tarifs": "Rates",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Tree pruning & maintenance in Fayence",
+      "title": "Professional tree pruning & safe removal",
+      "subtitle": "Young tree surgeon based in Fayence. Fast intervention and spotless sites throughout the canton.",
+      "cta": "Free quote within 24h",
+      "badges": {
+        "insured": "Fully Insured",
+        "fast": "Fast Response",
+        "clean": "Spotless Site"
+      },
+      "stats": {
+        "clients": "satisfied clients",
+        "villages": "local villages covered",
+        "quote": "for a quote"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Tailored solutions for all your landscape maintenance needs",
+      "elagage": {
+        "title": "Tree Pruning",
+        "desc": "Formative pruning, thinning, crown reduction. Work performed respecting tree biology to ensure safety and longevity."
+      },
+      "abattage": {
+        "title": "Controlled Felling",
+        "desc": "Sectional dismantling in confined spaces, directional felling. Branch removal and stump grinding included."
+      },
+      "haies": {
+        "title": "Hedge Trimming",
+        "desc": "Regular maintenance for a neat and harmonious garden. Geometric or natural shapes according to your preference."
+      },
+      "debroussaillage": {
+        "title": "Brush Clearing (DFCI)",
+        "desc": "Land clearing according to fire prevention regulations (OLD). Fast intervention throughout the canton."
+      },
+      "fruitiers": {
+        "title": "Fruit Tree Pruning",
+        "desc": "Olive trees, fig trees, citrus: pruning adapted to the season of each species to optimize production."
+      },
+      "urgences": {
+        "title": "Storm Emergency",
+        "desc": "Broken branches, dangerous trees: immediate securing. Available 7/7 for emergency situations."
+      }
+    },
+    "piliers": {
+      "title": "Our Commitments",
+      "subtitle": "What makes the difference every day",
+      "proprete": {
+        "title": "Impeccable Sites",
+        "desc": "Complete removal of green waste and thorough cleanup"
+      },
+      "rapidite": {
+        "title": "Responsiveness",
+        "desc": "Quote within 24h, rapid response for emergencies"
+      },
+      "securite": {
+        "title": "Professional Gear",
+        "desc": "Rigging equipment, retention techniques, certified safety gear"
+      }
+    },
+    "realisations": {
+      "title": "Our Finest Work",
+      "subtitle": "Some examples of our achievements in Fayence and surroundings"
+    },
+    "about": {
+      "title": "Mathis Duverger",
+      "subtitle": "Professional Tree Climber / Arborist in Fayence",
+      "text_1": "Passionate about the tree surgery profession, I mainly operate in the <strong>Fayence canton</strong> and surrounding areas. Every job is carried out with <strong>seriousness and professionalism</strong>: respect for the tree, maximum safety, and neat work.",
+      "text_2": "I collaborate with private individuals, hotels, restaurants, equestrian centres, and estate agencies. <strong>Intervention possible outside the zone</strong> subject to availability — do not hesitate to contact me for a personalised quote."
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Testimonials from private and professional clients",
+      "t1": {
+        "text": "Mathis saved our centenary oak with surgically precise pruning. Impeccable site, precious advice.",
+        "author": "Sophie Renard",
+        "location": "Fayence"
+      },
+      "t2": {
+        "text": "Punctual, pro, and efficient. My garden has never been so neat. I recommend without hesitation.",
+        "author": "Julien Terrier",
+        "location": "Tourrettes"
+      },
+      "t3": {
+        "text": "Beautiful pruning job, fast and neat. A true professional passionate about his trade.",
+        "author": "Mrs. Lopez",
+        "location": "Callian"
+      }
+    },
+    "contact": {
+      "title": "Let's Meet",
+      "subtitle": "A question, need a quote? I reply quickly",
+      "form": {
+        "label_name": "Name",
+        "label_email": "Email",
+        "label_phone": "Phone",
+        "label_message": "Message",
+        "submit": "Send My Request"
+      },
+      "info": {
+        "phone_label": "Phone",
+        "email_label": "Email",
+        "zone_label": "Service Area",
+        "zone_text": "Fayence & Canton"
+      }
+    },
+    "footer": {
+      "brand_desc": "Young passionate tree surgeon based in Fayence. Fast interventions, clean sites, and personalised advice for your trees.",
+      "nav_title": "Navigation",
+      "contact_title": "Contact",
+      "location": "Fayence & surroundings",
+      "copyright": "&copy; 2025 Mat Élagage — All rights reserved.",
+      "certs": {
+        "rc": "Liability Insurance",
+        "epi": "PPE & Safety",
+        "invoice": "Quote & Invoice"
+      }
+    }
+  },
+  "nl": {
+    "nav": {
+      "services": "Diensten",
+      "realisations": "Realisaties",
+      "about": "Over mij",
+      "tarifs": "Tarieven",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Snoeiwerk & onderhoud in Fayence",
+      "title": "Bomen snoeien & veilig vellen",
+      "subtitle": "Jonge boomverzorger gevestigd in Fayence, snelle interventies en keurig achtergelaten werven in het hele kanton.",
+      "cta": "Gratis offerte binnen 24u",
+      "badges": {
+        "insured": "Volledig Verzekerd",
+        "fast": "Snelle Interventie",
+        "clean": "Propere Werf"
+      },
+      "stats": {
+        "clients": "tevreden klanten",
+        "villages": "dorpen in de regio",
+        "quote": "voor de offerte"
+      }
+    },
+    "services": {
+      "title": "Onze Diensten",
+      "subtitle": "Oplossingen op maat voor al uw tuinonderhoud",
+      "elagage": {
+        "title": "Vakkundig Snoeien",
+        "desc": "Vormsnoei, uitdunnen, kroonreductie. Interventie met respect voor de biologie van de boom voor veiligheid en levensduur."
+      },
+      "abattage": {
+        "title": "Gecontroleerd Vellen",
+        "desc": "Ontmanteling (afvangen) in beperkte ruimtes, gericht vellen. Afvoer van takken en stobbenfrezen inbegrepen."
+      },
+      "haies": {
+        "title": "Hagen Scheren",
+        "desc": "Regelmatig onderhoud voor een strakke en harmonieuze tuin. Geometrische of natuurlijke vormen naar uw wens."
+      },
+      "debroussaillage": {
+        "title": "Struiken Ruimen (Brandpreventie)",
+        "desc": "Terrein vrijmaken volgens de wettelijke normen voor brandpreventie (OLD). Snelle service in het hele kanton."
+      },
+      "fruitiers": {
+        "title": "Fruitbomen Snoeien",
+        "desc": "Olijfbomen, vijgenbomen, citrus: snoei aangepast aan het seizoen van elke soort om de productie te optimaliseren."
+      },
+      "urgences": {
+        "title": "Noodinterventies Storm",
+        "desc": "Gebroken takken, gevaarlijke bomen: onmiddellijke beveiliging. 7/7 beschikbaar voor noodsituaties."
+      }
+    },
+    "piliers": {
+      "title": "Onze Beloften",
+      "subtitle": "Wat dagelijks het verschil maakt",
+      "proprete": {
+        "title": "Onberispelijke Werven",
+        "desc": "Volledige afvoer van groenafval en grondige opkuis"
+      },
+      "rapidite": {
+        "title": "Reactiviteit",
+        "desc": "Offerte binnen 24u, snelle actie bij noodgevallen"
+      },
+      "securite": {
+        "title": "Professioneel Materiaal",
+        "desc": "Klimmateriaal, afvangtechnieken, gecertificeerde veiligheidsuitrusting"
+      }
+    },
+    "realisations": {
+      "title": "Onze Mooiste Werken",
+      "subtitle": "Enkele voorbeelden van realisaties in Fayence en omgeving"
+    },
+    "about": {
+      "title": "Mathis Duverger",
+      "subtitle": "Professioneel Boomverzorger / Klimmer in Fayence",
+      "text_1": "Gepassioneerd door het vak van boomverzorger-klimmer, werk ik voornamelijk in het <strong>kanton Fayence</strong> en omgeving. Elke werf wordt uitgevoerd met <strong>ernst en professionalisme</strong>: respect voor de boom, maximale veiligheid en verzorgd werk.",
+      "text_2": "Ik werk samen met particulieren, hotels, restaurants, maneges en makelaarskantoren. <strong>Interventie mogelijk buiten de zone</strong> afhankelijk van beschikbaarheid — aarzel niet mij te contacteren voor een offerte op maat."
+    },
+    "testimonials": {
+      "title": "Wat Onze Klanten Zeggen",
+      "subtitle": "Getuigenissen van particulieren en professionals",
+      "t1": {
+        "text": "Mathis heeft onze honderdjarige eik gered met chirurgisch precieze snoei. Onberispelijke werf, waardevol advies.",
+        "author": "Sophie Renard",
+        "location": "Fayence"
+      },
+      "t2": {
+        "text": "Stipt, professioneel en efficiënt. Mijn tuin is nog nooit zo netjes geweest. Ik raad hem zonder aarzelen aan.",
+        "author": "Julien Terrier",
+        "location": "Tourrettes"
+      },
+      "t3": {
+        "text": "Mooi snoeiwerk, snel en verzorgd. Een echte vakman met passie voor zijn beroep.",
+        "author": "Mevr. Lopez",
+        "location": "Callian"
+      }
+    },
+    "contact": {
+      "title": "Afspraak Maken",
+      "subtitle": "Een vraag, een offerte nodig? Ik antwoord snel",
+      "form": {
+        "label_name": "Naam",
+        "label_email": "E-mail",
+        "label_phone": "Telefoon",
+        "label_message": "Bericht",
+        "submit": "Mijn Aanvraag Versturen"
+      },
+      "info": {
+        "phone_label": "Telefoon",
+        "email_label": "E-mail",
+        "zone_label": "Interventiezone",
+        "zone_text": "Fayence & Kanton"
+      }
+    },
+    "footer": {
+      "brand_desc": "Jonge gepassioneerde boomverzorger in Fayence. Snelle interventies, propere werven en persoonlijk advies voor uw bomen.",
+      "nav_title": "Navigatie",
+      "contact_title": "Contact",
+      "location": "Fayence & omgeving",
+      "copyright": "&copy; 2025 Mat Élagage — Alle rechten voorbehouden.",
+      "certs": {
+        "rc": "BA Verzekering",
+        "epi": "PBM & Veiligheid",
+        "invoice": "Offerte & Factuur"
+      }
+    }
+  },
+  "de": {
+    "nav": {
+      "services": "Leistungen",
+      "realisations": "Projekte",
+      "about": "Über uns",
+      "tarifs": "Preise",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "eyebrow": "Baumschnitt & Pflege in Fayence",
+      "title": "Sauberer Baumschnitt & sichere Fällung",
+      "subtitle": "Junger Baumkletterer aus Fayence. Schnelle Einsätze und saubere Baustellen im ganzen Kanton.",
+      "cta": "Kostenloses Angebot in 24h",
+      "badges": {
+        "insured": "Voll versichert (Haftpflicht)",
+        "fast": "Schneller Einsatz",
+        "clean": "Saubere Baustelle"
+      },
+      "stats": {
+        "clients": "zufriedene Kunden",
+        "villages": "Dörfer im Umkreis",
+        "quote": "für das Angebot"
+      }
+    },
+    "services": {
+      "title": "Unsere Leistungen",
+      "subtitle": "Maßgeschneiderte Lösungen für Ihre Gartenpflege",
+      "elagage": {
+        "title": "Fachgerechter Baumschnitt",
+        "desc": "Erziehungsschnitt, Auslichtung, Kronenreduzierung. Biologisch korrekte Eingriffe für Sicherheit und Langlebigkeit."
+      },
+      "abattage": {
+        "title": "Kontrollierte Fällung",
+        "desc": "Stückweise Abtragung (Rigging) auf engem Raum, Richtfällung. Inklusive Entsorgung und Stubbenfräsen."
+      },
+      "haies": {
+        "title": "Heckenschnitt",
+        "desc": "Regelmäßige Pflege für einen gepflegten Garten. Geometrische oder natürliche Formen nach Wunsch."
+      },
+      "debroussaillage": {
+        "title": "Rodung & Brandschutz",
+        "desc": "Vorschriftsmäßige Grundstücksreinigung zur Brandverhütung (OLD). Schneller Einsatz im ganzen Kanton."
+      },
+      "fruitiers": {
+        "title": "Obstbaumschnitt",
+        "desc": "Oliven, Feigen, Zitrusfrüchte: Jahreszeitgerechter Schnitt zur Ertragsoptimierung."
+      },
+      "urgences": {
+        "title": "Sturmschaden-Notdienst",
+        "desc": "Gebrochene Äste, gefährliche Bäume: Sofortige Sicherung. 7/7 für Notfälle erreichbar."
+      }
+    },
+    "piliers": {
+      "title": "Unser Versprechen",
+      "subtitle": "Was uns täglich auszeichnet",
+      "proprete": {
+        "title": "Makellose Baustellen",
+        "desc": "Komplette Entsorgung und gründliche Reinigung"
+      },
+      "rapidite": {
+        "title": "Reaktionsschnelligkeit",
+        "desc": "Angebot binnen 24h, Soforthilfe bei Notfällen"
+      },
+      "securite": {
+        "title": "Professionelle Ausrüstung",
+        "desc": "Abseiltechniken, zertifizierte Sicherheitsausrüstung"
+      }
+    },
+    "realisations": {
+      "title": "Unsere besten Projekte",
+      "subtitle": "Beispiele unserer Arbeit in Fayence und Umgebung"
+    },
+    "about": {
+      "title": "Mathis Duverger",
+      "subtitle": "Professioneller Baumkletterer in Fayence",
+      "text_1": "Aus Leidenschaft für die Baumpflege arbeite ich hauptsächlich im <strong>Kanton Fayence</strong> und Umgebung. Jeder Auftrag wird mit <strong>Sorgfalt und Professionalität</strong> ausgeführt: Respekt vor dem Baum, maximale Sicherheit und saubere Arbeit.",
+      "text_2": "Ich arbeite für Privatpersonen, Hotels, Restaurants und Immobilienagenturen. <strong>Einsätze außerhalb der Zone</strong> nach Absprache möglich — kontaktieren Sie mich für ein persönliches Angebot."
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Bewertungen von Privat- und Geschäftskunden",
+      "t1": {
+        "text": "Mathis hat unsere hundertjährige Eiche mit chirurgischer Präzision gerettet. Tadellose Arbeit, wertvolle Ratschläge.",
+        "author": "Sophie Renard",
+        "location": "Fayence"
+      },
+      "t2": {
+        "text": "Pünktlich, professionell und effizient. Mein Garten war noch nie so gepflegt. Ich empfehle ihn uneingeschränkt.",
+        "author": "Julien Terrier",
+        "location": "Tourrettes"
+      },
+      "t3": {
+        "text": "Tolle Arbeit, schnell und sauber. Ein echter Profi mit Leidenschaft.",
+        "author": "Mme Lopez",
+        "location": "Callian"
+      }
+    },
+    "contact": {
+      "title": "Termin vereinbaren",
+      "subtitle": "Eine Frage oder ein Angebot? Ich antworte schnell",
+      "form": {
+        "label_name": "Name",
+        "label_email": "E-Mail",
+        "label_phone": "Telefon",
+        "label_message": "Nachricht",
+        "submit": "Anfrage senden"
+      },
+      "info": {
+        "phone_label": "Telefon",
+        "email_label": "E-Mail",
+        "zone_label": "Einsatzgebiet",
+        "zone_text": "Fayence & Kanton"
+      }
+    },
+    "footer": {
+      "brand_desc": "Junger, passionierter Baumkletterer in Fayence. Schnelle Einsätze, saubere Arbeit und persönliche Beratung für Ihre Bäume.",
+      "nav_title": "Navigation",
+      "contact_title": "Kontakt",
+      "location": "Fayence & Umgebung",
+      "copyright": "&copy; 2025 Mat Élagage — Alle Rechte vorbehalten.",
+      "certs": {
+        "rc": "Haftpflichtversicherung",
+        "epi": "PSA & Sicherheit",
+        "invoice": "Angebot & Rechnung"
+      }
+    }
+  }
+}

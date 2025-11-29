@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ – Mat Élagage</title>
+  <meta name="description" content="Questions fréquentes sur l'élagage, l'abattage, la taille de haie et nos prestations à Fayence et alentours. Devis gratuit." />
+
+  <!-- Fonts & Icons (mêmes que la home) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root{ --bg:#FAF3E0; --paper:#fff; --ink:#243222; --brand:#2F855A; --brand-2:#476930; --gold:#DAA520; --ring:#e6e6e6; --shadow:0 6px 24px rgba(47,133,90,.10) }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; padding:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6; background:var(--bg); color:var(--ink)}
+    a{color:#1b5e20; text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(98vw,1320px); margin:0 auto}
+
+    /* NAVBAR (identique à la home) */
+    .navbar{position:sticky; top:0; z-index:1000; margin:12px 12px 24px; background:rgba(255,255,255,.8); backdrop-filter:saturate(1.1) blur(8px); border:1px solid var(--ring); border-radius:18px; padding:10px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:var(--shadow); transition:box-shadow .3s, background .3s, transform .2s}
+    .navbar.scrolled{background:#fff; transform:translateY(-2px); box-shadow:0 12px 38px rgba(47,133,90,.18)}
+    .logo img{height:52px; width:auto; border-radius:12px; background:#fff; padding:4px 8px; border:2px solid #6B8E23; box-shadow:0 2px 8px rgba(107,142,35,.10)}
+    .nav-links{list-style:none; display:flex; gap:28px; margin:0; padding:0; align-items:center}
+    .nav-links a{display:inline-block; color:#476930; font-weight:600; padding:10px 14px; border-radius:10px; transition:background .2s, box-shadow .2s, transform .12s; position:relative; text-decoration:none}
+    .nav-links a:hover{background:rgba(47,133,90,.08); box-shadow:0 2px 8px rgba(107,142,35,.08); transform:translateY(-1px)}
+    .nav-links a::after{content:""; position:absolute; left:12px; right:12px; bottom:6px; height:2px; background:linear-gradient(90deg, var(--brand), var(--gold)); transform:scaleX(0); transform-origin:left; transition:transform .25s}
+    .nav-links a:hover::after, .nav-links a:focus-visible::after{transform:scaleX(1)}
+    .burger{display:none; font-size:1.8rem; background:none; border:1px solid var(--ring); color:#6B8E23; padding:6px 10px; border-radius:8px}
+    @media (max-width:900px){ .navbar{flex-wrap:wrap} .burger{display:block} .nav-links{display:none; width:100%; flex-direction:column; gap:14px; background:#fff; border-top:1px solid var(--ring); border-radius:0 0 18px 18px; box-shadow:0 4px 12px rgba(107,142,35,.10); padding:12px 0} .nav-links.show{display:flex} }
+
+    /* En-tête de page */
+    header.page-hero{padding:30px 0 6px}
+    .breadcrumbs{font-weight:600; color:#476930; font-size:.95rem}
+    h1{font-size:clamp(1.8rem,3.5vw,2.4rem); color:#1b5e20; margin:.25rem 0 .5rem}
+    .lead{max-width:840px; color:#4e4e4e}
+
+    /* Accordéon FAQ (accessible) */
+    .faq{padding:14px 12px 28px}
+    .faq .item{background:var(--paper); border:1px solid var(--ring); border-left:4px solid var(--brand-2); border-radius:14px; box-shadow:0 8px 22px rgba(0,0,0,.06)}
+    .faq .item + .item{margin-top:12px}
+    .faq .item h3{margin:0}
+    .faq .btn{width:100%; text-align:left; background:none; border:0; font:inherit; padding:16px 54px 16px 16px; display:flex; align-items:center; gap:10px; cursor:pointer; color:#2F855A; font-weight:700; position:relative}
+    .faq .btn .ico{display:inline-grid; place-items:center; width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, var(--brand), var(--gold)); color:#fff}
+    .faq .btn .chev{position:absolute; right:14px; top:50%; transform:translateY(-50%); transition:transform .2s}
+    .faq .btn[aria-expanded="true"] .chev{transform:translateY(-50%) rotate(180deg)}
+    .faq .panel{padding:0 16px 18px 16px}
+    .faq .panel[hidden]{display:none}
+
+    /* Callout bas de page */
+    .callout{background:var(--paper); border:1px solid var(--ring); border-radius:12px; padding:16px; box-shadow:0 4px 10px rgba(0,0,0,.06); margin:8px 12px 28px}
+    .button{appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.6rem; border:2px solid var(--brand); background:#fff; color:var(--brand); padding:12px 22px; border-radius:999px; font-weight:700; letter-spacing:.2px; box-shadow:0 6px 18px rgba(47,133,90,.16); transition:transform .12s, box-shadow .2s, background .2s, color .2s}
+    .button:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(47,133,90,.22); background:var(--brand); color:#fff}
+
+    /* Footer (identique à la home) */
+    footer{background:linear-gradient(180deg, var(--brand-2) 0%, var(--brand) 100%); color:#fff; border-radius:10px; padding:20px 0; margin:22px 0 0}
+    .footer-row{display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; max-width:1320px; margin:0 auto; padding:0 12px}
+    .social{margin-top:10px}
+    .social a{color:#fff; font-size:1.35rem; margin-left:16px}
+    .social a:hover{color:var(--gold)}
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <a class="logo" href="index.html" aria-label="Retour à l'accueil">
+      <img src="image/logo fond blanc.png" alt="Logo Mat Élagage" width="112" height="56" />
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#about">À propos</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="tarif.html">Tarifs</a></li>
+      <li><a href="index.html#realisations">Réalisations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero container">
+    <div class="breadcrumbs">Accueil / FAQ</div>
+    <h1>Foire aux questions</h1>
+    <p class="lead">Voici les réponses aux questions qu’on nous pose le plus souvent. Si vous ne trouvez pas l’info, contactez‑nous : on répond vite et clairement.</p>
+  </header>
+
+  <main class="container faq" id="faq" aria-label="Questions fréquentes">
+    <!-- Item 1 -->
+    <section class="item">
+      <h3 id="q1"><button class="btn" aria-expanded="false" aria-controls="p1"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> Combien de temps dure une intervention ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p1" class="panel" role="region" aria-labelledby="q1" hidden>
+        <p>Ça dépend du chantier. Un élagage standard prend quelques heures. Pour des arbres plus grands ou plusieurs sujets, il faut parfois une journée complète. On vous précise tout au moment du devis.</p>
+      </div>
+    </section>
+    <!-- Item 2 -->
+    <section class="item">
+      <h3 id="q2"><button class="btn" aria-expanded="false" aria-controls="p2"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> Travaillez‑vous pour pros et particuliers ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p2" class="panel" role="region" aria-labelledby="q2" hidden>
+        <p>Oui. Particuliers, entreprises, copropriétés, agences immobilières, centres équestres… on s’adapte aux contraintes de chaque site.</p>
+      </div>
+    </section>
+    <!-- Item 3 -->
+    <section class="item">
+      <h3 id="q3"><button class="btn" aria-expanded="false" aria-controls="p3"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> L’élagage est‑il réglementé ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p3" class="panel" role="region" aria-labelledby="q3" hidden>
+        <p>Oui, certaines communes imposent des périodes d’intervention et des distances à respecter. On vous conseille selon votre commune et on intervient dans les règles.</p>
+      </div>
+    </section>
+    <!-- Item 4 -->
+    <section class="item">
+      <h3 id="q4"><button class="btn" aria-expanded="false" aria-controls="p4"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> Dois‑je être présent pendant les travaux ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p4" class="panel" role="region" aria-labelledby="q4" hidden>
+        <p>Ce n’est pas obligatoire. C’est juste plus pratique si des choix techniques doivent être validés sur place. Dans tous les cas, on laisse un chantier propre.</p>
+      </div>
+    </section>
+    <!-- Item 5 -->
+    <section class="item">
+      <h3 id="q5"><button class="btn" aria-expanded="false" aria-controls="p5"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> Les déchets verts sont‑ils évacués ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p5" class="panel" role="region" aria-labelledby="q5" hidden>
+        <p>Oui. Évacuation, broyage et valorisation possible selon le volume. C’est précisé sur le devis.</p>
+      </div>
+    </section>
+    <!-- Item 6 -->
+    <section class="item">
+      <h3 id="q6"><button class="btn" aria-expanded="false" aria-controls="p6"><span class="ico"><i class="fa-solid fa-circle-question"></i></span> Les devis sont‑ils gratuits ? <i class="fa-solid fa-chevron-down chev" aria-hidden="true"></i></button></h3>
+      <div id="p6" class="panel" role="region" aria-labelledby="q6" hidden>
+        <p>Oui, devis gratuit et sans engagement. Demandez‑le via le <a href="index.html#contact">formulaire de contact</a> ou par téléphone.</p>
+      </div>
+    </section>
+
+    <section class="callout" aria-label="Demande de devis">
+      <p><a class="button" href="index.html#contact"><i class="fa-solid fa-file-signature"></i> Demander un devis gratuit</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="max-width:1320px">
+      <div class="footer-row" style="justify-content:space-between; gap:32px">
+        <div>
+          <strong>Mat Élagage</strong><br>
+          Fayence & alentours<br>
+          <a href="tel:+33612345678" style="color:#fff;text-decoration:underline">06 12 34 56 78</a><br>
+          <a href="mailto:contact@mat-elagage.fr" style="color:#fff;text-decoration:underline">contact@mat-elagage.fr</a>
+        </div>
+        <div>
+          <nav aria-label="Liens pied de page">
+            <a href="index.html#about" style="color:#fff;margin-right:12px">À propos</a>
+            <a href="index.html#services" style="color:#fff;margin-right:12px">Services</a>
+            <a href="index.html#realisations" style="color:#fff;margin-right:12px">Réalisations</a>
+            <a href="index.html#contact" style="color:#fff">Contact</a>
+          </nav>
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;opacity:.9;margin-top:14px">&copy; 2025 Mat Élagage — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Burger accessible (même JS que la home)
+    const burger = document.getElementById('burger');
+    const links = document.getElementById('nav-links');
+    burger?.addEventListener('click', ()=>{
+      const open = links.classList.toggle('show');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    const nav = document.querySelector('.navbar');
+    const onScroll = ()=>{ if(window.scrollY > 20){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); } };
+    window.addEventListener('scroll', onScroll);
+
+    // Accordéon accessible
+    const items = document.querySelectorAll('.faq .item');
+    items.forEach((it)=>{
+      const btn = it.querySelector('button.btn');
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Option: fermer les autres pour un accordéon exclusif
+        items.forEach((other)=>{
+          const oBtn = other.querySelector('button.btn');
+          const oPanel = document.getElementById(oBtn.getAttribute('aria-controls'));
+          if(other !== it){ oBtn.setAttribute('aria-expanded','false'); oPanel.hidden = true; }
+        });
+        btn.setAttribute('aria-expanded', String(!expanded));
+        panel.hidden = expanded; // toggle
+      });
+    });
+
+    // Respecte prefers-reduced-motion : pas d'animation JS ici; le chevron pivote via CSS
+  </script>
+</body>
+</html>

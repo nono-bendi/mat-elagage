@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarifs – Mat Élagage</title>
+  <meta name="description" content="Tarifs indicatifs pour l'élagage, l'abattage, la taille de haies et l'entretien paysager à Fayence et alentours. Devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <style>
+    /* VARIABLES - Même DA que l'index */
+    :root {
+      --sable: #1a1a1a;
+      --gris-moyen: #2a2a2a;
+      --blanc: #ffffff;
+      --terre-cuite: #7da87f;
+      --vert-sauge: #5a8266;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      background: var(--sable);
+      color: var(--blanc);
+    }
+
+    .container {
+      width: min(95%, 1200px);
+      margin: 0 auto;
+    }
+
+    /* NAVBAR - Même que l'index */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(26, 26, 26, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(26, 26, 26, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--blanc);
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--terre-cuite);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--terre-cuite);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--blanc);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HERO PAGE TARIFS */
+    .page-hero {
+      background: linear-gradient(
+        135deg,
+        var(--sable) 0%,
+        var(--gris-moyen) 100%
+      );
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(125, 168, 127, 0.15) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      filter: blur(80px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
+    .breadcrumbs {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .breadcrumbs a {
+      color: var(--terre-cuite);
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 700;
+      color: var(--blanc);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lead strong {
+      color: var(--terre-cuite);
+    }
+
+    /* PRICING SECTION */
+    .pricing {
+      background: var(--gris-moyen);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    /* Grille de points animée */
+    .pricing::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(125, 168, 127, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.3;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(30px, 30px); }
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* PRICING CARDS - Glassmorphism */
+    .pricing-card {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.04) 100%
+      );
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 32px 28px;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dégradé lumineux en bas */
+    .pricing-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(
+        to top,
+        rgba(125, 168, 127, 0.25) 0%,
+        rgba(90, 130, 102, 0.1) 50%,
+        transparent 100%
+      );
+      opacity: 0.5;
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(125, 168, 127, 0.4);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(125, 168, 127, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .pricing-card:hover::after {
+      opacity: 0.8;
+      height: 120px;
+    }
+
+    .pricing-icon {
+      font-size: 32px;
+      color: var(--terre-cuite);
+      margin-bottom: 16px;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--blanc);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing-card .price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--terre-cuite);
+      margin-top: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* INFO SECTION */
+    .info-section {
+      background: var(--sable);
+      padding: 60px 0;
+    }
+
+    .info-box {
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.04) 100%
+      );
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .info-box h2 {
+      font-size: 28px;
+      color: var(--blanc);
+      margin-bottom: 24px;
+    }
+
+    .info-box ul {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .info-box li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .info-box li:last-child {
+      border-bottom: none;
+    }
+
+    .info-box li i {
+      color: var(--terre-cuite);
+      font-size: 18px;
+    }
+
+    /* BUTTON CTA */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--terre-cuite), var(--vert-sauge));
+      color: var(--blanc);
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(125, 168, 127, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(125, 168, 127, 0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--sable);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: var(--terre-cuite);
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--terre-cuite);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      color: var(--blanc);
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--terre-cuite);
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .page-hero {
+        padding: 60px 0 50px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 768px) and (min-width: 481px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="image/logo.png" alt="Mat Élagage Logo" width="45" height="45">
+        <span>Mat Élagage</span>
+      </a>
+      
+      <button class="burger" id="burger" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="tarif.html">Tarifs</a></li>
+        <li><a href="index.html#realisations">Réalisations</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Accueil</a> / Tarifs
+      </div>
+      <h1>Tarifs indicatifs</h1>
+      <p class="lead">
+        Des prestations adaptées à vos besoins, avec des prix <strong>transparents</strong>. 
+        Les montants ci-dessous sont <strong>indicatifs</strong> : ils varient selon la hauteur, 
+        l'accès, la dangerosité, le volume de déchets verts, etc. Un <strong>devis gratuit</strong> 
+        permet d'affiner précisément.
+      </p>
+    </div>
+  </header>
+
+  <!-- PRICING SECTION -->
+  <section class="pricing">
+    <div class="container">
+      <div class="pricing-grid">
+        <!-- Élagage arbuste -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-seedling pricing-icon"></i>
+          <h3>Élagage arbuste (< 5 m)</h3>
+          <p class="price">150€ à 300€</p>
+        </div>
+
+        <!-- Élagage arbre moyen -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-tree pricing-icon"></i>
+          <h3>Élagage arbre moyen (5-10 m)</h3>
+          <p class="price">350€ à 700€</p>
+        </div>
+
+        <!-- Élagage grand arbre -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-tree pricing-icon"></i>
+          <h3>Élagage grand arbre (10-15 m)</h3>
+          <p class="price">500€ à 1000€</p>
+        </div>
+
+        <!-- Très grand arbre -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-tower-observation pricing-icon"></i>
+          <h3>Très grand arbre (15-30 m)</h3>
+          <p class="price">800€ à 2000€</p>
+        </div>
+
+        <!-- Taille de haie -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-scissors pricing-icon"></i>
+          <h3>Taille de haie</h3>
+          <p class="price">3€ à 12€ / m linéaire</p>
+        </div>
+
+        <!-- Débroussaillage -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-broom pricing-icon"></i>
+          <h3>Débroussaillage</h3>
+          <p class="price">25€ à 50€ / heure</p>
+        </div>
+
+        <!-- Taille de palmier -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-umbrella-beach pricing-icon"></i>
+          <h3>Taille de palmier</h3>
+          <p class="price">80€ à 350€</p>
+        </div>
+
+        <!-- Arbres fruitiers -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-apple-whole pricing-icon"></i>
+          <h3>Taille arbres fruitiers</h3>
+          <p class="price">150€ à 200€</p>
+        </div>
+
+        <!-- Abattage -->
+        <div class="pricing-card">
+          <i class="fa-solid fa-axe pricing-icon"></i>
+          <h3>Abattage d'arbre</h3>
+          <p class="price">250€ à 2500€</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-box">
+        <h2>Informations utiles</h2>
+        <ul>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Le <strong>déplacement</strong> est offert dans le canton de Fayence
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Évacuation et <strong>valorisation des déchets</strong> en option selon le volume
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Interventions <strong>sécurisées</strong> (EPI, rétention) – Assurance RC Pro
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Possibilité d'intervention <strong>hors zone</strong> selon disponibilités
+          </li>
+        </ul>
+        <a href="index.html#contact" class="cta-button">
+          <i class="fa-solid fa-file-signature"></i>
+          Demander un devis gratuit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mat Élagage</h3>
+          <p>Élagueur-Grimpeur professionnel</p>
+          <p>Fayence & alentours</p>
+          <p><a href="tel:+33612345678">06 12 34 56 78</a></p>
+          <p><a href="mailto:contact@mat-elagage.fr">contact@mat-elagage.fr</a></p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="index.html#about">À propos</a>
+          <a href="index.html#services">Services</a>
+          <a href="tarif.html">Tarifs</a>
+          <a href="index.html#realisations">Réalisations</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 Mat Élagage – Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menu burger
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    
+    burger?.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Navbar au scroll
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
