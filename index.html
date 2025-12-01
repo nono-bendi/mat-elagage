@@ -232,6 +232,12 @@
       justify-content: center;
     }
 
+    /* Cacher les éléments mobile sur desktop */
+    .nav-lang-mobile,
+    .nav-contact-mobile {
+      display: none;
+    }
+
     .nav-links li {
       position: relative;
     }
@@ -486,15 +492,36 @@
       transform: translate(-50%, -50%) rotate(-45deg);
     }
 
-    @media (max-width: 1100px) {
-      .navbar-actions .lang-selector {
-        display: none;
-      }
-    }
-
     @media (max-width: 900px) {
       .burger {
         display: block !important;
+      }
+
+      /* Cacher lang-selector desktop, afficher mobile */
+      .navbar-actions .lang-dropdown {
+        display: none;
+      }
+
+      .nav-lang-mobile,
+      .nav-contact-mobile {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav-lang-mobile {
+        order: -1;
+        margin-bottom: 24px;
+      }
+
+      .nav-contact-mobile {
+        margin-top: auto;
+        padding-top: 24px;
+      }
+
+      .nav-contact-mobile .btn {
+        width: 100%;
+        max-width: 220px;
       }
 
       /* Menu mobile - Ultra sobre et centré */
@@ -522,6 +549,33 @@
         transform: translateX(0);
       }
 
+      /* Lang selector dans le menu mobile */
+      .nav-lang-mobile .lang-dropdown {
+        position: relative;
+      }
+
+      .nav-lang-mobile .lang-selector {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 18px;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 500;
+      }
+
+      .nav-lang-mobile .lang-selector:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .nav-lang-mobile .lang-options {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) translateY(-10px);
+      }
+
+      .nav-lang-mobile .lang-options.show {
+        transform: translateX(-50%) translateY(0);
+      }
+
       /* Liens - Texte simple sobre */
       .nav-links a {
         color: rgba(255, 255, 255, 0.65);
@@ -538,20 +592,6 @@
         color: rgba(255, 255, 255, 0.95);
         background: transparent;
         transform: none;
-      }
-
-      /* Contact button */
-      .navbar-actions {
-        margin-top: auto;
-        width: 100%;
-        max-width: 220px;
-      }
-
-      .navbar-actions .btn-primary {
-        width: 100%;
-        justify-content: center;
-        padding: 12px;
-        font-size: 14px;
       }
 
       .nav-dropdown {
@@ -1590,6 +1630,180 @@
       color: rgba(255, 255, 255, 0.95);
     }
 
+    /* ===== ROADMAP / PROCESSUS ===== */
+    .processus {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .processus::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(125, 168, 127, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .processus .section-intro {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .processus .section-intro h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #7DA87F;
+      margin-bottom: 16px;
+    }
+
+    .processus .section-intro p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .roadmap-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Ligne verticale centrale */
+    .roadmap-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, 
+        transparent 0%, 
+        rgba(125, 168, 127, 0.2) 10%,
+        rgba(125, 168, 127, 0.5) 50%,
+        rgba(125, 168, 127, 0.2) 90%,
+        transparent 100%
+      );
+      transform: translateX(-50%);
+    }
+
+    .roadmap-step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 80px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .roadmap-step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Alternance gauche/droite */
+    .roadmap-step:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .roadmap-step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* Numéro central */
+    .step-number {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
+      background: #7DA87F;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 8px 32px rgba(125, 168, 127, 0.3);
+      z-index: 2;
+      border: 4px solid #1a1a1a;
+    }
+
+    /* Contenu de l'étape */
+    .step-content {
+      width: 42%;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .roadmap-step:nth-child(odd) .step-content {
+      margin-right: auto;
+    }
+
+    .roadmap-step:nth-child(even) .step-content {
+      margin-left: auto;
+    }
+
+    /* Flèche vers le centre */
+    .step-content::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(125, 168, 127, 0.5), transparent);
+      transform: translateY(-50%);
+    }
+
+    .roadmap-step:nth-child(odd) .step-content::before {
+      right: -30px;
+      background: linear-gradient(90deg, rgba(125, 168, 127, 0.5), transparent);
+    }
+
+    .roadmap-step:nth-child(even) .step-content::before {
+      left: -30px;
+      background: linear-gradient(-90deg, rgba(125, 168, 127, 0.5), transparent);
+    }
+
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .step-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .step-content h3 {
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .step-content p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
     @media (max-width: 900px) {
       .piliers {
         padding: 70px 0;
@@ -1922,12 +2136,15 @@
 
     .testimonial-dot:hover::before {
       background: rgba(255, 255, 255, 0.4);
+      transform: translate(-50%, -50%) scale(1.15);
     }
 
     .testimonial-dot.active::before {
       background: var(--terre-cuite);
-      width: 32px;
-      border-radius: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%; /* IMPORTANT : Force le rond */
+      box-shadow: 0 0 12px rgba(125, 168, 127, 0.5);
     }
 
     @media (max-width: 768px) {
@@ -2550,6 +2767,62 @@
         right: 20px;
         max-width: none;
       }
+
+      /* Roadmap mobile */
+      .processus {
+        padding: 60px 0;
+      }
+
+      .processus .section-intro h2 {
+        font-size: 32px;
+      }
+
+      .processus .section-intro {
+        margin-bottom: 50px;
+      }
+
+      .roadmap-container::before {
+        left: 35px;
+      }
+
+      .roadmap-step {
+        flex-direction: row !important;
+        margin-bottom: 50px;
+      }
+
+      .step-number {
+        position: relative;
+        left: 0;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+
+      .step-content {
+        width: auto !important;
+        flex: 1;
+        margin: 0 !important;
+      }
+
+      .step-content::before {
+        display: none;
+      }
+
+      .step-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .step-content h3 {
+        font-size: 18px;
+      }
+
+      .step-content p {
+        font-size: 14px;
+      }
     }
 
     @media (max-width: 900px) {
@@ -2576,11 +2849,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://api.mapbox.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://api.mapbox.com; img-src 'self' data: https://api.mapbox.com; connect-src 'self' https://api.mapbox.com; frame-src 'self' https://api.mapbox.com;">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
   
   <title>Mat Élagage | Élagage & entretien paysager à Fayence</title>
   <meta name="description" content="Paysagiste à Fayence : élagage, abattage, débroussaillage, taille de haies. Devis et déplacement gratuits dans le canton de Fayence et alentours." />
@@ -2614,10 +2882,32 @@
       </a>
       
       <ul class="nav-links" id="nav-links">
+        <!-- Lang selector mobile (en haut du menu) -->
+        <li class="nav-lang-mobile">
+          <div class="lang-dropdown">
+            <button class="lang-selector lang-selector-mobile" id="lang-selector-mobile">
+              <i class="fas fa-globe"></i>
+              <span id="current-lang-mobile">FR</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
+            </button>
+            <div class="lang-options" id="lang-options-mobile">
+              <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+              <button class="lang-option" data-lang="en">🇬🇧 English</button>
+              <button class="lang-option" data-lang="nl">🇳🇱 Nederlands</button>
+              <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+            </div>
+          </div>
+        </li>
+        
         <li><a href="#services" data-i18n="nav.services">Services</a></li>
         <li><a href="#realisations" data-i18n="nav.realisations">Réalisations</a></li>
         <li><a href="#about" data-i18n="nav.about">À propos</a></li>
         <li><a href="tarif.html" data-i18n="nav.tarifs">Tarifs</a></li>
+        
+        <!-- Contact button mobile (en bas du menu) -->
+        <li class="nav-contact-mobile">
+          <a href="#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
+        </li>
       </ul>
 
       <div class="navbar-actions">
@@ -2681,19 +2971,23 @@
           <i class="fas fa-broom"></i>
           <span data-i18n="hero.badges.clean">Chantier propre</span>
         </span>
+        <span class="badge">
+          <i class="fas fa-language"></i>
+          <span data-i18n="hero.badges.english">Nous parlons anglais</span>
+        </span>
       </div>
 
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="stat-number">100%</span>
+          <span class="stat-number" data-count="100" data-suffix="%">0%</span>
           <span class="stat-label" data-i18n="hero.stats.clients">clients satisfaits</span>
         </div>
         <div class="hero-stat">
-          <span class="stat-number">10+</span>
+          <span class="stat-number" data-count="10" data-suffix="+">0+</span>
           <span class="stat-label" data-i18n="hero.stats.villages">villages du canton</span>
         </div>
         <div class="hero-stat">
-          <span class="stat-number">24h</span>
+          <span class="stat-number" data-count="24" data-suffix="h">0h</span>
           <span class="stat-label" data-i18n="hero.stats.quote">pour le devis</span>
         </div>
       </div>
@@ -2710,7 +3004,7 @@
       <div class="services-grid-simple">
         <div class="service-item">
           <div class="service-image">
-            <img src="image/elagage-abattage-arbres.jpg" alt="Élagage raisonné" loading="lazy" width="584" height="390">
+            <img src="image/service1.png" alt="Élagage raisonné" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.elagage.title">Élagage Raisonné</h3>
@@ -2720,7 +3014,7 @@
 
         <div class="service-item">
           <div class="service-image">
-            <img src="image/abattage-arbre-1920x1282.jpg" alt="Abattage contrôlé" loading="lazy" width="584" height="390">
+            <img src="image/service2.png" alt="Abattage contrôlé" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.abattage.title">Abattage Contrôlé</h3>
@@ -2730,7 +3024,7 @@
 
         <div class="service-item">
           <div class="service-image">
-            <img src="image/c_taille_haie_thermique_mobile_20250430_7204812bc4.avif" alt="Taille de haies" loading="lazy" width="584" height="390">
+            <img src="image/service3.png" alt="Taille de haies" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.haies.title">Taille de Haies</h3>
@@ -2740,7 +3034,7 @@
 
         <div class="service-item">
           <div class="service-image">
-            <img src="image/cellaaa.webp" alt="Débroussaillage DFCI" loading="lazy" width="584" height="390">
+            <img src="image/service4.png" alt="Débroussaillage DFCI" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.debroussaillage.title">Débroussaillage DFCI</h3>
@@ -2750,7 +3044,7 @@
 
         <div class="service-item">
           <div class="service-image">
-            <img src="image/real3.jpg" alt="Taille arbres fruitiers" loading="lazy" width="584" height="390">
+            <img src="image/service5.png" alt="Taille arbres fruitiers" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.fruitiers.title">Taille Fruitiers</h3>
@@ -2760,7 +3054,7 @@
 
         <div class="service-item">
           <div class="service-image">
-            <img src="image/2022-06-03.jpg" alt="Urgences tempête" loading="lazy" width="584" height="390">
+            <img src="image/service6.png" alt="Urgences tempête" loading="lazy" width="584" height="390">
           </div>
           <div class="service-content">
             <h3 data-i18n="services.urgences.title">Urgences Tempête</h3>
@@ -2800,6 +3094,78 @@
           </div>
           <h3 data-i18n="piliers.securite.title">Matériel professionnel</h3>
           <p data-i18n="piliers.securite.desc">Démonte-pièces, techniques de rétention, équipements certifiés</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESSUS D'INTERVENTION ===== -->
+  <section class="processus">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Notre Processus d'Intervention</h2>
+        <p>De votre premier contact jusqu'au chantier terminé : un accompagnement complet</p>
+      </div>
+
+      <div class="roadmap-container">
+        <!-- Étape 1 -->
+        <div class="roadmap-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-icon">
+              <img src="image/icone/step1.png" alt="Contact & Devis" width="80" height="80" loading="lazy">
+            </div>
+            <h3>Contact & Devis</h3>
+            <p>Vous nous contactez par téléphone ou formulaire. Visite sur place pour évaluer vos besoins. Devis gratuit et détaillé sous 24h.</p>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="roadmap-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-icon">
+              <img src="image/icone/step2.png" alt="Planification" width="80" height="80" loading="lazy">
+            </div>
+            <h3>Planification</h3>
+            <p>On fixe ensemble une date d'intervention selon vos disponibilités. Préparation du matériel et organisation du chantier.</p>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="roadmap-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-icon">
+              <img src="image/icone/step3.png" alt="Intervention" width="80" height="80" loading="lazy">
+            </div>
+            <h3>Intervention</h3>
+            <p>Travail sécurisé avec matériel professionnel certifié. Respect de l'arbre et de votre propriété. Communication régulière pendant le chantier.</p>
+          </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="roadmap-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <div class="step-icon">
+              <img src="image/icone/step4.png" alt="Nettoyage" width="80" height="80" loading="lazy">
+            </div>
+            <h3>Nettoyage</h3>
+            <p>Évacuation complète des branches et déchets verts. Broyage ou évacuation selon votre choix. Chantier impeccable garanti.</p>
+          </div>
+        </div>
+
+        <!-- Étape 5 -->
+        <div class="roadmap-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <div class="step-icon">
+              <img src="image/icone/step5.png" alt="Suivi & Conseils" width="80" height="80" loading="lazy">
+            </div>
+            <h3>Suivi & Conseils</h3>
+            <p>Conseils d'entretien personnalisés pour vos arbres. Disponibilité pour toute question après intervention. Satisfaction garantie.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2946,7 +3312,7 @@
           <div class="contact-card">
             <div class="contact-item">
               <div class="contact-icon">
-                <img src="image/icone/phone.png" alt="telephone icon" width="50" height="50" loading="lazy">
+                <img src="image/icone/step1.png" alt="telephone icon" width="50" height="50" loading="lazy">
               </div>
               <div class="contact-details">
                 <strong data-i18n="contact.info.phone_label">Téléphone</strong>
@@ -3033,25 +3399,27 @@
 
 
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('nav-links');
     const navbar = document.getElementById('navbar');
 
     // Toggle mobile menu
-    burger.addEventListener('click', () => {
-      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-      
-      navLinks.classList.toggle('show');
-      burger.setAttribute('aria-expanded', !isExpanded);
-      
-      // Bloquer le scroll du body quand le menu est ouvert
-      if (!isExpanded) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-    });
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+        
+        navLinks.classList.toggle('show');
+        burger.setAttribute('aria-expanded', !isExpanded);
+        
+        // Bloquer le scroll du body quand le menu est ouvert
+        if (!isExpanded) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      });
+    }
 
     // Dropdown functionality
     const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
@@ -3103,23 +3471,25 @@
     });
 
     // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Close mobile menu when clicking on overlay
-    if (window.innerWidth <= 900) {
-      navLinks.addEventListener('click', (e) => {
-        if (e.target === navLinks || e.target.classList.contains('nav-links')) {
+    if (navLinks && burger) {
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
           navLinks.classList.remove('show');
           burger.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
-        }
+        });
       });
+
+      // Close mobile menu when clicking on overlay
+      if (window.innerWidth <= 900) {
+        navLinks.addEventListener('click', (e) => {
+          if (e.target === navLinks || e.target.classList.contains('nav-links')) {
+            navLinks.classList.remove('show');
+            burger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      }
     }
 
     // Intersection Observer pour les animations d'entrée
@@ -3159,6 +3529,11 @@
 
     // Charger la galerie depuis gallery.json
     async function loadGallery() {
+      if (!gallerySlider || !sliderDotsContainer) {
+        console.log('Galerie non trouvée sur cette page');
+        return;
+      }
+      
       try {
         const response = await fetch('gallery.json');
         const data = await response.json();
@@ -3185,12 +3560,35 @@
         
       } catch (error) {
         console.error('Erreur de chargement de la galerie:', error);
-        // Fallback en cas d'erreur
-        gallerySlider.innerHTML = '<p style="color: white; text-align: center;">Erreur de chargement de la galerie</p>';
+        // Fallback avec images par défaut
+        const fallbackImages = [
+          { src: 'image/abattage-arbre-1920x1282.jpg', alt: 'Abattage d\'arbre', caption: 'Abattage contrôlé' },
+          { src: 'image/2022-06-03.jpg', alt: 'Élagage', caption: 'Élagage professionnel' },
+          { src: 'image/cellaaa.webp', alt: 'Chantier', caption: 'Chantier terminé' }
+        ];
+        
+        gallerySlider.innerHTML = fallbackImages.map((img, index) => `
+          <div class="slide ${index === 0 ? 'active' : ''}">
+            <img src="${img.src}" alt="${img.alt}" loading="lazy" width="1200" height="800">
+            <div class="slide-caption">${img.caption}</div>
+          </div>
+        `).join('');
+        
+        sliderDotsContainer.innerHTML = fallbackImages.map((img, index) => `
+          <button class="dot ${index === 0 ? 'active' : ''}" data-slide="${index}" aria-label="Image ${index + 1}"></button>
+        `).join('');
+        
+        slides = document.querySelectorAll('.slide');
+        dots = document.querySelectorAll('.dot');
+        
+        if (slides.length > 0) {
+          initSlider();
+        }
       }
     }
 
     function initSlider() {
+      if (!dots || dots.length === 0) return;
       // Navigation par points
       dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -3294,7 +3692,9 @@
     }
 
     // Charger la galerie au chargement de la page
-    loadGallery();
+    if (gallerySlider && sliderDotsContainer) {
+      loadGallery();
+    }
 
     // ===== SLIDER TÉMOIGNAGES =====
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
@@ -3376,36 +3776,115 @@
     }
 
     // ===== SYSTÈME DE TRADUCTION =====
-    let translations = {};
     let currentLang = localStorage.getItem('language') || 'fr';
+    let translations = {};
 
-    // Charger les traductions
+    // Charger les traductions depuis translations.json
     async function loadTranslations() {
       try {
         const response = await fetch('translations.json');
         translations = await response.json();
+        console.log('✅ Traductions chargées depuis JSON');
         applyTranslations(currentLang);
       } catch (error) {
-        console.error('Erreur chargement traductions:', error);
+        console.warn('⚠️ Impossible de charger translations.json, utilisation du fallback');
+        // Fallback avec traductions minimales
+        translations = {
+          "fr": { "nav": { "services": "Services", "realisations": "Réalisations", "about": "À propos", "tarifs": "Tarifs", "contact": "Contact" } },
+          "en": { "nav": { "services": "Services", "realisations": "Projects", "about": "About", "tarifs": "Rates", "contact": "Contact" } },
+          "nl": { "nav": { "services": "Diensten", "realisations": "Realisaties", "about": "Over mij", "tarifs": "Tarieven", "contact": "Contact" } },
+          "de": { "nav": { "services": "Leistungen", "realisations": "Projekte", "about": "Über uns", "tarifs": "Preise", "contact": "Kontakt" } }
+        };
+        applyTranslations(currentLang);
       }
     }
 
+    // Charger au démarrage
+    loadTranslations();
+
+    // ===== ANIMATION COUNT-UP POUR LES STATS =====
+    function animateCountUp(element, target, duration = 2000) {
+      const start = 0;
+      const increment = target / (duration / 16); // 60 FPS
+      let current = start;
+      const suffix = element.getAttribute('data-suffix') || '';
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+      }, 16);
+    }
+
+    // Intersection Observer pour déclencher l'animation quand visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const target = parseInt(entry.target.getAttribute('data-count'));
+          animateCountUp(entry.target, target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Observer tous les stat-number
+    document.querySelectorAll('.stat-number[data-count]').forEach(stat => {
+      statsObserver.observe(stat);
+    });
+
+    // ===== ANIMATION ROADMAP AU SCROLL =====
+    const roadmapObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { 
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observer toutes les étapes
+    document.querySelectorAll('.roadmap-step').forEach(step => {
+      roadmapObserver.observe(step);
+    });
+
     // Appliquer les traductions
     function applyTranslations(lang) {
+      console.log('🌍 Changement de langue vers:', lang);
       currentLang = lang;
       localStorage.setItem('language', lang);
       
-      // Mettre à jour le sélecteur de langue
-      document.getElementById('current-lang').textContent = lang.toUpperCase();
+      // Mettre à jour les sélecteurs de langue (desktop et mobile)
+      const currentLangElement = document.getElementById('current-lang');
+      const currentLangMobileElement = document.getElementById('current-lang-mobile');
+      if (currentLangElement) currentLangElement.textContent = lang.toUpperCase();
+      if (currentLangMobileElement) currentLangMobileElement.textContent = lang.toUpperCase();
       
       // Mettre à jour les éléments avec data-i18n
+      let updated = 0;
       document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getTranslation(key, lang);
         if (translation) {
-          element.textContent = translation;
+          // Si l'élément contient seulement du texte (pas d'enfants HTML)
+          if (element.children.length === 0) {
+            element.textContent = translation;
+          } else {
+            // Si l'élément contient des enfants (comme des <i> icônes)
+            // On cherche les noeuds de texte et on les remplace
+            const textNodes = Array.from(element.childNodes).filter(node => node.nodeType === 3);
+            if (textNodes.length > 0) {
+              textNodes[0].textContent = translation;
+            }
+          }
+          updated++;
         }
       });
+      console.log(`✅ ${updated} éléments traduits`);
 
       // Mettre à jour les placeholders
       document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
@@ -3437,36 +3916,55 @@
     }
 
     // Gestion du dropdown de langues
+    // Gestion du dropdown de langues DESKTOP
     const langSelector = document.getElementById('lang-selector');
     const langOptions = document.getElementById('lang-options');
-    const langButtons = document.querySelectorAll('.lang-option');
+    
+    if (langSelector) {
+      langSelector.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langOptions.classList.toggle('show');
+      });
 
-    langSelector.addEventListener('click', (e) => {
-      e.stopPropagation();
-      langOptions.classList.toggle('show');
-    });
+      langOptions.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
 
-    // Fermer le dropdown en cliquant ailleurs
+    // Gestion du dropdown de langues MOBILE
+    const langSelectorMobile = document.getElementById('lang-selector-mobile');
+    const langOptionsMobile = document.getElementById('lang-options-mobile');
+    
+    if (langSelectorMobile) {
+      langSelectorMobile.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langOptionsMobile.classList.toggle('show');
+      });
+
+      langOptionsMobile.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+
+    // Fermer les dropdowns en cliquant ailleurs
     document.addEventListener('click', () => {
-      langOptions.classList.remove('show');
+      if (langOptions) langOptions.classList.remove('show');
+      if (langOptionsMobile) langOptionsMobile.classList.remove('show');
     });
 
-    // Empêcher la fermeture en cliquant dans le dropdown
-    langOptions.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-    // Changer de langue
+    // Changer de langue (fonctionne pour desktop ET mobile)
+    const langButtons = document.querySelectorAll('.lang-option');
+    console.log('🔘 Boutons langue trouvés:', langButtons.length);
+    
     langButtons.forEach(button => {
       button.addEventListener('click', () => {
         const lang = button.getAttribute('data-lang');
+        console.log('👆 Clic sur langue:', lang);
         applyTranslations(lang);
-        langOptions.classList.remove('show');
+        if (langOptions) langOptions.classList.remove('show');
+        if (langOptionsMobile) langOptionsMobile.classList.remove('show');
       });
     });
-
-    // Charger les traductions au démarrage
-    loadTranslations();
 
     // ===== CONFIGURATION EMAILJS =====
     // Configuration avec vos identifiants EmailJS
