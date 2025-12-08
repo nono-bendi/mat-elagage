@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - Mat Élagage | Questions fréquentes</title>
-  <meta name="description" content="Questions fréquentes sur l'élagage, l'abattage, la taille de haie et nos prestations à Fayence et alentours. Devis gratuit sous 24h.">
+  <title>FAQ - ONE ÉLAGAGE | Questions fréquentes</title>
+  <meta name="description" content="Questions fréquentes sur l'élagage, l'abattage, la taille de haie et nos prestations sur la Côte d'Azur. Devis gratuit sous 24h.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,17 @@
   
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta name="keywords" content="FAQ élagage, questions élagage, période élagage">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://one-elagage.fr/faq.html">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="image/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="manifest" href="image/site.webmanifest" />
+  <meta name="theme-color" content="#f9f6ef" />
 
   <style>
     :root {
@@ -105,6 +116,132 @@
     .nav-links a:hover {
       background: rgba(125, 168, 127, 0.15);
       color: #7da87f;
+    }
+
+    /* Language selector mobile */
+    .nav-lang-mobile, .nav-contact-mobile {
+      display: none;
+    }
+
+    /* Navbar actions */
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .navbar-actions .icon-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.9);
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 13px;
+    }
+
+    .navbar-actions .icon-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .lang-dropdown {
+      position: relative;
+    }
+
+    .navbar-actions .lang-selector {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .navbar-actions .lang-selector:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .lang-options {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 8px;
+      min-width: 160px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .lang-options.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      color: #2a2a2a;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+
+    .lang-option:hover {
+      background: rgba(125, 168, 127, 0.1);
+      color: #7da87f;
+    }
+
+    .lang-option.active {
+      background: rgba(125, 168, 127, 0.15);
+      color: #5a8266;
+    }
+
+    .navbar-actions .btn-primary {
+      padding: 8px 18px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .navbar-actions .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.5);
     }
 
     /* ===== HERO FAQ ===== */
@@ -465,26 +602,241 @@
         color: rgba(255, 255, 255, 0.95);
         background: transparent;
       }
+
+      .navbar-actions {
+        display: none;
+      }
+
+      .nav-lang-mobile {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-lang-mobile .lang-dropdown {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-lang-mobile .lang-selector {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .nav-lang-mobile .lang-options {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 8px;
+        padding: 8px;
+        min-width: 160px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .nav-lang-mobile .lang-options.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-contact-mobile {
+        display: block;
+        width: 100%;
+        margin-top: auto;
+        padding-top: 20px;
+      }
+
+      .nav-contact-mobile .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+        background: #7da87f;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .particles-container {
+        display: none;
+      }
+      
+      .edge-glow {
+        display: none;
+      }
+    }
+    
+    /* PARTICLES / FIREFLIES */
+    .particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 100;
+      overflow: hidden;
+    }
+    
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(125,168,127,.6) 0%, rgba(125,168,127,.3) 40%, transparent 70%);
+      animation: floatParticle 15s ease-in-out infinite;
+      box-shadow: 0 0 8px rgba(125,168,127,.4), 0 0 15px rgba(125,168,127,.2);
+    }
+    
+    .particle:nth-child(1){width:5px;height:5px;left:3%;top:20%;animation-duration:18s;animation-delay:0s}
+    .particle:nth-child(2){width:3px;height:3px;left:5%;top:45%;animation-duration:22s;animation-delay:-3s}
+    .particle:nth-child(3){width:6px;height:6px;left:2%;top:70%;animation-duration:20s;animation-delay:-6s}
+    .particle:nth-child(4){width:4px;height:4px;left:6%;top:85%;animation-duration:16s;animation-delay:-9s}
+    .particle:nth-child(5){width:6px;height:6px;right:3%;top:15%;animation-duration:19s;animation-delay:-2s}
+    .particle:nth-child(6){width:3px;height:3px;right:5%;top:35%;animation-duration:23s;animation-delay:-5s}
+    .particle:nth-child(7){width:5px;height:5px;right:2%;top:55%;animation-duration:17s;animation-delay:-8s}
+    .particle:nth-child(8){width:7px;height:7px;right:4%;top:75%;animation-duration:21s;animation-delay:-11s}
+    .particle:nth-child(9){width:4px;height:4px;right:6%;top:90%;animation-duration:18s;animation-delay:-4s}
+    .particle:nth-child(10){width:3px;height:3px;left:4%;top:10%;animation-duration:24s;animation-delay:-7s}
+    .particle:nth-child(11){width:5px;height:5px;left:1%;top:55%;animation-duration:19s;animation-delay:-10s}
+    .particle:nth-child(12){width:3px;height:3px;right:1%;top:40%;animation-duration:20s;animation-delay:-1s}
+    .particle:nth-child(13){width:5px;height:5px;left:7%;top:30%;animation-duration:16s;animation-delay:-13s}
+    .particle:nth-child(14){width:4px;height:4px;right:7%;top:65%;animation-duration:22s;animation-delay:-6s}
+    .particle:nth-child(15){width:6px;height:6px;left:2%;top:95%;animation-duration:18s;animation-delay:-9s}
+    .particle:nth-child(16){width:3px;height:3px;right:3%;top:5%;animation-duration:21s;animation-delay:-3s}
+    
+    @keyframes floatParticle {
+      0%,100%{transform:translateY(0) translateX(0) scale(1);opacity:.7}
+      25%{transform:translateY(-30px) translateX(15px) scale(1.2);opacity:1}
+      50%{transform:translateY(-15px) translateX(-10px) scale(.85);opacity:.5}
+      75%{transform:translateY(-40px) translateX(8px) scale(1.1);opacity:.9}
+    }
+    
+    /* EDGE GLOW */
+    .edge-glow {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      pointer-events: none;
+      z-index: 99;
+    }
+    
+    .edge-glow-left {
+      left: 0;
+      background: radial-gradient(ellipse at left center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%);
+      animation: pulseGlowLeft 8s ease-in-out infinite;
+    }
+    
+    .edge-glow-right {
+      right: 0;
+      background: radial-gradient(ellipse at right center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%);
+      animation: pulseGlowRight 8s ease-in-out infinite;
+    }
+    
+    @keyframes pulseGlowLeft {
+      0%,100%{opacity:.6;transform:translateX(-15px)}
+      50%{opacity:1;transform:translateX(0)}
+    }
+    
+    @keyframes pulseGlowRight {
+      0%,100%{opacity:.6;transform:translateX(15px)}
+      50%{opacity:1;transform:translateX(0)}
     }
   </style>
 </head>
 <body>
+  <!-- Particles / Fireflies Effect -->
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Edge Glow Effect -->
+  <div class="edge-glow edge-glow-left"></div>
+  <div class="edge-glow edge-glow-right"></div>
+
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="image/logo.png" alt="Mat Élagage Logo" width="45" height="45">
-        Mat Élagage
+        <img src="image/logo.png" alt="ONE ÉLAGAGE Logo" width="70" height="70">
+        
       </a>
       
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#realisations">Réalisations</a></li>
-        <li><a href="index.html#about">À propos</a></li>
-        <li><a href="tarif.html">Tarifs</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
+        <!-- Lang selector mobile (en haut du menu) -->
+        <li class="nav-lang-mobile">
+          <div class="lang-dropdown">
+            <button class="lang-selector lang-selector-mobile" id="lang-selector-mobile">
+              <i class="fas fa-globe"></i>
+              <span id="current-lang-mobile">FR</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
+            </button>
+            <div class="lang-options" id="lang-options-mobile">
+              <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+              <button class="lang-option" data-lang="en">🇬🇧 English</button>
+              <button class="lang-option" data-lang="nl">🇳🇱 Nederlands</button>
+              <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+            </div>
+          </div>
+        </li>
+        
+        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#realisations" data-i18n="nav.realisations">Réalisations</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+        <li><a href="tarif.html" data-i18n="nav.tarifs">Tarifs</a></li>
+        <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+        
+        <!-- Contact button mobile (en bas du menu) -->
+        <li class="nav-contact-mobile">
+          <a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
+        </li>
       </ul>
+
+      <div class="navbar-actions">
+        <div class="lang-dropdown">
+          <button class="lang-selector" id="lang-selector">
+            <i class="fas fa-globe"></i>
+            <span id="current-lang">FR</span>
+            <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
+          </button>
+          <div class="lang-options" id="lang-options">
+            <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button class="lang-option" data-lang="nl">🇳🇱 Nederlands</button>
+            <button class="lang-option" data-lang="de">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn-primary" data-i18n="nav.contact">Contact</a>
+      </div>
 
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
         <span class="bar"></span>
@@ -498,10 +850,10 @@
   <header class="page-hero">
     <div class="container">
       <div class="breadcrumbs">
-        <a href="index.html">Accueil</a> / FAQ
+        <a href="index.html" data-i18n="faq.breadcrumb.home">Accueil</a> <span data-i18n="faq.breadcrumb.separator">/</span> <span data-i18n="nav.faq">FAQ</span>
       </div>
-      <h1>Questions Fréquentes</h1>
-      <p class="lead">Tout ce que vous devez savoir sur nos services d'élagage, abattage et entretien paysager à Fayence et alentours.</p>
+      <h1 data-i18n="faq.title">Questions Fréquentes</h1>
+      <p class="lead" data-i18n="faq.subtitle">Tout ce que vous devez savoir sur nos services d'élagage, abattage et entretien paysager sur la Côte d'Azur.</p>
     </div>
   </header>
 
@@ -517,12 +869,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-clock"></i>
               </div>
-              <span>Combien de temps dure une intervention ?</span>
+              <span data-i18n="faq.q1.title">Combien de temps dure une intervention ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Ça dépend du chantier. Un élagage standard prend quelques heures. Pour des arbres plus grands ou plusieurs sujets, il faut parfois une journée complète. On vous précise tout au moment du devis.</p>
+            <p data-i18n="faq.q1.answer">Ça dépend du chantier. Un élagage standard prend quelques heures. Pour des arbres plus grands ou plusieurs sujets, il faut parfois une journée complète. On vous précise tout au moment du devis.</p>
           </div>
         </div>
 
@@ -533,12 +885,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-users"></i>
               </div>
-              <span>Travaillez-vous pour pros et particuliers ?</span>
+              <span data-i18n="faq.q2.title">Travaillez-vous pour pros et particuliers ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui. Particuliers, entreprises, copropriétés, agences immobilières, centres équestres… on s'adapte aux contraintes de chaque site et de chaque client.</p>
+            <p data-i18n="faq.q2.answer">Oui. Particuliers, entreprises, copropriétés, agences immobilières, centres équestres… on s'adapte aux contraintes de chaque site et de chaque client.</p>
           </div>
         </div>
 
@@ -549,12 +901,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-gavel"></i>
               </div>
-              <span>L'élagage est-il réglementé ?</span>
+              <span data-i18n="faq.q3.title">L'élagage est-il réglementé ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui, certaines communes imposent des périodes d'intervention et des distances à respecter. On vous conseille selon votre commune et on intervient dans les règles.</p>
+            <p data-i18n="faq.q3.answer">Oui, certaines communes imposent des périodes d'intervention et des distances à respecter. On vous conseille selon votre commune et on intervient dans les règles.</p>
           </div>
         </div>
 
@@ -565,12 +917,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-user-check"></i>
               </div>
-              <span>Dois-je être présent pendant les travaux ?</span>
+              <span data-i18n="faq.q4.title">Dois-je être présent pendant les travaux ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Ce n'est pas obligatoire. C'est juste plus pratique si des choix techniques doivent être validés sur place. Dans tous les cas, on laisse un chantier propre et vous êtes tenu informé.</p>
+            <p data-i18n="faq.q4.answer">Ce n'est pas obligatoire. C'est juste plus pratique si des choix techniques doivent être validés sur place. Dans tous les cas, on laisse un chantier propre et vous êtes tenu informé.</p>
           </div>
         </div>
 
@@ -581,12 +933,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-leaf"></i>
               </div>
-              <span>Les déchets verts sont-ils évacués ?</span>
+              <span data-i18n="faq.q5.title">Les déchets verts sont-ils évacués ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui. Évacuation, broyage et valorisation possible selon le volume. C'est précisé sur le devis. Vous pouvez aussi choisir de garder le bois de chauffage si vous le souhaitez.</p>
+            <p data-i18n="faq.q5.answer">Oui. Évacuation, broyage et valorisation possible selon le volume. C'est précisé sur le devis. Vous pouvez aussi choisir de garder le bois de chauffage si vous le souhaitez.</p>
           </div>
         </div>
 
@@ -597,12 +949,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-file-invoice"></i>
               </div>
-              <span>Les devis sont-ils gratuits ?</span>
+              <span data-i18n="faq.q6.title">Les devis sont-ils gratuits ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui, devis gratuit et sans engagement. Demandez-le via le <a href="index.html#contact">formulaire de contact</a> ou par téléphone. Réponse sous 24h garantie.</p>
+            <p data-i18n="faq.q6.answer">Oui, devis gratuit et sans engagement. Demandez-le via le <a href="index.html#contact">formulaire de contact</a> ou par téléphone. Réponse sous 24h garantie.</p>
           </div>
         </div>
 
@@ -613,12 +965,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
-              <span>Êtes-vous assuré ?</span>
+              <span data-i18n="faq.q7.title">Êtes-vous assuré ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui, nous disposons d'une assurance RC Pro couvrant tous nos chantiers. Vous travaillez avec un professionnel certifié et équipé selon les normes en vigueur.</p>
+            <p data-i18n="faq.q7.answer">Oui, nous disposons d'une assurance RC Pro couvrant tous nos chantiers. Vous travaillez avec un professionnel certifié et équipé selon les normes en vigueur.</p>
           </div>
         </div>
 
@@ -629,12 +981,12 @@
               <div class="faq-icon">
                 <i class="fa-solid fa-calendar-check"></i>
               </div>
-              <span>Intervenez-vous en urgence ?</span>
+              <span data-i18n="faq.q8.title">Intervenez-vous en urgence ?</span>
             </div>
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p>Oui, nous intervenons rapidement en cas d'urgence (arbre dangereux, branche cassée après tempête, etc.). Contactez-nous et on organise une intervention dans les plus brefs délais.</p>
+            <p data-i18n="faq.q8.answer">Oui, nous intervenons rapidement en cas d'urgence (arbre dangereux, branche cassée après tempête, etc.). Contactez-nous et on organise une intervention dans les plus brefs délais.</p>
           </div>
         </div>
 
@@ -646,11 +998,11 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
-        <h2>Une autre question ?</h2>
-        <p>N'hésitez pas à nous contacter. On répond vite et clairement à toutes vos demandes.</p>
+        <h2 data-i18n="faq.cta.title">Une autre question ?</h2>
+        <p data-i18n="faq.cta.text">N'hésitez pas à nous contacter. On répond vite et clairement à toutes vos demandes.</p>
         <a href="index.html#contact" class="btn-primary">
           <i class="fa-solid fa-message"></i>
-          Nous contacter
+          <span data-i18n="faq.cta.button">Nous contacter</span>
         </a>
       </div>
     </div>
@@ -661,89 +1013,106 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h3>Mat Élagage</h3>
-          <p>Élagueur-grimpeur professionnel basé à Fayence. Interventions rapides et chantiers propres dans tout le canton.</p>
+          <h3 data-i18n="footer.brand">ONE ÉLAGAGE</h3>
+          <p data-i18n="footer.tagline">Élagueur-grimpeur professionnel situé à Callian. Interventions rapides et chantiers propres sur toute la Côte d'Azur.</p>
         </div>
         
         <div class="footer-links">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
           <ul>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#realisations">Réalisations</a></li>
-            <li><a href="index.html#about">À propos</a></li>
-            <li><a href="tarif.html">Tarifs</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="index.html#realisations" data-i18n="nav.realisations">Réalisations</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+            <li><a href="tarif.html" data-i18n="nav.tarifs">Tarifs</a></li>
+            <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact_title">Contact</h4>
           <ul>
-            <li><a href="tel:+33612345678">06 12 34 56 78</a></li>
-            <li><a href="mailto:contact@mat-elagage.fr">contact@mat-elagage.fr</a></li>
-            <li>Fayence & alentours</li>
+            <li><a href="tel:+33649982083">06 49 98 20 83</a></li>
+            <li><a href="/cdn-cgi/l/email-protection#b7dad6c3dfdec499d2dbd6d0d6d0d2f7d0dad6dedb99d4d8da"><span class="__cf_email__" data-cfemail="e48985908c8d97ca81888583858381a48389858d88ca878b89">[email&#160;protected]</span></a></li>
+            <li data-i18n="footer.location">Côte d'Azur</li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Mat Élagage - Tous droits réservés</p>
+        <p data-i18n="footer.copyright">&copy; 2025 ONE ÉLAGAGE - Tous droits réservés</p>
       </div>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Accordéon FAQ (spécifique à cette page)
+    (function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const isOpen = answer.classList.contains('open');
+          
+          // Fermer toutes les autres réponses
+          document.querySelectorAll('.faq-answer').forEach(a => {
+            a.classList.remove('open');
+          });
+          
+          document.querySelectorAll('.faq-question').forEach(q => {
+            q.setAttribute('aria-expanded', 'false');
+          });
+          
+          // Ouvrir celle cliquée (si elle n'était pas déjà ouverte)
+          if (!isOpen) {
+            answer.classList.add('open');
+            question.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
     // Burger menu
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
+(function() {
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+      navLinks.classList.toggle('show');
+      burger.setAttribute('aria-expanded', !isExpanded);
+      
+      if (!isExpanded) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
 
-    if (burger && navLinks) {
-      burger.addEventListener('click', () => {
-        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-        navLinks.classList.toggle('show');
-        burger.setAttribute('aria-expanded', !isExpanded);
-        
-        if (!isExpanded) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = '';
-        }
-      });
-
-      // Fermer au clic sur un lien
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('show');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-
-    // Accordéon FAQ
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const isOpen = answer.classList.contains('open');
-        
-        // Fermer toutes les autres réponses
-        document.querySelectorAll('.faq-answer').forEach(a => {
-          a.classList.remove('open');
-        });
-        
-        document.querySelectorAll('.faq-question').forEach(q => {
-          q.setAttribute('aria-expanded', 'false');
-        });
-        
-        // Toggle la réponse actuelle
-        if (!isOpen) {
-          answer.classList.add('open');
-          question.setAttribute('aria-expanded', 'true');
-        }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
     });
-  </script>
+  }
+})();
+
+// Navbar scroll effect
+(function() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+})();
+</script>
 </body>
 </html>

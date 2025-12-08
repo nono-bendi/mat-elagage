@@ -1,50 +1,52 @@
 {
   "fr": {
     "nav": {
+      "home": "Accueil",
       "services": "Services",
       "realisations": "Réalisations",
       "about": "À propos",
       "tarifs": "Tarifs",
-      "contact": "Contact"
+      "contact": "Contact",
+      "faq": "FAQ"
     },
     "hero": {
-      "eyebrow": "Élagage & entretien à Fayence",
-      "title": "Élagage & abattage propre et sécurisé",
-      "subtitle": "Jeune élagueur basé à Fayence, interventions rapides et chantiers propres dans tout le canton.",
-      "cta": "Devis gratuit sous 24h",
+      "eyebrow": "Paysagiste & Élagueur - Var & Alpes-Maritimes",
+      "title": "L'Art de l'Élagage sur la Côte d'Azur",
+      "subtitle": "Situé à Callian, j'interviens de Sainte-Maxime à Vence pour vos travaux délicats. Savoir-faire, sécurité et propreté irréprochable.",
+      "cta": "Demander un devis gratuit",
       "badges": {
         "insured": "Assurance RC Pro",
-        "fast": "Intervention rapide",
-        "clean": "Chantier propre"
+        "fast": "Travail Soigné",
+        "english": "English Spoken"
       },
       "stats": {
-        "clients": "clients satisfaits",
-        "villages": "villages du canton",
-        "quote": "pour le devis"
+        "clients": "Satisfaction client",
+        "zone": "Rayon d'intervention",
+        "quote": "Réponse devis"
       }
     },
     "services": {
       "title": "Nos Services",
       "subtitle": "Des prestations adaptées à tous vos besoins d'entretien paysager",
       "elagage": {
-        "title": "Élagage Raisonné",
-        "desc": "Tailles de formation, éclaircissage, réduction de couronne. Intervention dans le respect de la biologie de l'arbre pour garantir sécurité et longévité."
+        "title": "Élagage Professionnel",
+        "desc": "Taille et entretien de tous types d'arbres (pins, chênes, platanes). Travail en hauteur sécurisé, matériel professionnel."
       },
       "abattage": {
-        "title": "Abattage Contrôlé",
-        "desc": "Démontage par rétention en milieu contraint, abattage directionnel. Évacuation des branches et rognage de souche inclus."
+        "title": "Abattage d'Arbres",
+        "desc": "Démontage contrôlé même en espace réduit. Abattage directionnel, rognage de souche et évacuation complète des déchets."
       },
       "haies": {
         "title": "Taille de Haies",
-        "desc": "Entretien régulier pour un jardin net et harmonieux. Formes géométriques ou naturelles selon vos préférences."
+        "desc": "Entretien régulier de vos haies et arbustes. Formes géométriques ou naturelles selon vos préférences."
       },
       "debroussaillage": {
-        "title": "Débroussaillage DFCI",
-        "desc": "Terrain dégagé selon normes réglementaires pour la prévention incendie. Intervention rapide dans tout le canton."
+        "title": "Débroussaillage & OLD",
+        "desc": "Débroussaillage réglementaire pour la prévention incendie. Mise en conformité OLD de vos terrains et propriétés."
       },
       "fruitiers": {
-        "title": "Taille Fruitiers",
-        "desc": "Olivier, figuier, agrumes : taille adaptée au calendrier de chaque essence pour optimiser la production."
+        "title": "Palmiers & Fruitiers",
+        "desc": "Taille et nettoyage de palmiers, entretien de vos oliviers, agrumes et arbres fruitiers."
       },
       "urgences": {
         "title": "Urgences Tempête",
@@ -67,15 +69,40 @@
         "desc": "Démonte-pièces, techniques de rétention, équipements certifiés"
       }
     },
+    "processus": {
+      "title": "Notre Processus d'Intervention",
+      "subtitle": "De votre premier contact jusqu'au chantier terminé : un accompagnement complet",
+      "step1": {
+        "title": "Contact & Devis",
+        "desc": "Vous nous contactez par téléphone ou formulaire. Visite sur place pour évaluer vos besoins. Devis gratuit et détaillé sous 24h."
+      },
+      "step2": {
+        "title": "Planification",
+        "desc": "On fixe ensemble une date d'intervention selon vos disponibilités. Préparation du matériel et organisation du chantier."
+      },
+      "step3": {
+        "title": "Intervention",
+        "desc": "Travail sécurisé avec matériel professionnel certifié. Respect de l'arbre et de votre propriété. Communication régulière pendant le chantier."
+      },
+      "step4": {
+        "title": "Nettoyage",
+        "desc": "Évacuation complète des branches et déchets verts. Broyage ou évacuation selon votre choix. Chantier impeccable garanti."
+      },
+      "step5": {
+        "title": "Suivi & Conseils",
+        "desc": "Conseils d'entretien personnalisés pour vos arbres. Disponibilité pour toute question après intervention. Satisfaction garantie."
+      }
+    },
     "realisations": {
       "title": "Nos Plus Belles Interventions",
-      "subtitle": "Quelques exemples de nos réalisations à Fayence et alentours"
+      "subtitle": "Quelques exemples de nos réalisations sur la Côte d'Azur"
     },
     "about": {
+      "zone_title": "Zone d'Intervention",
       "title": "Mathis Duverger",
-      "subtitle": "Élagueur-Grimpeur professionnel à Fayence",
-      "text_1": "Passionné par le métier d'élagueur-grimpeur, j'interviens principalement dans le <strong>canton de Fayence</strong> et ses alentours. Chaque chantier est réalisé avec <strong>sérieux et professionnalisme</strong> : respect de l'arbre, sécurité maximale, et travail soigné.",
-      "text_2": "Je collabore avec des particuliers, hôtels, restaurants, centres équestres et agences immobilières. <strong>Intervention possible hors zone</strong> selon disponibilités — n'hésitez pas à me contacter pour un devis personnalisé."
+      "subtitle": "Élagueur-Grimpeur Professionnel - Côte d'Azur",
+      "text_1": "Situé à Callian, j'interviens sur l'ensemble de la <strong>Côte d'Azur</strong> (Var et Alpes-Maritimes). Spécialisé dans les accès difficiles et les arbres de grande hauteur, j'apporte une solution technique à vos extérieurs.",
+      "text_2": "Que vous soyez un particulier à <strong>Mougins</strong>, un domaine viticole dans le <strong>Var</strong> ou une copropriété à <strong>Cannes</strong>, je garantis une intervention discrète, sécurisée et un nettoyage impeccable du chantier."
     },
     "testimonials": {
       "title": "Ce Que Disent Nos Clients",
@@ -83,12 +110,12 @@
       "t1": {
         "text": "Mathis a sauvé notre chêne centenaire avec une taille d'une précision chirurgicale. Chantier impeccable, conseils précieux.",
         "author": "Sophie Renard",
-        "location": "Fayence"
+        "location": "Mougins"
       },
       "t2": {
         "text": "Ponctuel, pro et efficace. Mon jardin n'a jamais été aussi net. Je recommande sans hésiter.",
         "author": "Julien Terrier",
-        "location": "Tourrettes"
+        "location": "Saint-Raphaël"
       },
       "t3": {
         "text": "Belle intervention d'élagage, rapide et soignée. Un vrai professionnel passionné par son métier.",
@@ -110,15 +137,67 @@
         "phone_label": "Téléphone",
         "email_label": "Email",
         "zone_label": "Zone d'intervention",
-        "zone_text": "Fayence & Canton"
+        "zone_text": "Var (83) & Alpes-Maritimes (06)"
+      }
+    },
+    "whatsapp": {
+      "title": "Besoin d'une intervention urgente ?",
+      "text": "Contactez-moi directement sur WhatsApp pour une réponse rapide",
+      "btn": "Contacter sur WhatsApp"
+    },
+    "tarif": {
+      "breadcrumb": "Tarifs",
+      "title": "Tarifs indicatifs",
+      "subtitle": "Des prestations adaptées à vos besoins, avec des prix <strong>transparents</strong>. Les montants ci-dessous sont <strong>indicatifs</strong> : ils varient selon la hauteur, l'accès, la dangerosité et le volume de déchets. Un <strong>devis gratuit</strong> permet d'affiner précisément.",
+      "pricing": {
+        "shrub": { "title": "Élagage arbuste (< 5 m)", "price": "150€ à 300€" },
+        "medium": { "title": "Élagage arbre moyen (5-10 m)", "price": "350€ à 700€" },
+        "large": { "title": "Élagage grand arbre (10-15 m)", "price": "500€ à 1000€" },
+        "xlarge": { "title": "Très grand arbre (15-30 m)", "price": "800€ à 2000€" },
+        "hedge": { "title": "Taille de haie", "price": "3€ à 12€ / m linéaire" },
+        "clearing": { "title": "Débroussaillage", "price": "25€ à 50€ / heure" },
+        "palm": { "title": "Taille de palmier", "price": "80€ à 350€" },
+        "fruit": { "title": "Taille arbres fruitiers", "price": "150€ à 200€" },
+        "felling": { "title": "Abattage d'arbre", "price": "250€ à 2500€" }
+      },
+      "info": {
+        "title": "Informations utiles",
+        "item1": "Le <strong>déplacement</strong> est offert dans un rayon de 30km autour de Callian",
+        "item2": "Évacuation et <strong>valorisation des déchets</strong> en option selon le volume",
+        "item3": "Interventions <strong>sécurisées</strong> (EPI, rétention) – Assurance RC Pro",
+        "item4": "Possibilité d'intervention <strong>hors zone</strong> selon disponibilités"
+      },
+      "cta": "Demander un devis gratuit"
+    },
+    "faq": {
+      "breadcrumb": { "home": "Accueil", "separator": "/" },
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur nos services d'élagage, abattage et entretien paysager sur la Côte d'Azur.",
+      "q1": { "title": "Combien de temps dure une intervention ?", "answer": "Ça dépend du chantier. Un élagage standard prend quelques heures. Pour des arbres plus grands ou plusieurs sujets, il faut parfois une journée complète. On vous précise tout au moment du devis." },
+      "q2": { "title": "Travaillez-vous pour pros et particuliers ?", "answer": "Oui. Particuliers, entreprises, copropriétés, agences immobilières, centres équestres… on s'adapte aux contraintes de chaque site et de chaque client." },
+      "q3": { "title": "L'élagage est-il réglementé ?", "answer": "Oui, certaines communes imposent des périodes d'intervention et des distances à respecter. On vous conseille selon votre commune et on intervient dans les règles." },
+      "q4": { "title": "Dois-je être présent pendant les travaux ?", "answer": "Ce n'est pas obligatoire. C'est juste plus pratique si des choix techniques doivent être validés sur place. Dans tous les cas, on laisse un chantier propre et vous êtes tenu informé." },
+      "q5": { "title": "Les déchets verts sont-ils évacués ?", "answer": "Oui. Évacuation, broyage et valorisation possible selon le volume. C'est précisé sur le devis. Vous pouvez aussi choisir de garder le bois de chauffage si vous le souhaitez." },
+      "q6": { "title": "Les devis sont-ils gratuits ?", "answer": "Oui, devis gratuit et sans engagement. Demandez-le via le formulaire de contact ou par téléphone. Réponse sous 24h garantie." },
+      "q7": { "title": "Êtes-vous assuré ?", "answer": "Oui, nous disposons d'une assurance RC Pro couvrant tous nos chantiers. Vous travaillez avec un professionnel certifié et équipé selon les normes en vigueur." },
+      "q8": { "title": "Intervenez-vous en urgence ?", "answer": "Oui, nous intervenons rapidement en cas d'urgence (arbre dangereux, branche cassée après tempête, etc.). Contactez-nous et on organise une intervention dans les plus brefs délais." },
+      "cta": {
+        "title": "Une autre question ?",
+        "text": "N'hésitez pas à nous contacter. On répond vite et clairement à toutes vos demandes.",
+        "button": "Nous contacter"
       }
     },
     "footer": {
-      "brand_desc": "Jeune élagueur passionné basé à Fayence. Interventions rapides, chantiers propres et conseils personnalisés pour vos arbres.",
+      "brand": "ONE ÉLAGAGE",
+      "tagline": "Élagueur-grimpeur professionnel situé à Callian.",
+      "brand_desc": "Jeune élagueur passionné situé à Callian. Interventions rapides, chantiers propres et conseils personnalisés pour vos arbres.",
       "nav_title": "Navigation",
+      "social_title": "Suivez-nous",
       "contact_title": "Contact",
-      "location": "Fayence & alentours",
-      "copyright": "&copy; 2025 Mat Élagage — Tous droits réservés.",
+      "location": "PACA / Côte d'Azur",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Tous droits réservés.",
+      "phone": "06 49 98 20 83",
+      "email": "mathis.elagage@gmail.com",
       "certs": {
         "rc": "RC Pro",
         "epi": "EPI & sécurité",
@@ -128,50 +207,52 @@
   },
   "en": {
     "nav": {
+      "home": "Home",
       "services": "Services",
       "realisations": "Projects",
       "about": "About",
       "tarifs": "Rates",
-      "contact": "Contact"
+      "contact": "Contact",
+      "faq": "FAQ"
     },
     "hero": {
-      "eyebrow": "Tree pruning & maintenance in Fayence",
-      "title": "Professional tree pruning & safe removal",
-      "subtitle": "Young tree surgeon based in Fayence. Fast intervention and spotless sites throughout the canton.",
-      "cta": "Free quote within 24h",
+      "eyebrow": "Landscaper & Tree Surgeon - Var & French Riviera",
+      "title": "The Art of Tree Surgery on the French Riviera",
+      "subtitle": "Located in Callian, operating from Sainte-Maxime to Vence for your delicate works. Expertise, safety, and spotless cleanup guaranteed.",
+      "cta": "Get a Free Quote",
       "badges": {
         "insured": "Fully Insured",
-        "fast": "Fast Response",
-        "clean": "Spotless Site"
+        "fast": "Neat Work",
+        "english": "English Spoken"
       },
       "stats": {
-        "clients": "satisfied clients",
-        "villages": "local villages covered",
-        "quote": "for a quote"
+        "clients": "client satisfaction",
+        "zone": "Service radius",
+        "quote": "Quote response"
       }
     },
     "services": {
       "title": "Our Services",
       "subtitle": "Tailored solutions for all your landscape maintenance needs",
       "elagage": {
-        "title": "Tree Pruning",
-        "desc": "Formative pruning, thinning, crown reduction. Work performed respecting tree biology to ensure safety and longevity."
+        "title": "Professional Pruning",
+        "desc": "Trimming and maintenance of all tree types (pines, oaks, plane trees). Safe work at heights, professional equipment."
       },
       "abattage": {
-        "title": "Controlled Felling",
-        "desc": "Sectional dismantling in confined spaces, directional felling. Branch removal and stump grinding included."
+        "title": "Tree Felling",
+        "desc": "Controlled dismantling even in confined spaces. Directional felling, stump grinding, and complete waste removal."
       },
       "haies": {
         "title": "Hedge Trimming",
-        "desc": "Regular maintenance for a neat and harmonious garden. Geometric or natural shapes according to your preference."
+        "desc": "Regular maintenance for your hedges and shrubs. Geometric or natural shapes according to your preference."
       },
       "debroussaillage": {
-        "title": "Brush Clearing (DFCI)",
-        "desc": "Land clearing according to fire prevention regulations (OLD). Fast intervention throughout the canton."
+        "title": "Brush Clearing & Fire Safety",
+        "desc": "Regulatory brush clearing for fire prevention (OLD). Bringing your land and properties into compliance."
       },
       "fruitiers": {
-        "title": "Fruit Tree Pruning",
-        "desc": "Olive trees, fig trees, citrus: pruning adapted to the season of each species to optimize production."
+        "title": "Palms & Fruit Trees",
+        "desc": "Pruning and cleaning of palm trees, maintenance of your olive trees, citrus, and fruit trees."
       },
       "urgences": {
         "title": "Storm Emergency",
@@ -182,8 +263,8 @@
       "title": "Our Commitments",
       "subtitle": "What makes the difference every day",
       "proprete": {
-        "title": "Impeccable Sites",
-        "desc": "Complete removal of green waste and thorough cleanup"
+        "title": "Spotless Sites",
+        "desc": "Complete removal of waste and thorough cleanup"
       },
       "rapidite": {
         "title": "Responsiveness",
@@ -194,15 +275,40 @@
         "desc": "Rigging equipment, retention techniques, certified safety gear"
       }
     },
+    "processus": {
+      "title": "Our Work Process",
+      "subtitle": "From your first contact to the finished job: complete support",
+      "step1": {
+        "title": "Contact & Quote",
+        "desc": "Contact us by phone or form. On-site visit to assess your needs. Free detailed quote within 24h."
+      },
+      "step2": {
+        "title": "Planning",
+        "desc": "We set an intervention date together according to your availability. Equipment preparation and site organization."
+      },
+      "step3": {
+        "title": "Intervention",
+        "desc": "Safe work with certified professional equipment. Respect for the tree and your property. Regular communication during the job."
+      },
+      "step4": {
+        "title": "Cleanup",
+        "desc": "Complete removal of branches and green waste. Chipping or removal as per your choice. Spotless site guaranteed."
+      },
+      "step5": {
+        "title": "Follow-up & Advice",
+        "desc": "Personalized maintenance advice for your trees. Available for any questions after intervention. Satisfaction guaranteed."
+      }
+    },
     "realisations": {
       "title": "Our Finest Work",
-      "subtitle": "Some examples of our achievements in Fayence and surroundings"
+      "subtitle": "Some examples of our achievements on the French Riviera"
     },
     "about": {
+      "zone_title": "Service Area",
       "title": "Mathis Duverger",
-      "subtitle": "Professional Tree Climber / Arborist in Fayence",
-      "text_1": "Passionate about the tree surgery profession, I mainly operate in the <strong>Fayence canton</strong> and surrounding areas. Every job is carried out with <strong>seriousness and professionalism</strong>: respect for the tree, maximum safety, and neat work.",
-      "text_2": "I collaborate with private individuals, hotels, restaurants, equestrian centres, and estate agencies. <strong>Intervention possible outside the zone</strong> subject to availability — do not hesitate to contact me for a personalised quote."
+      "subtitle": "Professional Tree Climber - French Riviera",
+      "text_1": "Located in Callian, I operate throughout the <strong>French Riviera</strong> (Var and Alpes-Maritimes). Specializing in difficult access and tall trees, I bring a technical solution to your outdoors.",
+      "text_2": "Whether you are a private individual in <strong>Mougins</strong>, a vineyard in the <strong>Var</strong>, or a co-ownership in <strong>Cannes</strong>, I guarantee a discreet, secure intervention and impeccable site cleaning."
     },
     "testimonials": {
       "title": "What Our Clients Say",
@@ -210,12 +316,12 @@
       "t1": {
         "text": "Mathis saved our centenary oak with surgically precise pruning. Impeccable site, precious advice.",
         "author": "Sophie Renard",
-        "location": "Fayence"
+        "location": "Mougins"
       },
       "t2": {
         "text": "Punctual, pro, and efficient. My garden has never been so neat. I recommend without hesitation.",
         "author": "Julien Terrier",
-        "location": "Tourrettes"
+        "location": "Saint-Raphaël"
       },
       "t3": {
         "text": "Beautiful pruning job, fast and neat. A true professional passionate about his trade.",
@@ -237,15 +343,67 @@
         "phone_label": "Phone",
         "email_label": "Email",
         "zone_label": "Service Area",
-        "zone_text": "Fayence & Canton"
+        "zone_text": "Var (83) & Alpes-Maritimes (06)"
+      }
+    },
+    "whatsapp": {
+      "title": "Need urgent assistance?",
+      "text": "Contact me directly on WhatsApp for a fast response",
+      "btn": "Contact on WhatsApp"
+    },
+    "tarif": {
+      "breadcrumb": "Rates",
+      "title": "Indicative Rates",
+      "subtitle": "Services adapted to your needs, with <strong>transparent</strong> pricing. The amounts below are <strong>indicative</strong>: they vary according to height, access, danger level, and waste volume. A <strong>free quote</strong> allows for precise estimation.",
+      "pricing": {
+        "shrub": { "title": "Shrub Pruning (< 5 m)", "price": "150€ to 300€" },
+        "medium": { "title": "Medium Tree Pruning (5-10 m)", "price": "350€ to 700€" },
+        "large": { "title": "Large Tree Pruning (10-15 m)", "price": "500€ to 1000€" },
+        "xlarge": { "title": "Very Large Tree (15-30 m)", "price": "800€ to 2000€" },
+        "hedge": { "title": "Hedge Trimming", "price": "3€ to 12€ / linear meter" },
+        "clearing": { "title": "Brush Clearing", "price": "25€ to 50€ / hour" },
+        "palm": { "title": "Palm Tree Trimming", "price": "80€ to 350€" },
+        "fruit": { "title": "Fruit Tree Pruning", "price": "150€ to 200€" },
+        "felling": { "title": "Tree Felling", "price": "250€ to 2500€" }
+      },
+      "info": {
+        "title": "Useful Information",
+        "item1": "<strong>Travel</strong> is free within 30km of Callian",
+        "item2": "Waste evacuation and <strong>recycling</strong> optional depending on volume",
+        "item3": "<strong>Secure</strong> interventions (PPE, retention) – Liability Insurance",
+        "item4": "Possibility of intervention <strong>outside zone</strong> depending on availability"
+      },
+      "cta": "Get a Free Quote"
+    },
+    "faq": {
+      "breadcrumb": { "home": "Home", "separator": "/" },
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our tree surgery, felling, and landscaping services on the French Riviera.",
+      "q1": { "title": "How long does an intervention take?", "answer": "It depends on the site. Standard pruning takes a few hours. For larger trees or multiple subjects, it sometimes takes a full day. We specify everything in the quote." },
+      "q2": { "title": "Do you work for pros and individuals?", "answer": "Yes. Individuals, businesses, co-ownerships, real estate agencies, equestrian centers... we adapt to the constraints of each site and client." },
+      "q3": { "title": "Is tree pruning regulated?", "answer": "Yes, some municipalities impose intervention periods and distances to respect. We advise you according to your municipality and intervene within the rules." },
+      "q4": { "title": "Do I need to be present during the work?", "answer": "It is not mandatory. It's just more practical if technical choices need to be validated on site. In any case, we leave a clean site and keep you informed." },
+      "q5": { "title": "Is green waste removed?", "answer": "Yes. Evacuation, chipping, and recycling possible depending on volume. This is specified in the quote. You can also choose to keep the firewood if you wish." },
+      "q6": { "title": "Are quotes free?", "answer": "Yes, free quote with no obligation. Ask for it via the contact form or by phone. Answer within 24h guaranteed." },
+      "q7": { "title": "Are you insured?", "answer": "Yes, we have Professional Liability insurance covering all our sites. You work with a certified professional equipped according to current standards." },
+      "q8": { "title": "Do you intervene in emergencies?", "answer": "Yes, we intervene quickly in case of emergency (dangerous tree, broken branch after storm, etc.). Contact us and we will organize an intervention as soon as possible." },
+      "cta": {
+        "title": "Another question?",
+        "text": "Do not hesitate to contact us. We answer all your requests quickly and clearly.",
+        "button": "Contact Us"
       }
     },
     "footer": {
-      "brand_desc": "Young passionate tree surgeon based in Fayence. Fast interventions, clean sites, and personalised advice for your trees.",
+      "brand": "ONE ÉLAGAGE",
+      "tagline": "Professional tree climber located in Callian.",
+      "brand_desc": "Young passionate tree surgeon located in Callian. Fast interventions, clean sites, and personalised advice for your trees.",
       "nav_title": "Navigation",
+      "social_title": "Follow us",
       "contact_title": "Contact",
-      "location": "Fayence & surroundings",
-      "copyright": "&copy; 2025 Mat Élagage — All rights reserved.",
+      "location": "PACA / French Riviera",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — All rights reserved.",
+      "phone": "06 49 98 20 83",
+      "email": "mathis.elagage@gmail.com",
       "certs": {
         "rc": "Liability Insurance",
         "epi": "PPE & Safety",
@@ -255,26 +413,28 @@
   },
   "nl": {
     "nav": {
+      "home": "Home",
       "services": "Diensten",
       "realisations": "Realisaties",
       "about": "Over mij",
       "tarifs": "Tarieven",
-      "contact": "Contact"
+      "contact": "Contact",
+      "faq": "FAQ"
     },
     "hero": {
-      "eyebrow": "Snoeiwerk & onderhoud in Fayence",
-      "title": "Bomen snoeien & veilig vellen",
-      "subtitle": "Jonge boomverzorger gevestigd in Fayence, snelle interventies en keurig achtergelaten werven in het hele kanton.",
-      "cta": "Gratis offerte binnen 24u",
+      "eyebrow": "Tuinarchitect & Boomverzorger - Var & Azurenkust",
+      "title": "De Kunst van Boomverzorging aan de Côte d'Azur",
+      "subtitle": "Gevestigd in Callian, actief van Sainte-Maxime tot Vence. Vakmanschap, veiligheid en onberispelijke opkuis.",
+      "cta": "Gratis offerte aanvragen",
       "badges": {
         "insured": "Volledig Verzekerd",
-        "fast": "Snelle Interventie",
-        "clean": "Propere Werf"
+        "fast": "Verzorgd Werk",
+        "english": "English Spoken"
       },
       "stats": {
-        "clients": "tevreden klanten",
-        "villages": "dorpen in de regio",
-        "quote": "voor de offerte"
+        "clients": "klanttevredenheid",
+        "zone": "Interventiestraal",
+        "quote": "Offerte respons"
       }
     },
     "services": {
@@ -282,23 +442,23 @@
       "subtitle": "Oplossingen op maat voor al uw tuinonderhoud",
       "elagage": {
         "title": "Vakkundig Snoeien",
-        "desc": "Vormsnoei, uitdunnen, kroonreductie. Interventie met respect voor de biologie van de boom voor veiligheid en levensduur."
+        "desc": "Snoeien en onderhoud van alle soorten bomen (dennen, eiken, platanen). Veilig werk op hoogte, professioneel materiaal."
       },
       "abattage": {
-        "title": "Gecontroleerd Vellen",
-        "desc": "Ontmanteling (afvangen) in beperkte ruimtes, gericht vellen. Afvoer van takken en stobbenfrezen inbegrepen."
+        "title": "Bomen Vellen",
+        "desc": "Gecontroleerde ontmanteling, ook in beperkte ruimtes. Gericht vellen, stobbenfrezen en volledige afvoer van groenafval."
       },
       "haies": {
         "title": "Hagen Scheren",
-        "desc": "Regelmatig onderhoud voor een strakke en harmonieuze tuin. Geometrische of natuurlijke vormen naar uw wens."
+        "desc": "Regelmatig onderhoud voor uw hagen en struiken. Geometrische of natuurlijke vormen naar uw wens."
       },
       "debroussaillage": {
-        "title": "Struiken Ruimen (Brandpreventie)",
-        "desc": "Terrein vrijmaken volgens de wettelijke normen voor brandpreventie (OLD). Snelle service in het hele kanton."
+        "title": "Struiken Ruimen & Brandpreventie",
+        "desc": "Wettelijk verplicht struikgewas ruimen (OLD) voor brandpreventie. Uw terrein conform maken aan de regelgeving."
       },
       "fruitiers": {
-        "title": "Fruitbomen Snoeien",
-        "desc": "Olijfbomen, vijgenbomen, citrus: snoei aangepast aan het seizoen van elke soort om de productie te optimaliseren."
+        "title": "Palmen & Fruitbomen",
+        "desc": "Snoeien en schoonmaken van palmbomen, onderhoud van uw olijfbomen, citrusbomen en fruitbomen."
       },
       "urgences": {
         "title": "Noodinterventies Storm",
@@ -310,7 +470,7 @@
       "subtitle": "Wat dagelijks het verschil maakt",
       "proprete": {
         "title": "Onberispelijke Werven",
-        "desc": "Volledige afvoer van groenafval en grondige opkuis"
+        "desc": "Volledige afvoer van afval en grondige opkuis"
       },
       "rapidite": {
         "title": "Reactiviteit",
@@ -321,15 +481,40 @@
         "desc": "Klimmateriaal, afvangtechnieken, gecertificeerde veiligheidsuitrusting"
       }
     },
+    "processus": {
+      "title": "Ons Werkproces",
+      "subtitle": "Van uw eerste contact tot de afgewerkte werf: volledige begeleiding",
+      "step1": {
+        "title": "Contact & Offerte",
+        "desc": "Neem contact op per telefoon of formulier. Plaatsbezoek om uw behoeften te evalueren. Gratis gedetailleerde offerte binnen 24u."
+      },
+      "step2": {
+        "title": "Planning",
+        "desc": "We leggen samen een datum vast volgens uw beschikbaarheid. Voorbereiding van materiaal en organisatie van de werf."
+      },
+      "step3": {
+        "title": "Interventie",
+        "desc": "Veilig werken met gecertificeerd professioneel materiaal. Respect voor de boom en uw eigendom. Regelmatige communicatie tijdens het werk."
+      },
+      "step4": {
+        "title": "Opkuis",
+        "desc": "Volledige afvoer van takken en groenafval. Versnipperen of afvoeren naar keuze. Gegarandeerd propere werf."
+      },
+      "step5": {
+        "title": "Opvolging & Advies",
+        "desc": "Persoonlijk onderhoudsadvies voor uw bomen. Beschikbaar voor vragen na de interventie. Tevredenheid gegarandeerd."
+      }
+    },
     "realisations": {
       "title": "Onze Mooiste Werken",
-      "subtitle": "Enkele voorbeelden van realisaties in Fayence en omgeving"
+      "subtitle": "Enkele voorbeelden van realisaties aan de Côte d'Azur"
     },
     "about": {
+      "zone_title": "Interventiezone",
       "title": "Mathis Duverger",
-      "subtitle": "Professioneel Boomverzorger / Klimmer in Fayence",
-      "text_1": "Gepassioneerd door het vak van boomverzorger-klimmer, werk ik voornamelijk in het <strong>kanton Fayence</strong> en omgeving. Elke werf wordt uitgevoerd met <strong>ernst en professionalisme</strong>: respect voor de boom, maximale veiligheid en verzorgd werk.",
-      "text_2": "Ik werk samen met particulieren, hotels, restaurants, maneges en makelaarskantoren. <strong>Interventie mogelijk buiten de zone</strong> afhankelijk van beschikbaarheid — aarzel niet mij te contacteren voor een offerte op maat."
+      "subtitle": "Professioneel Boomverzorger / Klimmer - Côte d'Azur",
+      "text_1": "Gepassioneerd door het vak, werk ik vanuit Callian in de hele regio <strong>Côte d'Azur</strong> (Var en Alpes-Maritimes). Gespecialiseerd in moeilijke toegangen en hoge bomen.",
+      "text_2": "Of u nu een particulier bent in <strong>Mougins</strong>, een wijndomein in de <strong>Var</strong> of een mede-eigendom in <strong>Cannes</strong>, ik garandeer een discrete, veilige interventie en een onberispelijke werf."
     },
     "testimonials": {
       "title": "Wat Onze Klanten Zeggen",
@@ -337,12 +522,12 @@
       "t1": {
         "text": "Mathis heeft onze honderdjarige eik gered met chirurgisch precieze snoei. Onberispelijke werf, waardevol advies.",
         "author": "Sophie Renard",
-        "location": "Fayence"
+        "location": "Mougins"
       },
       "t2": {
         "text": "Stipt, professioneel en efficiënt. Mijn tuin is nog nooit zo netjes geweest. Ik raad hem zonder aarzelen aan.",
         "author": "Julien Terrier",
-        "location": "Tourrettes"
+        "location": "Saint-Raphaël"
       },
       "t3": {
         "text": "Mooi snoeiwerk, snel en verzorgd. Een echte vakman met passie voor zijn beroep.",
@@ -364,15 +549,67 @@
         "phone_label": "Telefoon",
         "email_label": "E-mail",
         "zone_label": "Interventiezone",
-        "zone_text": "Fayence & Kanton"
+        "zone_text": "Var (83) & Alpes-Maritimes (06)"
+      }
+    },
+    "whatsapp": {
+      "title": "Dringende hulp nodig?",
+      "text": "Neem direct contact op via WhatsApp voor een snel antwoord",
+      "btn": "Contacteer via WhatsApp"
+    },
+    "tarif": {
+      "breadcrumb": "Tarieven",
+      "title": "Indicatieve Tarieven",
+      "subtitle": "Diensten aangepast aan uw behoeften, met <strong>transparante</strong> prijzen. De onderstaande bedragen zijn <strong>indicatief</strong>: ze variëren afhankelijk van hoogte, toegang, gevaar en afvalvolume. Een <strong>gratis offerte</strong> maakt een precieze schatting mogelijk.",
+      "pricing": {
+        "shrub": { "title": "Snoeien struik (< 5 m)", "price": "150€ tot 300€" },
+        "medium": { "title": "Snoeien middelgrote boom (5-10 m)", "price": "350€ tot 700€" },
+        "large": { "title": "Snoeien grote boom (10-15 m)", "price": "500€ tot 1000€" },
+        "xlarge": { "title": "Zeer grote boom (15-30 m)", "price": "800€ tot 2000€" },
+        "hedge": { "title": "Hagen scheren", "price": "3€ tot 12€ / lopende meter" },
+        "clearing": { "title": "Struiken ruimen", "price": "25€ tot 50€ / uur" },
+        "palm": { "title": "Snoeien palmboom", "price": "80€ tot 350€" },
+        "fruit": { "title": "Snoeien fruitbomen", "price": "150€ tot 200€" },
+        "felling": { "title": "Bomen vellen", "price": "250€ tot 2500€" }
+      },
+      "info": {
+        "title": "Nuttige Informatie",
+        "item1": "<strong>Verplaatsing</strong> is gratis binnen 30km van Callian",
+        "item2": "Afvoer en <strong>recyclage van afval</strong> optioneel afhankelijk van volume",
+        "item3": "<strong>Veilige</strong> interventies (PBM, afvangtechnieken) – BA Verzekering",
+        "item4": "Mogelijkheid tot interventie <strong>buiten zone</strong> afhankelijk van beschikbaarheid"
+      },
+      "cta": "Gratis offerte aanvragen"
+    },
+    "faq": {
+      "breadcrumb": { "home": "Home", "separator": "/" },
+      "title": "Veelgestelde Vragen",
+      "subtitle": "Alles wat u moet weten over onze snoei-, kap- en landschapsdiensten aan de Côte d'Azur.",
+      "q1": { "title": "Hoe lang duurt een interventie?", "answer": "Dat hangt af van de werf. Standaard snoeiwerk duurt enkele uren. Voor grotere bomen of meerdere onderwerpen duurt het soms een hele dag. We specificeren alles in de offerte." },
+      "q2": { "title": "Werkt u voor particulieren en bedrijven?", "answer": "Ja. Particulieren, bedrijven, mede-eigendommen, vastgoedkantoren, maneges... we passen ons aan de beperkingen van elke site en klant aan." },
+      "q3": { "title": "Is bomen snoeien gereglementeerd?", "answer": "Ja, sommige gemeenten leggen interventieperiodes en afstanden op. Wij adviseren u volgens uw gemeente en werken volgens de regels." },
+      "q4": { "title": "Moet ik aanwezig zijn tijdens de werken?", "answer": "Het is niet verplicht. Het is gewoon praktischer als technische keuzes ter plaatse moeten worden gevalideerd. In ieder geval laten we een schone werf achter en houden we u op de hoogte." },
+      "q5": { "title": "Wordt groenafval afgevoerd?", "answer": "Ja. Afvoer, versnippering en recyclage mogelijk afhankelijk van het volume. Dit staat in de offerte. U kunt er ook voor kiezen om het brandhout te houden als u dat wenst." },
+      "q6": { "title": "Zijn offertes gratis?", "answer": "Ja, gratis offerte zonder verplichting. Vraag het aan via het contactformulier of per telefoon. Antwoord binnen 24u gegarandeerd." },
+      "q7": { "title": "Bent u verzekerd?", "answer": "Ja, wij hebben een BA-verzekering die al onze werven dekt. U werkt met een gecertificeerde professional die is uitgerust volgens de geldende normen." },
+      "q8": { "title": "Komt u tussen in noodgevallen?", "answer": "Ja, wij grijpen snel in bij noodgevallen (gevaarlijke boom, gebroken tak na storm, enz.). Neem contact met ons op en wij organiseren zo snel mogelijk een interventie." },
+      "cta": {
+        "title": "Nog een vraag?",
+        "text": "Aarzel niet om contact met ons op te nemen. Wij beantwoorden al uw vragen snel en duidelijk.",
+        "button": "Contacteer ons"
       }
     },
     "footer": {
-      "brand_desc": "Jonge gepassioneerde boomverzorger in Fayence. Snelle interventies, propere werven en persoonlijk advies voor uw bomen.",
+      "brand": "ONE ÉLAGAGE",
+      "tagline": "Professioneel boomverzorger aan de Côte d'Azur.",
+      "brand_desc": "Jonge gepassioneerde boomverzorger in Callian. Snelle interventies, propere werven en persoonlijk advies voor uw bomen.",
       "nav_title": "Navigatie",
+      "social_title": "Volg ons",
       "contact_title": "Contact",
-      "location": "Fayence & omgeving",
-      "copyright": "&copy; 2025 Mat Élagage — Alle rechten voorbehouden.",
+      "location": "PACA / Côte d'Azur",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle rechten voorbehouden.",
+      "phone": "06 49 98 20 83",
+      "email": "mathis.elagage@gmail.com",
       "certs": {
         "rc": "BA Verzekering",
         "epi": "PBM & Veiligheid",
@@ -382,50 +619,52 @@
   },
   "de": {
     "nav": {
+      "home": "Startseite",
       "services": "Leistungen",
       "realisations": "Projekte",
       "about": "Über uns",
       "tarifs": "Preise",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "faq": "FAQ"
     },
     "hero": {
-      "eyebrow": "Baumschnitt & Pflege in Fayence",
-      "title": "Sauberer Baumschnitt & sichere Fällung",
-      "subtitle": "Junger Baumkletterer aus Fayence. Schnelle Einsätze und saubere Baustellen im ganzen Kanton.",
-      "cta": "Kostenloses Angebot in 24h",
+      "eyebrow": "Landschaftsgärtner & Baumpfleger - Var & Côte d'Azur",
+      "title": "Die Kunst der Baumpflege an der Côte d'Azur",
+      "subtitle": "Ansässig in Callian, tätig von Sainte-Maxime bis Vence. Fachwissen, Sicherheit und tadellose Sauberkeit.",
+      "cta": "Kostenloses Angebot anfordern",
       "badges": {
-        "insured": "Voll versichert (Haftpflicht)",
-        "fast": "Schneller Einsatz",
-        "clean": "Saubere Baustelle"
+        "insured": "Voll versichert",
+        "fast": "Saubere Arbeit",
+        "english": "English Spoken"
       },
       "stats": {
-        "clients": "zufriedene Kunden",
-        "villages": "Dörfer im Umkreis",
-        "quote": "für das Angebot"
+        "clients": "Kundenzufriedenheit",
+        "zone": "Einsatzradius",
+        "quote": "Angebot Antwortzeit"
       }
     },
     "services": {
       "title": "Unsere Leistungen",
       "subtitle": "Maßgeschneiderte Lösungen für Ihre Gartenpflege",
       "elagage": {
-        "title": "Fachgerechter Baumschnitt",
-        "desc": "Erziehungsschnitt, Auslichtung, Kronenreduzierung. Biologisch korrekte Eingriffe für Sicherheit und Langlebigkeit."
+        "title": "Professioneller Baumschnitt",
+        "desc": "Schnitt und Pflege aller Baumarten (Kiefern, Eichen, Platanen). Sicheres Arbeiten in der Höhe, professionelle Ausrüstung."
       },
       "abattage": {
-        "title": "Kontrollierte Fällung",
-        "desc": "Stückweise Abtragung (Rigging) auf engem Raum, Richtfällung. Inklusive Entsorgung und Stubbenfräsen."
+        "title": "Baumfällung",
+        "desc": "Kontrollierte Abtragung auch auf engstem Raum. Richtfällung, Stubbenfräsen und komplette Entsorgung der Abfälle."
       },
       "haies": {
         "title": "Heckenschnitt",
-        "desc": "Regelmäßige Pflege für einen gepflegten Garten. Geometrische oder natürliche Formen nach Wunsch."
+        "desc": "Regelmäßige Pflege Ihrer Hecken und Sträucher. Geometrische oder natürliche Formen nach Ihren Wünschen."
       },
       "debroussaillage": {
         "title": "Rodung & Brandschutz",
-        "desc": "Vorschriftsmäßige Grundstücksreinigung zur Brandverhütung (OLD). Schneller Einsatz im ganzen Kanton."
+        "desc": "Vorschriftsmäßige Rodung zur Brandverhütung (OLD). Herstellung der Konformität Ihrer Grundstücke."
       },
       "fruitiers": {
-        "title": "Obstbaumschnitt",
-        "desc": "Oliven, Feigen, Zitrusfrüchte: Jahreszeitgerechter Schnitt zur Ertragsoptimierung."
+        "title": "Palmen & Obstbäume",
+        "desc": "Schnitt und Reinigung von Palmen, Pflege Ihrer Oliven-, Zitrus- und Obstbäume."
       },
       "urgences": {
         "title": "Sturmschaden-Notdienst",
@@ -448,15 +687,40 @@
         "desc": "Abseiltechniken, zertifizierte Sicherheitsausrüstung"
       }
     },
+    "processus": {
+      "title": "Unser Arbeitsablauf",
+      "subtitle": "Vom ersten Kontakt bis zur fertigen Baustelle: komplette Betreuung",
+      "step1": {
+        "title": "Kontakt & Angebot",
+        "desc": "Kontakt per Telefon oder Formular. Vor-Ort-Besichtigung zur Bedarfsermittlung. Kostenloses Detailangebot binnen 24h."
+      },
+      "step2": {
+        "title": "Planung",
+        "desc": "Gemeinsame Terminfindung nach Ihrer Verfügbarkeit. Materialvorbereitung und Baustellenorganisation."
+      },
+      "step3": {
+        "title": "Durchführung",
+        "desc": "Sicheres Arbeiten mit zertifiziertem Profi-Gerät. Respekt vor Baum und Eigentum. Regelmäßige Kommunikation während der Arbeit."
+      },
+      "step4": {
+        "title": "Reinigung",
+        "desc": "Kompletter Abtransport von Ästen und Grünschnitt. Häckseln oder Abfuhr nach Wahl. Garantiert saubere Baustelle."
+      },
+      "step5": {
+        "title": "Nachsorge & Beratung",
+        "desc": "Persönliche Pflegehinweise für Ihre Bäume. Verfügbarkeit für Fragen nach dem Einsatz. Zufriedenheit garantiert."
+      }
+    },
     "realisations": {
       "title": "Unsere besten Projekte",
-      "subtitle": "Beispiele unserer Arbeit in Fayence und Umgebung"
+      "subtitle": "Beispiele unserer Arbeit an der Côte d'Azur"
     },
     "about": {
+      "zone_title": "Einsatzgebiet",
       "title": "Mathis Duverger",
-      "subtitle": "Professioneller Baumkletterer in Fayence",
-      "text_1": "Aus Leidenschaft für die Baumpflege arbeite ich hauptsächlich im <strong>Kanton Fayence</strong> und Umgebung. Jeder Auftrag wird mit <strong>Sorgfalt und Professionalität</strong> ausgeführt: Respekt vor dem Baum, maximale Sicherheit und saubere Arbeit.",
-      "text_2": "Ich arbeite für Privatpersonen, Hotels, Restaurants und Immobilienagenturen. <strong>Einsätze außerhalb der Zone</strong> nach Absprache möglich — kontaktieren Sie mich für ein persönliches Angebot."
+      "subtitle": "Professioneller Baumkletterer - Côte d'Azur",
+      "text_1": "Aus Leidenschaft für den Beruf arbeite ich von Callian aus an der gesamten <strong>Côte d'Azur</strong> (Var und Alpes-Maritimes). Spezialisiert auf schwierige Zugänge und hohe Bäume.",
+      "text_2": "Ob Privatkunde in <strong>Mougins</strong>, Weingut im <strong>Var</strong> oder Eigentümergemeinschaft in <strong>Cannes</strong>: Ich garantiere diskrete, sichere Arbeit und eine makellose Baustellenreinigung."
     },
     "testimonials": {
       "title": "Was unsere Kunden sagen",
@@ -464,12 +728,12 @@
       "t1": {
         "text": "Mathis hat unsere hundertjährige Eiche mit chirurgischer Präzision gerettet. Tadellose Arbeit, wertvolle Ratschläge.",
         "author": "Sophie Renard",
-        "location": "Fayence"
+        "location": "Mougins"
       },
       "t2": {
         "text": "Pünktlich, professionell und effizient. Mein Garten war noch nie so gepflegt. Ich empfehle ihn uneingeschränkt.",
         "author": "Julien Terrier",
-        "location": "Tourrettes"
+        "location": "Saint-Raphaël"
       },
       "t3": {
         "text": "Tolle Arbeit, schnell und sauber. Ein echter Profi mit Leidenschaft.",
@@ -491,15 +755,67 @@
         "phone_label": "Telefon",
         "email_label": "E-Mail",
         "zone_label": "Einsatzgebiet",
-        "zone_text": "Fayence & Kanton"
+        "zone_text": "Var (83) & Alpes-Maritimes (06)"
+      }
+    },
+    "whatsapp": {
+      "title": "Dringende Hilfe benötigt?",
+      "text": "Kontaktieren Sie mich direkt per WhatsApp für eine schnelle Antwort",
+      "btn": "Per WhatsApp kontaktieren"
+    },
+    "tarif": {
+      "breadcrumb": "Preise",
+      "title": "Richtpreise",
+      "subtitle": "Auf Ihre Bedürfnisse zugeschnittene Leistungen mit <strong>transparenten</strong> Preisen. Die untenstehenden Beträge sind <strong>Richtwerte</strong>: Sie variieren je nach Höhe, Zugang, Gefährlichkeit und Abfallvolumen. Ein <strong>kostenloses Angebot</strong> ermöglicht eine genaue Schätzung.",
+      "pricing": {
+        "shrub": { "title": "Strauchschnitt (< 5 m)", "price": "150€ bis 300€" },
+        "medium": { "title": "Schnitt mittelgroßer Baum (5-10 m)", "price": "350€ bis 700€" },
+        "large": { "title": "Schnitt großer Baum (10-15 m)", "price": "500€ bis 1000€" },
+        "xlarge": { "title": "Sehr großer Baum (15-30 m)", "price": "800€ bis 2000€" },
+        "hedge": { "title": "Heckenschnitt", "price": "3€ bis 12€ / laufender Meter" },
+        "clearing": { "title": "Rodung", "price": "25€ bis 50€ / Stunde" },
+        "palm": { "title": "Palmenschnitt", "price": "80€ bis 350€" },
+        "fruit": { "title": "Obstbaumschnitt", "price": "150€ bis 200€" },
+        "felling": { "title": "Baumfällung", "price": "250€ bis 2500€" }
+      },
+      "info": {
+        "title": "Nützliche Informationen",
+        "item1": "<strong>Anfahrt</strong> ist im Umkreis von 30km um Callian kostenlos",
+        "item2": "Abfuhr und <strong>Verwertung von Abfällen</strong> optional je nach Volumen",
+        "item3": "<strong>Sichere</strong> Einsätze (PSA, Rückhaltetechniken) – Haftpflichtversicherung",
+        "item4": "Einsatz <strong>außerhalb des Gebiets</strong> je nach Verfügbarkeit möglich"
+      },
+      "cta": "Kostenloses Angebot anfordern"
+    },
+    "faq": {
+      "breadcrumb": { "home": "Startseite", "separator": "/" },
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unsere Baumpflege-, Fäll- und Landschaftsbauarbeiten an der Côte d'Azur wissen müssen.",
+      "q1": { "title": "Wie lange dauert ein Einsatz?", "answer": "Das hängt von der Baustelle ab. Ein Standardschnitt dauert einige Stunden. Für größere Bäume oder mehrere Objekte dauert es manchmal einen ganzen Tag. Wir spezifizieren alles im Angebot." },
+      "q2": { "title": "Arbeiten Sie für Privat- und Geschäftskunden?", "answer": "Ja. Privatpersonen, Unternehmen, Miteigentümergemeinschaften, Immobilienagenturen, Reitzentren... wir passen uns den Gegebenheiten jedes Standorts und Kunden an." },
+      "q3": { "title": "Ist Baumschnitt gesetzlich geregelt?", "answer": "Ja, einige Gemeinden schreiben Eingriffszeiten und einzuhaltende Abstände vor. Wir beraten Sie entsprechend Ihrer Gemeinde und arbeiten vorschriftsmäßig." },
+      "q4": { "title": "Muss ich während der Arbeiten anwesend sein?", "answer": "Es ist nicht zwingend erforderlich. Es ist nur praktischer, wenn technische Entscheidungen vor Ort validiert werden müssen. In jedem Fall hinterlassen wir eine saubere Baustelle und halten Sie auf dem Laufenden." },
+      "q5": { "title": "Werden Grünabfälle abtransportiert?", "answer": "Ja. Abfuhr, Häckseln und Verwertung je nach Volumen möglich. Dies wird im Angebot angegeben. Sie können das Brennholz auch behalten, wenn Sie dies wünschen." },
+      "q6": { "title": "Sind Angebote kostenlos?", "answer": "Ja, kostenloses und unverbindliches Angebot. Fragen Sie es über das Kontaktformulier oder telefonisch an. Antwort innerhalb von 24 Stunden garantiert." },
+      "q7": { "title": "Sind Sie versichert?", "answer": "Ja, wir haben eine Haftpflichtversicherung, die alle unsere Baustellen abdeckt. Sie arbeiten mit einem zertifizierten Fachmann zusammen, der nach den geltenden Normen ausgerüstet ist." },
+      "q8": { "title": "Kommen Sie in Notfällen?", "answer": "Ja, wir greifen in Notfällen schnell ein (gefährlicher Baum, abgebrochener Ast nach Sturm usw.). Kontaktieren Sie uns und wir organisieren so schnell wie möglich einen Einsatz." },
+      "cta": {
+        "title": "Noch eine Frage?",
+        "text": "Zögern Sie nicht, uns zu kontaktieren. Wir beantworten alle Ihre Anfragen schnell und klar.",
+        "button": "Kontaktieren Sie uns"
       }
     },
     "footer": {
-      "brand_desc": "Junger, passionierter Baumkletterer in Fayence. Schnelle Einsätze, saubere Arbeit und persönliche Beratung für Ihre Bäume.",
+      "brand": "ONE ÉLAGAGE",
+      "tagline": "Professioneller Baumkletterer aan de Côte d'Azur.",
+      "brand_desc": "Junger, passionierter Baumkletterer in Callian. Schnelle Einsätze, saubere Arbeit und persönliche Beratung für Ihre Bäume.",
       "nav_title": "Navigation",
+      "social_title": "Folgen Sie uns",
       "contact_title": "Kontakt",
-      "location": "Fayence & Umgebung",
-      "copyright": "&copy; 2025 Mat Élagage — Alle Rechte vorbehalten.",
+      "location": "PACA / Côte d'Azur",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle Rechte vorbehalten.",
+      "phone": "06 49 98 20 83",
+      "email": "mathis.elagage@gmail.com",
       "certs": {
         "rc": "Haftpflichtversicherung",
         "epi": "PSA & Sicherheit",

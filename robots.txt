@@ -1,0 +1,58 @@
+# =============================================
+# robots.txt - ONE ÉLAGAGE
+# https://one-elagage.fr
+# =============================================
+
+# Autoriser tous les robots
+User-agent: *
+Allow: /
+
+# Fichiers à ne pas indexer
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Sitemap
+Sitemap: https://one-elagage.fr/sitemap.xml
+
+# =============================================
+# Crawlers spécifiques (réseaux sociaux)
+# =============================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /image/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# =============================================
+# Bloquer les mauvais bots (spam/scraping)
+# =============================================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

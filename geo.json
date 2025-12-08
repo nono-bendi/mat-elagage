@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "boundary",
+        "description": "Zone d'intervention Élargie"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [7.1117, 43.7223],
+            [7.1488, 43.6637],
+            [7.1190, 43.5810],
+            [7.0128, 43.5528],
+            [6.9422, 43.5061],
+            [6.8542, 43.4319],
+            [6.7683, 43.4252],
+            [6.7051, 43.3500],
+            [6.6370, 43.3120],
+            [6.5667, 43.4703],
+            [6.4667, 43.5403],
+            [6.5386, 43.5939],
+            [6.6947, 43.6247],
+            [6.9264, 43.6602],
+            [7.1117, 43.7223]
+          ]
+        ]
+      }
+    },
+    { "type": "Feature", "properties": { "name": "Callian", "role": "HQ", "description": "Siège Social ⭐" }, "geometry": { "type": "Point", "coordinates": [6.7527, 43.6231] } },
+    { "type": "Feature", "properties": { "name": "Antibes", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.1190, 43.5810] } },
+    { "type": "Feature", "properties": { "name": "Vence", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.1117, 43.7223] } },
+    { "type": "Feature", "properties": { "name": "Cagnes-sur-Mer", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.1488, 43.6637] } },
+    { "type": "Feature", "properties": { "name": "Mougins", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.9942, 43.6006] } },
+    { "type": "Feature", "properties": { "name": "Valbonne", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.0000, 43.6333] } },
+    { "type": "Feature", "properties": { "name": "Biot", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.1000, 43.6333] } },
+    { "type": "Feature", "properties": { "name": "Cannes", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [7.0128, 43.5528] } },
+    { "type": "Feature", "properties": { "name": "Mandelieu-la-Napoule", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.9383, 43.5447] } },
+    { "type": "Feature", "properties": { "name": "Grasse", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.9264, 43.6602] } },
+    { "type": "Feature", "properties": { "name": "Fayence", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.6947, 43.6247] } },
+    { "type": "Feature", "properties": { "name": "Saint-Raphaël", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.7683, 43.4252] } },
+    { "type": "Feature", "properties": { "name": "Fréjus", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.7364, 43.4330] } },
+    { "type": "Feature", "properties": { "name": "Roquebrune-sur-Argens", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.6386, 43.4442] } },
+    { "type": "Feature", "properties": { "name": "Les Issambres", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.7051, 43.3500] } },
+    { "type": "Feature", "properties": { "name": "Sainte-Maxime", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.6370, 43.3120] } },
+    { "type": "Feature", "properties": { "name": "Draguignan", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.4667, 43.5403] } },
+    { "type": "Feature", "properties": { "name": "Le Muy", "role": "zone" }, "geometry": { "type": "Point", "coordinates": [6.5667, 43.4703] } }
+  ]
+}
