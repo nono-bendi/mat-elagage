@@ -178,7 +178,7 @@
       "q3": { "title": "L'élagage est-il réglementé ?", "answer": "Oui, certaines communes imposent des périodes d'intervention et des distances à respecter. On vous conseille selon votre commune et on intervient dans les règles." },
       "q4": { "title": "Dois-je être présent pendant les travaux ?", "answer": "Ce n'est pas obligatoire. C'est juste plus pratique si des choix techniques doivent être validés sur place. Dans tous les cas, on laisse un chantier propre et vous êtes tenu informé." },
       "q5": { "title": "Les déchets verts sont-ils évacués ?", "answer": "Oui. Évacuation, broyage et valorisation possible selon le volume. C'est précisé sur le devis. Vous pouvez aussi choisir de garder le bois de chauffage si vous le souhaitez." },
-      "q6": { "title": "Les devis sont-ils gratuits ?", "answer": "Oui, devis gratuit et sans engagement. Demandez-le via le formulaire de contact ou par téléphone. Réponse sous 24h garantie." },
+      "q6": { "title": "Les devis sont-ils gratuits ?", "answer": "Oui, devis gratuit et sans engagement. Demandez-le via le <a href='index.html#contact' style='color:#7da87f;text-decoration:underline;font-weight:500'>formulaire de contact</a> ou par téléphone. Réponse sous 24h garantie." },
       "q7": { "title": "Êtes-vous assuré ?", "answer": "Oui, nous disposons d'une assurance RC Pro couvrant tous nos chantiers. Vous travaillez avec un professionnel certifié et équipé selon les normes en vigueur." },
       "q8": { "title": "Intervenez-vous en urgence ?", "answer": "Oui, nous intervenons rapidement en cas d'urgence (arbre dangereux, branche cassée après tempête, etc.). Contactez-nous et on organise une intervention dans les plus brefs délais." },
       "cta": {
@@ -190,12 +190,12 @@
     "footer": {
       "brand": "ONE ÉLAGAGE",
       "tagline": "Élagueur-grimpeur professionnel situé à Callian.",
-      "brand_desc": "Jeune élagueur passionné situé à Callian. Interventions rapides, chantiers propres et conseils personnalisés pour vos arbres.",
+      "brand_desc": "Élagueur passionné situé à Callian. Interventions rapides, chantiers propres et conseils personnalisés pour vos arbres.",
       "nav_title": "Navigation",
       "social_title": "Suivez-nous",
       "contact_title": "Contact",
       "location": "PACA / Côte d'Azur",
-      "copyright": "&copy; 2025 ONE ÉLAGAGE — Tous droits réservés.",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Tous droits réservés | Site by NOWA",
       "phone": "06 49 98 20 83",
       "email": "mathis.elagage@gmail.com",
       "certs": {
@@ -384,7 +384,7 @@
       "q3": { "title": "Is tree pruning regulated?", "answer": "Yes, some municipalities impose intervention periods and distances to respect. We advise you according to your municipality and intervene within the rules." },
       "q4": { "title": "Do I need to be present during the work?", "answer": "It is not mandatory. It's just more practical if technical choices need to be validated on site. In any case, we leave a clean site and keep you informed." },
       "q5": { "title": "Is green waste removed?", "answer": "Yes. Evacuation, chipping, and recycling possible depending on volume. This is specified in the quote. You can also choose to keep the firewood if you wish." },
-      "q6": { "title": "Are quotes free?", "answer": "Yes, free quote with no obligation. Ask for it via the contact form or by phone. Answer within 24h guaranteed." },
+      "q6": { "title": "Are quotes free?", "answer": "Yes, free quote with no obligation. Ask for it via the <a href='index.html#contact' style='color:#7da87f;text-decoration:underline;font-weight:500'>contact form</a> or by phone. Answer within 24h guaranteed." },
       "q7": { "title": "Are you insured?", "answer": "Yes, we have Professional Liability insurance covering all our sites. You work with a certified professional equipped according to current standards." },
       "q8": { "title": "Do you intervene in emergencies?", "answer": "Yes, we intervene quickly in case of emergency (dangerous tree, broken branch after storm, etc.). Contact us and we will organize an intervention as soon as possible." },
       "cta": {
@@ -396,12 +396,12 @@
     "footer": {
       "brand": "ONE ÉLAGAGE",
       "tagline": "Professional tree climber located in Callian.",
-      "brand_desc": "Young passionate tree surgeon located in Callian. Fast interventions, clean sites, and personalised advice for your trees.",
+      "brand_desc": "Passionate tree surgeon located in Callian. Fast interventions, clean sites, and personalised advice for your trees.",
       "nav_title": "Navigation",
       "social_title": "Follow us",
       "contact_title": "Contact",
       "location": "PACA / French Riviera",
-      "copyright": "&copy; 2025 ONE ÉLAGAGE — All rights reserved.",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — All rights reserved | Site by NOWA",
       "phone": "06 49 98 20 83",
       "email": "mathis.elagage@gmail.com",
       "certs": {
@@ -590,7 +590,7 @@
       "q3": { "title": "Is bomen snoeien gereglementeerd?", "answer": "Ja, sommige gemeenten leggen interventieperiodes en afstanden op. Wij adviseren u volgens uw gemeente en werken volgens de regels." },
       "q4": { "title": "Moet ik aanwezig zijn tijdens de werken?", "answer": "Het is niet verplicht. Het is gewoon praktischer als technische keuzes ter plaatse moeten worden gevalideerd. In ieder geval laten we een schone werf achter en houden we u op de hoogte." },
       "q5": { "title": "Wordt groenafval afgevoerd?", "answer": "Ja. Afvoer, versnippering en recyclage mogelijk afhankelijk van het volume. Dit staat in de offerte. U kunt er ook voor kiezen om het brandhout te houden als u dat wenst." },
-      "q6": { "title": "Zijn offertes gratis?", "answer": "Ja, gratis offerte zonder verplichting. Vraag het aan via het contactformulier of per telefoon. Antwoord binnen 24u gegarandeerd." },
+      "q6": { "title": "Zijn offertes gratis?", "answer": "Ja, gratis offerte zonder verplichting. Vraag het aan via het <a href='index.html#contact' style='color:#7da87f;text-decoration:underline;font-weight:500'>contactformulier</a> of per telefoon. Antwoord binnen 24u gegarandeerd." },
       "q7": { "title": "Bent u verzekerd?", "answer": "Ja, wij hebben een BA-verzekering die al onze werven dekt. U werkt met een gecertificeerde professional die is uitgerust volgens de geldende normen." },
       "q8": { "title": "Komt u tussen in noodgevallen?", "answer": "Ja, wij grijpen snel in bij noodgevallen (gevaarlijke boom, gebroken tak na storm, enz.). Neem contact met ons op en wij organiseren zo snel mogelijk een interventie." },
       "cta": {
@@ -602,12 +602,12 @@
     "footer": {
       "brand": "ONE ÉLAGAGE",
       "tagline": "Professioneel boomverzorger aan de Côte d'Azur.",
-      "brand_desc": "Jonge gepassioneerde boomverzorger in Callian. Snelle interventies, propere werven en persoonlijk advies voor uw bomen.",
+      "brand_desc": "Gepassioneerde boomverzorger in Callian. Snelle interventies, propere werven en persoonlijk advies voor uw bomen.",
       "nav_title": "Navigatie",
       "social_title": "Volg ons",
       "contact_title": "Contact",
       "location": "PACA / Côte d'Azur",
-      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle rechten voorbehouden.",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle rechten voorbehouden | Site by NOWA",
       "phone": "06 49 98 20 83",
       "email": "mathis.elagage@gmail.com",
       "certs": {
@@ -796,7 +796,7 @@
       "q3": { "title": "Ist Baumschnitt gesetzlich geregelt?", "answer": "Ja, einige Gemeinden schreiben Eingriffszeiten und einzuhaltende Abstände vor. Wir beraten Sie entsprechend Ihrer Gemeinde und arbeiten vorschriftsmäßig." },
       "q4": { "title": "Muss ich während der Arbeiten anwesend sein?", "answer": "Es ist nicht zwingend erforderlich. Es ist nur praktischer, wenn technische Entscheidungen vor Ort validiert werden müssen. In jedem Fall hinterlassen wir eine saubere Baustelle und halten Sie auf dem Laufenden." },
       "q5": { "title": "Werden Grünabfälle abtransportiert?", "answer": "Ja. Abfuhr, Häckseln und Verwertung je nach Volumen möglich. Dies wird im Angebot angegeben. Sie können das Brennholz auch behalten, wenn Sie dies wünschen." },
-      "q6": { "title": "Sind Angebote kostenlos?", "answer": "Ja, kostenloses und unverbindliches Angebot. Fragen Sie es über das Kontaktformulier oder telefonisch an. Antwort innerhalb von 24 Stunden garantiert." },
+      "q6": { "title": "Sind Angebote kostenlos?", "answer": "Ja, kostenloses und unverbindliches Angebot. Fragen Sie es über das <a href='index.html#contact' style='color:#7da87f;text-decoration:underline;font-weight:500'>Kontaktformular</a> oder telefonisch an. Antwort innerhalb von 24 Stunden garantiert." },
       "q7": { "title": "Sind Sie versichert?", "answer": "Ja, wir haben eine Haftpflichtversicherung, die alle unsere Baustellen abdeckt. Sie arbeiten mit einem zertifizierten Fachmann zusammen, der nach den geltenden Normen ausgerüstet ist." },
       "q8": { "title": "Kommen Sie in Notfällen?", "answer": "Ja, wir greifen in Notfällen schnell ein (gefährlicher Baum, abgebrochener Ast nach Sturm usw.). Kontaktieren Sie uns und wir organisieren so schnell wie möglich einen Einsatz." },
       "cta": {
@@ -808,12 +808,12 @@
     "footer": {
       "brand": "ONE ÉLAGAGE",
       "tagline": "Professioneller Baumkletterer aan de Côte d'Azur.",
-      "brand_desc": "Junger, passionierter Baumkletterer in Callian. Schnelle Einsätze, saubere Arbeit und persönliche Beratung für Ihre Bäume.",
+      "brand_desc": "Passionierter Baumkletterer in Callian. Schnelle Einsätze, saubere Arbeit und persönliche Beratung für Ihre Bäume.",
       "nav_title": "Navigation",
       "social_title": "Folgen Sie uns",
       "contact_title": "Kontakt",
       "location": "PACA / Côte d'Azur",
-      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle Rechte vorbehalten.",
+      "copyright": "&copy; 2025 ONE ÉLAGAGE — Alle Rechte vorbehalten. | Site by NOWA",
       "phone": "06 49 98 20 83",
       "email": "mathis.elagage@gmail.com",
       "certs": {

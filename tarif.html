@@ -9,10 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <meta name="keywords" content="tarif élagage, prix abattage arbre, devis paysagiste, Var">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://one-elagage.fr/tarif.html">
-  
-  <!-- Favicons -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://one-elagage.fr/tarif.html">
   <link rel="icon" type="image/png" href="image/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
   <link rel="shortcut icon" href="image/favicon.ico" />
@@ -21,7 +19,6 @@
   <meta name="theme-color" content="#f9f6ef" />
   
   <style>
-    /* VARIABLES - Même DA que l'index */
     :root {
       --sable: #1a1a1a;
       --gris-moyen: #2a2a2a;
@@ -29,815 +26,90 @@
       --terre-cuite: #7da87f;
       --vert-sauge: #5a8266;
     }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; background: var(--sable); color: var(--blanc); }
+    .container { width: min(95%, 1200px); margin: 0 auto; }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      background: var(--sable);
-      color: var(--blanc);
-    }
-
-    .container {
-      width: min(95%, 1200px);
-      margin: 0 auto;
-    }
-
-    /* NAVBAR - Même que l'index */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: transparent;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 16px 0;
-      transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled {
-      background: rgba(38, 71, 52, 0.95);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .navbar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-    }
-
-    .logo {
-      font-family: 'Outfit', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-      color: var(--blanc);
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 85px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 4px;
-      align-items: center;
-      flex: 1;
-      justify-content: center;
-    }
-
-    .nav-lang-mobile, .nav-contact-mobile {
-      display: none;
-    }
-
-    .nav-links li {
-      position: relative;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.95);
-      padding: 8px 14px;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .navbar-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    .navbar-actions .icon-btn {
-      background: transparent;
-      border: none;
-      color: rgba(255, 255, 255, 0.9);
-      width: 36px;
-      height: 36px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-size: 13px;
-    }
-
-    .navbar-actions .icon-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-    }
-
-    .lang-dropdown {
-      position: relative;
-    }
-
-    .navbar-actions .lang-selector {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 4px;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .navbar-actions .lang-selector:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    .lang-options {
-      position: absolute;
-      top: calc(100% + 8px);
-      right: 0;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      padding: 8px;
-      min-width: 160px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-
-    .lang-options.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .lang-option {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      padding: 10px 12px;
-      background: transparent;
-      border: none;
-      border-radius: 6px;
-      color: #2a2a2a;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: left;
-    }
-
-    .lang-option:hover {
-      background: rgba(125, 168, 127, 0.1);
-      color: var(--terre-cuite);
-    }
-
-    .navbar-actions .btn-primary {
-      padding: 8px 18px;
-      font-size: 14px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #fff;
-      border-radius: 4px;
-      white-space: nowrap;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: all 0.2s ease;
-    }
-
-    .navbar-actions .btn-primary:hover {
-      background: rgba(255, 255, 255, 0.25);
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .burger {
-      display: none !important;
-      position: absolute;
-      right: 4%;
-      top: calc(max(env(safe-area-inset-top, 0px), 15px) + 12px);
-      width: 47px;
-      height: 38px;
-      background: rgba(11, 11, 14, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      cursor: pointer;
-      z-index: 3000;
-      padding: 0;
-      outline: none;
-    }
-
-    .burger .bar {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #EDEDEF;
-      border-radius: 2px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: transform 0.25s ease, opacity 0.25s ease, top 0.25s ease, bottom 0.25s ease;
-    }
-
+    /* NAVBAR */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 16px 0; transition: all 0.3s ease; }
+    .navbar.scrolled { background: rgba(38, 71, 52, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .logo { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px; flex-shrink: 0; color: var(--blanc); text-decoration: none; }
+    .logo img { height: 85px; width: auto; }
+    .nav-links { display: flex; list-style: none; gap: 4px; align-items: center; flex: 1; justify-content: center; }
+    .nav-lang-mobile, .nav-contact-mobile { display: none; }
+    .nav-links li { position: relative; }
+    .nav-links a { font-size: 14px; font-weight: 400; color: rgba(255, 255, 255, 0.95); padding: 8px 14px; border-radius: 4px; transition: all 0.2s ease; display: flex; align-items: center; gap: 5px; cursor: pointer; background: transparent; border: none; text-decoration: none; }
+    .nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+    .navbar-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .lang-dropdown { position: relative; }
+    .navbar-actions .lang-selector { display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: transparent; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 4px; color: #fff; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+    .navbar-actions .lang-selector:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.4); }
+    .lang-options { position: absolute; top: calc(100% + 8px); right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); padding: 8px; min-width: 160px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+    .lang-options.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .lang-option { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 12px; background: transparent; border: none; border-radius: 6px; color: #2a2a2a; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; text-align: left; }
+    .lang-option:hover { background: rgba(125, 168, 127, 0.1); color: var(--terre-cuite); }
+    .navbar-actions .btn-primary { padding: 8px 18px; font-size: 14px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; border-radius: 4px; white-space: nowrap; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.2s ease; }
+    .navbar-actions .btn-primary:hover { background: rgba(255, 255, 255, 0.25); border-color: rgba(255, 255, 255, 0.5); }
+    .burger { display: none !important; position: absolute; right: 4%; top: calc(max(env(safe-area-inset-top, 0px), 15px) + 12px); width: 47px; height: 38px; background: rgba(11, 11, 14, 0.35); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 10px; cursor: pointer; z-index: 3000; padding: 0; outline: none; }
+    .burger .bar { display: block; width: 22px; height: 2px; background: #EDEDEF; border-radius: 2px; position: absolute; left: 50%; transform: translateX(-50%); transition: transform 0.25s ease, opacity 0.25s ease, top 0.25s ease, bottom 0.25s ease; }
     .burger .bar:nth-child(1) { top: 11px; }
     .burger .bar:nth-child(2) { top: 50%; transform: translate(-50%, -50%); }
     .burger .bar:nth-child(3) { bottom: 11px; }
+    .burger[aria-expanded="true"] .bar:nth-child(1) { top: 50%; transform: translate(-50%, -50%) rotate(45deg); }
+    .burger[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+    .burger[aria-expanded="true"] .bar:nth-child(3) { top: 50%; bottom: auto; transform: translate(-50%, -50%) rotate(-45deg); }
 
-    .burger[aria-expanded="true"] .bar:nth-child(1) {
-      top: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
+    /* HERO */
+    .page-hero { background: linear-gradient(135deg, var(--sable) 0%, var(--gris-moyen) 100%); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(125, 168, 127, 0.15) 0%, transparent 70%); top: -100px; right: -100px; filter: blur(80px); animation: float 8s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
+    .breadcrumbs { font-size: 14px; color: rgba(255, 255, 255, 0.6); margin-bottom: 16px; position: relative; z-index: 1; }
+    .breadcrumbs a { color: var(--terre-cuite); text-decoration: none; }
+    h1 { font-size: clamp(36px, 5vw, 52px); font-weight: 700; color: var(--blanc); margin-bottom: 16px; position: relative; z-index: 1; }
+    .lead { font-size: 18px; line-height: 1.8; color: rgba(255, 255, 255, 0.8); max-width: 800px; position: relative; z-index: 1; }
+    .lead strong { color: var(--terre-cuite); }
 
-    .burger[aria-expanded="true"] .bar:nth-child(2) {
-      opacity: 0;
-    }
+    /* PRICING */
+    .pricing { background: var(--gris-moyen); padding: 80px 0; position: relative; }
+    .pricing::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(125, 168, 127, 0.1) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.3; animation: gridMove 20s linear infinite; }
+    @keyframes gridMove { 0% { transform: translate(0, 0); } 100% { transform: translate(30px, 30px); } }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+    .pricing-card { background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 32px 28px; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+    .pricing-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, rgba(125, 168, 127, 0.25) 0%, rgba(90, 130, 102, 0.1) 50%, transparent 100%); opacity: 0.5; filter: blur(20px); pointer-events: none; }
+    .pricing-card:hover { transform: translateY(-8px); border-color: rgba(125, 168, 127, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(125, 168, 127, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+    .pricing-card:hover::after { opacity: 0.8; height: 120px; }
+    .pricing-icon { font-size: 32px; color: var(--terre-cuite); margin-bottom: 16px; display: block; position: relative; z-index: 1; }
+    .pricing-icon.icon-sm { font-size: 26px; }
+    .pricing-icon.icon-lg { font-size: 42px; }
+    .pricing-icon.icon-rotated { transform: rotate(90deg); display: inline-block; margin-bottom: 20px; }
+    .pricing-card h3 { font-size: 20px; font-weight: 600; color: var(--blanc); margin-bottom: 12px; position: relative; z-index: 1; }
+    .pricing-card .price { font-size: 24px; font-weight: 700; color: var(--terre-cuite); margin-top: 12px; position: relative; z-index: 1; }
 
-    .burger[aria-expanded="true"] .bar:nth-child(3) {
-      top: 50%;
-      bottom: auto;
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-
-    /* HERO PAGE TARIFS */
-    .page-hero {
-      background: linear-gradient(
-        135deg,
-        var(--sable) 0%,
-        var(--gris-moyen) 100%
-      );
-      padding: 100px 0 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(125, 168, 127, 0.15) 0%, transparent 70%);
-      top: -100px;
-      right: -100px;
-      filter: blur(80px);
-      animation: float 8s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-30px); }
-    }
-
-    .breadcrumbs {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .breadcrumbs a {
-      color: var(--terre-cuite);
-      text-decoration: none;
-    }
-
-    h1 {
-      font-size: clamp(36px, 5vw, 52px);
-      font-weight: 700;
-      color: var(--blanc);
-      margin-bottom: 16px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .lead {
-      font-size: 18px;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 800px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .lead strong {
-      color: var(--terre-cuite);
-    }
-
-    /* PRICING SECTION */
-    .pricing {
-      background: var(--gris-moyen);
-      padding: 80px 0;
-      position: relative;
-    }
-
-    /* Grille de points animée */
-    .pricing::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(125, 168, 127, 0.1) 1px, transparent 1px);
-      background-size: 30px 30px;
-      opacity: 0.3;
-      animation: gridMove 20s linear infinite;
-    }
-
-    @keyframes gridMove {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(30px, 30px); }
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* PRICING CARDS - Glassmorphism */
-    .pricing-card {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(255, 255, 255, 0.04) 100%
-      );
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 32px 28px;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-
-    /* Dégradé lumineux en bas */
-    .pricing-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100px;
-      background: linear-gradient(
-        to top,
-        rgba(125, 168, 127, 0.25) 0%,
-        rgba(90, 130, 102, 0.1) 50%,
-        transparent 100%
-      );
-      opacity: 0.5;
-      filter: blur(20px);
-      pointer-events: none;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(125, 168, 127, 0.4);
-      box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(125, 168, 127, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    }
-
-    .pricing-card:hover::after {
-      opacity: 0.8;
-      height: 120px;
-    }
-
-    .pricing-icon {
-      font-size: 32px;
-      color: var(--terre-cuite);
-      margin-bottom: 16px;
-      display: block;
-      position: relative;
-      z-index: 1;
-    }
-
-    .pricing-icon.icon-sm {
-      font-size: 26px;
-    }
-
-    .pricing-icon.icon-lg {
-      font-size: 42px;
-    }
-
-    .pricing-icon.icon-rotated {
-      transform: rotate(90deg);
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .pricing-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--blanc);
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .pricing-card .price {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--terre-cuite);
-      margin-top: 12px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* INFO SECTION */
-    .info-section {
-      background: var(--sable);
-      padding: 60px 0;
-    }
-
-    .info-box {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(255, 255, 255, 0.04) 100%
-      );
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .info-box h2 {
-      font-size: 28px;
-      color: var(--blanc);
-      margin-bottom: 24px;
-    }
-
-    .info-box ul {
-      list-style: none;
-      margin-bottom: 32px;
-    }
-
-    .info-box li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .info-box li:last-child {
-      border-bottom: none;
-    }
-
-    .info-box li i {
-      color: var(--terre-cuite);
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .info-box li strong {
-      color: var(--terre-cuite);
-    }
-
-    /* BUTTON CTA */
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(135deg, var(--terre-cuite), var(--vert-sauge));
-      color: var(--blanc);
-      padding: 16px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 16px;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(125, 168, 127, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(125, 168, 127, 0.4);
-    }
+    /* INFO */
+    .info-section { background: var(--sable); padding: 60px 0; }
+    .info-box { background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 40px; max-width: 900px; margin: 0 auto; }
+    .info-box h2 { font-size: 28px; color: var(--blanc); margin-bottom: 24px; }
+    .info-box ul { list-style: none; margin-bottom: 32px; }
+    .info-box li { padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; gap: 12px; }
+    .info-box li:last-child { border-bottom: none; }
+    .info-box li i { color: var(--terre-cuite); font-size: 18px; flex-shrink: 0; }
+    .info-box li strong { color: var(--terre-cuite); }
+    .cta-button { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--terre-cuite), var(--vert-sauge)); color: var(--blanc); padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 16px; text-decoration: none; box-shadow: 0 8px 24px rgba(125, 168, 127, 0.3); transition: all 0.3s ease; }
+    .cta-button:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(125, 168, 127, 0.4); }
 
     /* FOOTER */
-    footer {
-      background: var(--sable);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 40px 0 20px;
-    }
+    footer { background: var(--sable); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 40px 0 20px; }
+    .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 32px; }
+    .footer-section h3 { font-size: 18px; margin-bottom: 16px; color: var(--terre-cuite); }
+    .footer-section p, .footer-section a { color: rgba(255, 255, 255, 0.7); text-decoration: none; display: block; margin-bottom: 8px; transition: color 0.3s ease; }
+    .footer-section a:hover { color: var(--terre-cuite); }
+    .copyright { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.5); font-size: 14px; }
 
-    .footer-content {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 32px;
-    }
-
-    .footer-section h3 {
-      font-size: 18px;
-      margin-bottom: 16px;
-      color: var(--terre-cuite);
-    }
-
-    .footer-section p,
-    .footer-section a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      display: block;
-      margin-bottom: 8px;
-      transition: color 0.3s ease;
-    }
-
-    .footer-section a:hover {
-      color: var(--terre-cuite);
-    }
-
-    .social-links {
-      display: flex;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
-      color: var(--blanc);
-      font-size: 18px;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--terre-cuite);
-      transform: translateY(-2px);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 14px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .burger {
-        display: block !important;
-      }
-
-      .navbar-actions .lang-dropdown {
-        display: none;
-      }
-
-      .nav-lang-mobile, .nav-contact-mobile {
-        display: flex !important;
-        width: 100%;
-        justify-content: center;
-      }
-
-      .nav-lang-mobile {
-        order: -1;
-        margin-bottom: 24px;
-      }
-
-      .nav-contact-mobile {
-        margin-top: auto;
-        padding-top: 24px;
-      }
-
-      .nav-contact-mobile .btn {
-        width: 100%;
-        max-width: 220px;
-      }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 280px;
-        max-width: 75vw;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(20px);
-        padding: 100px 32px 40px;
-        gap: 32px;
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        z-index: 999;
-      }
-
-      .nav-links.show {
-        transform: translateX(0);
-      }
-
-      .nav-lang-mobile .lang-dropdown {
-        position: relative;
-      }
-
-      .nav-lang-mobile .lang-selector {
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 10px 18px;
-        color: rgba(255, 255, 255, 0.95);
-        font-weight: 500;
-      }
-
-      .nav-lang-mobile .lang-options {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%) translateY(-10px);
-      }
-
-      .nav-lang-mobile .lang-options.show {
-        transform: translateX(-50%) translateY(0);
-      }
-
-      .nav-links a {
-        color: rgba(255, 255, 255, 0.65);
-        padding: 4px 0;
-        font-size: 17px;
-        font-weight: 400;
-        background: transparent;
-        border: none;
-        text-align: center;
-      }
-
-      .nav-links a:hover {
-        color: rgba(255, 255, 255, 0.95);
-        background: transparent;
-      }
-
-      .navbar-actions {
-        display: none;
-      }
-
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .info-section {
-        padding: 40px 0;
-      }
-
-      .info-box {
-        padding: 24px 20px;
-        border-radius: 16px;
-      }
-
-      .info-box h2 {
-        font-size: 22px;
-        margin-bottom: 20px;
-      }
-
-      .info-box li {
-        padding: 14px 0;
-        font-size: 14px;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .info-box li i {
-        font-size: 16px;
-        margin-top: 2px;
-        flex-shrink: 0;
-      }
-
-      .cta-button {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 24px;
-        font-size: 15px;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .page-hero {
-        padding: 120px 0 50px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .lead {
-        font-size: 16px;
-      }
-      
-      .particles-container {
-        display: none;
-      }
-      
-      .edge-glow {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) and (min-width: 481px) {
-      .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .info-box {
-        padding: 20px 16px;
-      }
-
-      .info-box h2 {
-        font-size: 20px;
-        margin-bottom: 16px;
-      }
-
-      .info-box li {
-        padding: 12px 0;
-        font-size: 13px;
-        line-height: 1.5;
-      }
-
-      .info-box li i {
-        font-size: 14px;
-      }
-
-      .cta-button {
-        padding: 12px 20px;
-        font-size: 14px;
-        border-radius: 40px;
-      }
-    }
-    
-    /* PARTICLES / FIREFLIES */
-    .particles-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 100;
-      overflow: hidden;
-    }
-    
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(125,168,127,.6) 0%, rgba(125,168,127,.3) 40%, transparent 70%);
-      animation: floatParticle 15s ease-in-out infinite;
-      box-shadow: 0 0 8px rgba(125,168,127,.4), 0 0 15px rgba(125,168,127,.2);
-    }
-    
+    /* PARTICLES */
+    .particles-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
+    .particle { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(125,168,127,.6) 0%, rgba(125,168,127,.3) 40%, transparent 70%); animation: floatParticle 15s ease-in-out infinite; box-shadow: 0 0 8px rgba(125,168,127,.4), 0 0 15px rgba(125,168,127,.2); }
     .particle:nth-child(1){width:5px;height:5px;left:3%;top:20%;animation-duration:18s;animation-delay:0s}
     .particle:nth-child(2){width:3px;height:3px;left:5%;top:45%;animation-duration:22s;animation-delay:-3s}
     .particle:nth-child(3){width:6px;height:6px;left:2%;top:70%;animation-duration:20s;animation-delay:-6s}
@@ -846,97 +118,71 @@
     .particle:nth-child(6){width:3px;height:3px;right:5%;top:35%;animation-duration:23s;animation-delay:-5s}
     .particle:nth-child(7){width:5px;height:5px;right:2%;top:55%;animation-duration:17s;animation-delay:-8s}
     .particle:nth-child(8){width:7px;height:7px;right:4%;top:75%;animation-duration:21s;animation-delay:-11s}
-    .particle:nth-child(9){width:4px;height:4px;right:6%;top:90%;animation-duration:18s;animation-delay:-4s}
-    .particle:nth-child(10){width:3px;height:3px;left:4%;top:10%;animation-duration:24s;animation-delay:-7s}
-    .particle:nth-child(11){width:5px;height:5px;left:1%;top:55%;animation-duration:19s;animation-delay:-10s}
-    .particle:nth-child(12){width:3px;height:3px;right:1%;top:40%;animation-duration:20s;animation-delay:-1s}
-    .particle:nth-child(13){width:5px;height:5px;left:7%;top:30%;animation-duration:16s;animation-delay:-13s}
-    .particle:nth-child(14){width:4px;height:4px;right:7%;top:65%;animation-duration:22s;animation-delay:-6s}
-    .particle:nth-child(15){width:6px;height:6px;left:2%;top:95%;animation-duration:18s;animation-delay:-9s}
-    .particle:nth-child(16){width:3px;height:3px;right:3%;top:5%;animation-duration:21s;animation-delay:-3s}
-    
-    @keyframes floatParticle {
-      0%,100%{transform:translateY(0) translateX(0) scale(1);opacity:.7}
-      25%{transform:translateY(-30px) translateX(15px) scale(1.2);opacity:1}
-      50%{transform:translateY(-15px) translateX(-10px) scale(.85);opacity:.5}
-      75%{transform:translateY(-40px) translateX(8px) scale(1.1);opacity:.9}
+    @keyframes floatParticle { 0%,100%{transform:translateY(0) translateX(0) scale(1);opacity:.7} 25%{transform:translateY(-30px) translateX(15px) scale(1.2);opacity:1} 50%{transform:translateY(-15px) translateX(-10px) scale(.85);opacity:.5} 75%{transform:translateY(-40px) translateX(8px) scale(1.1);opacity:.9} }
+    .edge-glow { position: fixed; top: 0; bottom: 0; width: 120px; pointer-events: none; z-index: 99; }
+    .edge-glow-left { left: 0; background: radial-gradient(ellipse at left center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%); animation: pulseGlowLeft 8s ease-in-out infinite; }
+    .edge-glow-right { right: 0; background: radial-gradient(ellipse at right center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%); animation: pulseGlowRight 8s ease-in-out infinite; }
+    @keyframes pulseGlowLeft { 0%,100%{opacity:.6;transform:translateX(-15px)} 50%{opacity:1;transform:translateX(0)} }
+    @keyframes pulseGlowRight { 0%,100%{opacity:.6;transform:translateX(15px)} 50%{opacity:1;transform:translateX(0)} }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .burger { display: block !important; }
+      .navbar-actions .lang-dropdown { display: none; }
+      .nav-lang-mobile, .nav-contact-mobile { display: flex !important; width: 100%; justify-content: center; }
+      .nav-lang-mobile { order: -1; margin-bottom: 24px; }
+      .nav-contact-mobile { margin-top: auto; padding-top: 24px; }
+      .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; max-width: 75vw; flex-direction: column; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); padding: 100px 32px 40px; gap: 32px; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: flex-start; z-index: 999; }
+      .nav-links.show { transform: translateX(0); }
+      .nav-lang-mobile .lang-selector { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 18px; color: rgba(255, 255, 255, 0.95); font-weight: 500; }
+      .nav-lang-mobile .lang-options { left: 50%; right: auto; transform: translateX(-50%) translateY(-10px); }
+      .nav-lang-mobile .lang-options.show { transform: translateX(-50%) translateY(0); }
+      .nav-links a { color: rgba(255, 255, 255, 0.65); padding: 4px 0; font-size: 17px; background: transparent; text-align: center; }
+      .navbar-actions { display: none; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
+      .info-box { padding: 24px 20px; border-radius: 16px; }
+      .info-box h2 { font-size: 22px; }
+      .info-box li { font-size: 14px; }
+      .cta-button { width: 100%; justify-content: center; }
+      .footer-content { grid-template-columns: 1fr 1fr; gap: 30px 40px; text-align: center; }
+      .footer-section:first-child { grid-column: 1 / -1; text-align: center; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; align-items: center; }
+      .footer-section:first-child img { margin: 0 auto 12px; }
+      .footer-section { text-align: center; }
+      .page-hero { padding: 120px 0 50px; }
+      h1 { font-size: 32px; }
+      .lead { font-size: 16px; }
+      .particles-container, .edge-glow { display: none; }
     }
-    
-    /* EDGE GLOW */
-    .edge-glow {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 120px;
-      pointer-events: none;
-      z-index: 99;
-    }
-    
-    .edge-glow-left {
-      left: 0;
-      background: radial-gradient(ellipse at left center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%);
-      animation: pulseGlowLeft 8s ease-in-out infinite;
-    }
-    
-    .edge-glow-right {
-      right: 0;
-      background: radial-gradient(ellipse at right center, rgba(125,168,127,.06) 0%, rgba(90,130,102,.03) 35%, transparent 70%);
-      animation: pulseGlowRight 8s ease-in-out infinite;
-    }
-    
-    @keyframes pulseGlowLeft {
-      0%,100%{opacity:.6;transform:translateX(-15px)}
-      50%{opacity:1;transform:translateX(0)}
-    }
-    
-    @keyframes pulseGlowRight {
-      0%,100%{opacity:.6;transform:translateX(15px)}
-      50%{opacity:1;transform:translateX(0)}
+    @media (max-width: 768px) and (min-width: 481px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) {
+      .info-box { padding: 20px 16px; }
+      .info-box h2 { font-size: 20px; }
+      .info-box li { font-size: 13px; }
+      .cta-button { padding: 12px 20px; font-size: 14px; }
+      footer { padding: 40px 0 20px; }
+      .footer-content { gap: 24px 20px; }
+      .footer-section:first-child img { width: 120px; height: auto; }
+      .footer-section h3 { font-size: 14px; margin-bottom: 10px; }
+      .footer-section p, .footer-section a { font-size: 13px; }
+      .copyright { font-size: 11px; }
     }
   </style>
 </head>
 <body>
-  <!-- Particles / Fireflies Effect -->
   <div class="particles-container">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
   </div>
-
-  <!-- Edge Glow Effect -->
   <div class="edge-glow edge-glow-left"></div>
   <div class="edge-glow edge-glow-right"></div>
 
-  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="logo">
-        <img src="image/logo.png" alt="ONE ÉLAGAGE Logo" width="70" height="70">
-        
-      </a>
-      
+      <a href="index.html" class="logo"><img src="image/logo.png" alt="ONE ÉLAGAGE Logo" width="70" height="70"></a>
       <ul class="nav-links" id="nav-links">
-        <!-- Lang selector mobile (en haut du menu) -->
         <li class="nav-lang-mobile">
           <div class="lang-dropdown">
-            <button class="lang-selector lang-selector-mobile" id="lang-selector-mobile">
-              <i class="fas fa-globe"></i>
-              <span id="current-lang-mobile">FR</span>
-              <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
-            </button>
+            <button class="lang-selector" id="lang-selector-mobile"><i class="fas fa-globe"></i><span id="current-lang-mobile">FR</span><i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></button>
             <div class="lang-options" id="lang-options-mobile">
               <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
               <button class="lang-option" data-lang="en">🇬🇧 English</button>
@@ -945,29 +191,16 @@
             </div>
           </div>
         </li>
-        
         <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
         <li><a href="index.html#realisations" data-i18n="nav.realisations">Réalisations</a></li>
         <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
         <li><a href="tarif.html" data-i18n="nav.tarifs">Tarifs</a></li>
         <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
-        
-        <!-- Contact button mobile (en bas du menu) -->
-        <li class="nav-contact-mobile">
-          <a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
-        </li>
+        <li class="nav-contact-mobile"><a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a></li>
       </ul>
-
       <div class="navbar-actions">
-        <button class="icon-btn" aria-label="Recherche">
-          <i class="fas fa-search"></i>
-        </button>
         <div class="lang-dropdown">
-          <button class="lang-selector" id="lang-selector">
-            <i class="fas fa-globe"></i>
-            <span id="current-lang">FR</span>
-            <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i>
-          </button>
+          <button class="lang-selector" id="lang-selector"><i class="fas fa-globe"></i><span id="current-lang">FR</span><i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px"></i></button>
           <div class="lang-options" id="lang-options">
             <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
             <button class="lang-option" data-lang="en">🇬🇧 English</button>
@@ -977,242 +210,82 @@
         </div>
         <a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
       </div>
-
-      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="page-hero">
     <div class="container">
-      <div class="breadcrumbs">
-        <a href="index.html" data-i18n="nav.home">Accueil</a> / <span data-i18n="tarif.breadcrumb">Tarifs</span>
-      </div>
+      <div class="breadcrumbs"><a href="index.html" data-i18n="nav.home">Accueil</a> / <span data-i18n="tarif.breadcrumb">Tarifs</span></div>
       <h1 data-i18n="tarif.title">Tarifs indicatifs</h1>
-      <p class="lead" data-i18n="tarif.subtitle">
-        Des prestations adaptées à vos besoins, avec des prix <strong>transparents</strong>. 
-        Les montants ci-dessous sont <strong>indicatifs</strong> : ils varient selon la hauteur, 
-        l'accès, la dangerosité, le volume de déchets verts, etc. Un <strong>devis gratuit</strong> 
-        permet d'affiner précisément.
-      </p>
+      <p class="lead" data-i18n="tarif.subtitle">Des prestations adaptées à vos besoins, avec des prix <strong>transparents</strong>. Les montants ci-dessous sont <strong>indicatifs</strong> : ils varient selon la hauteur, l'accès, la dangerosité, le volume de déchets verts, etc. Un <strong>devis gratuit</strong> permet d'affiner précisément.</p>
     </div>
   </header>
 
-  <!-- PRICING SECTION -->
   <section class="pricing">
     <div class="container">
       <div class="pricing-grid">
-        <!-- Élagage arbuste -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-seedling pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.shrub.title">Élagage arbuste (< 5 m)</h3>
-          <p class="price" data-i18n="tarif.pricing.shrub.price">150€ à 300€</p>
-        </div>
-
-        <!-- Élagage arbre moyen -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-tree pricing-icon icon-sm"></i>
-          <h3 data-i18n="tarif.pricing.medium.title">Élagage arbre moyen (5-10 m)</h3>
-          <p class="price" data-i18n="tarif.pricing.medium.price">350€ à 700€</p>
-        </div>
-
-        <!-- Élagage grand arbre -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-tree pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.large.title">Élagage grand arbre (10-15 m)</h3>
-          <p class="price" data-i18n="tarif.pricing.large.price">500€ à 1000€</p>
-        </div>
-
-        <!-- Très grand arbre -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-tree pricing-icon icon-lg"></i>
-          <h3 data-i18n="tarif.pricing.xlarge.title">Très grand arbre (15-30 m)</h3>
-          <p class="price" data-i18n="tarif.pricing.xlarge.price">800€ à 2000€</p>
-        </div>
-
-        <!-- Taille de haie -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-scissors pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.hedge.title">Taille de haie</h3>
-          <p class="price" data-i18n="tarif.pricing.hedge.price">3€ à 12€ / m linéaire</p>
-        </div>
-
-        <!-- Débroussaillage -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-broom pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.clearing.title">Débroussaillage</h3>
-          <p class="price" data-i18n="tarif.pricing.clearing.price">25€ à 50€ / heure</p>
-        </div>
-
-        <!-- Taille de palmier -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-umbrella-beach pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.palm.title">Taille de palmier</h3>
-          <p class="price" data-i18n="tarif.pricing.palm.price">80€ à 350€</p>
-        </div>
-
-        <!-- Arbres fruitiers -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-apple-whole pricing-icon"></i>
-          <h3 data-i18n="tarif.pricing.fruit.title">Taille arbres fruitiers</h3>
-          <p class="price" data-i18n="tarif.pricing.fruit.price">150€ à 200€</p>
-        </div>
-
-        <!-- Abattage -->
-        <div class="pricing-card">
-          <i class="fa-solid fa-tree pricing-icon icon-rotated"></i>
-          <h3 data-i18n="tarif.pricing.felling.title">Abattage d'arbre</h3>
-          <p class="price" data-i18n="tarif.pricing.felling.price">250€ à 2500€</p>
-        </div>
+        <div class="pricing-card"><i class="fa-solid fa-seedling pricing-icon"></i><h3 data-i18n="tarif.pricing.shrub.title">Élagage arbuste (&lt; 5 m)</h3><p class="price" data-i18n="tarif.pricing.shrub.price">150€ à 300€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-tree pricing-icon icon-sm"></i><h3 data-i18n="tarif.pricing.medium.title">Élagage arbre moyen (5-10 m)</h3><p class="price" data-i18n="tarif.pricing.medium.price">350€ à 700€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-tree pricing-icon"></i><h3 data-i18n="tarif.pricing.large.title">Élagage grand arbre (10-15 m)</h3><p class="price" data-i18n="tarif.pricing.large.price">500€ à 1000€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-tree pricing-icon icon-lg"></i><h3 data-i18n="tarif.pricing.xlarge.title">Très grand arbre (15-30 m)</h3><p class="price" data-i18n="tarif.pricing.xlarge.price">800€ à 2000€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-scissors pricing-icon"></i><h3 data-i18n="tarif.pricing.hedge.title">Taille de haie</h3><p class="price" data-i18n="tarif.pricing.hedge.price">3€ à 12€ / m linéaire</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-broom pricing-icon"></i><h3 data-i18n="tarif.pricing.clearing.title">Débroussaillage</h3><p class="price" data-i18n="tarif.pricing.clearing.price">25€ à 50€ / heure</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-umbrella-beach pricing-icon"></i><h3 data-i18n="tarif.pricing.palm.title">Taille de palmier</h3><p class="price" data-i18n="tarif.pricing.palm.price">80€ à 350€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-apple-whole pricing-icon"></i><h3 data-i18n="tarif.pricing.fruit.title">Taille arbres fruitiers</h3><p class="price" data-i18n="tarif.pricing.fruit.price">150€ à 200€</p></div>
+        <div class="pricing-card"><i class="fa-solid fa-tree pricing-icon icon-rotated"></i><h3 data-i18n="tarif.pricing.felling.title">Abattage d'arbre</h3><p class="price" data-i18n="tarif.pricing.felling.price">250€ à 2500€</p></div>
       </div>
     </div>
   </section>
 
-  <!-- INFO SECTION -->
   <section class="info-section">
     <div class="container">
       <div class="info-box">
         <h2 data-i18n="tarif.info.title">Informations utiles</h2>
         <ul>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span data-i18n="tarif.info.item1">Le <strong>déplacement</strong> est offert dans un rayon de 30km autour de Callian</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span data-i18n="tarif.info.item2">Évacuation et <strong>valorisation des déchets</strong> en option selon le volume</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span data-i18n="tarif.info.item3">Interventions <strong>sécurisées</strong> (EPI, rétention) – Assurance RC Pro</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span data-i18n="tarif.info.item4">Possibilité d'intervention <strong>hors zone</strong> selon disponibilités</span>
-          </li>
+          <li><i class="fas fa-check-circle"></i><span data-i18n="tarif.info.item1">Le <strong>déplacement</strong> est offert dans un rayon de 30km autour de Callian</span></li>
+          <li><i class="fas fa-check-circle"></i><span data-i18n="tarif.info.item2">Évacuation et <strong>valorisation des déchets</strong> en option selon le volume</span></li>
+          <li><i class="fas fa-check-circle"></i><span data-i18n="tarif.info.item3">Interventions <strong>sécurisées</strong> (EPI, rétention) – Assurance RC Pro</span></li>
+          <li><i class="fas fa-check-circle"></i><span data-i18n="tarif.info.item4">Possibilité d'intervention <strong>hors zone</strong> selon disponibilités</span></li>
         </ul>
-        <a href="index.html#contact" class="cta-button">
-          <i class="fa-solid fa-file-signature"></i>
-          <span data-i18n="tarif.cta">Demander un devis gratuit</span>
-        </a>
+        <a href="index.html#contact" class="cta-button"><i class="fa-solid fa-file-signature"></i><span data-i18n="tarif.cta">Demander un devis gratuit</span></a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
           <img src="image/logo.png" alt="logo ONE ÉLAGAGE" width="150" height="auto">
-          <p data-i18n="footer.tagline">Élagueur-Grimpeur professionnel</p>
-          <p data-i18n="footer.location">Côte d'Azur</p>
-          <p><a href="tel:+33649982083" data-i18n="footer.phone">06 49 98 20 83</a></p>
-          <p><a href="/cdn-cgi/l/email-protection#402d21342829336e252c212721272500272d21292c6e232f2d" data-i18n="footer.email"><span class="__cf_email__" data-cfemail="751814011d1c065b10191412141210351218141c195b161a18">[email&#160;protected]</span></a></p>
+          <p data-i18n="footer.brand_desc">Élagueur passionné situé à Callian. Interventions rapides sur toute la Côte d'Azur, chantiers propres et conseils personnalisés pour vos arbres.</p>
         </div>
-        
         <div class="footer-section">
           <h3 data-i18n="footer.nav_title">Navigation</h3>
           <a href="index.html#about" data-i18n="nav.about">À propos</a>
           <a href="index.html#services" data-i18n="nav.services">Services</a>
           <a href="tarif.html" data-i18n="nav.tarifs">Tarifs</a>
           <a href="index.html#realisations" data-i18n="nav.realisations">Réalisations</a>
-          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
         </div>
-        
         <div class="footer-section">
-          <h3 data-i18n="footer.social_title">Suivez-nous</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+          <h3 data-i18n="footer.contact_title">Contact</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:+33649982083">06 49 98 20 83</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:mathis.elagage@gmail.com">mathis.elagage@gmail.com</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.location">Côte d'Azur</span></p>
         </div>
       </div>
-      
-      <div class="copyright" data-i18n="footer.copyright">
-        © 2025 One Élagage - Tous droits réservés
-      </div>
+      <div class="copyright" data-i18n="footer.copyright">© 2025 One Élagage - Tous droits réservés | Site by NOWA</div>
     </div>
   </footer>
 
 <script>
-// Burger menu
-(function() {
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
-  
-  if (burger && navLinks) {
-    burger.addEventListener('click', () => {
-      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-      navLinks.classList.toggle('show');
-      burger.setAttribute('aria-expanded', !isExpanded);
-      
-      if (!isExpanded) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-  }
-})();
-
-// Navbar scroll effect
-(function() {
-  const navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-})();
-
-// Language selector
-(function() {
-  const langSelector = document.querySelector('.lang-selector');
-  const langOptions = document.querySelector('.lang-options');
-  
-  if (langSelector && langOptions) {
-    langSelector.addEventListener('click', (e) => {
-      e.stopPropagation();
-      langOptions.classList.toggle('show');
-    });
-    
-    document.addEventListener('click', () => {
-      langOptions.classList.remove('show');
-    });
-    
-    document.querySelectorAll('.lang-option').forEach(option => {
-      option.addEventListener('click', () => {
-        const lang = option.dataset.lang;
-        localStorage.setItem('preferredLanguage', lang);
-        langOptions.classList.remove('show');
-      });
-    });
-  }
-})();
+(function(){const b=document.getElementById('burger'),n=document.getElementById('nav-links');if(b&&n){b.addEventListener('click',()=>{const e=b.getAttribute('aria-expanded')==='true';n.classList.toggle('show');b.setAttribute('aria-expanded',!e);document.body.style.overflow=e?'':'hidden'});document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>{n.classList.remove('show');b.setAttribute('aria-expanded','false');document.body.style.overflow=''}))}})();
+(function(){const n=document.getElementById('navbar');if(n)window.addEventListener('scroll',()=>n.classList.toggle('scrolled',window.scrollY>50))})();
+(function(){const s=document.getElementById('lang-selector'),o=document.getElementById('lang-options'),sm=document.getElementById('lang-selector-mobile'),om=document.getElementById('lang-options-mobile');if(s&&o){s.addEventListener('click',e=>{e.stopPropagation();if(om)om.classList.remove('show');o.classList.toggle('show')});o.addEventListener('click',e=>e.stopPropagation())}if(sm&&om){sm.addEventListener('click',e=>{e.stopPropagation();if(o)o.classList.remove('show');om.classList.toggle('show')});om.addEventListener('click',e=>e.stopPropagation())}document.addEventListener('click',()=>{if(o)o.classList.remove('show');if(om)om.classList.remove('show')});document.querySelectorAll('.lang-option').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const l=btn.getAttribute('data-lang');const cl=document.getElementById('current-lang'),clm=document.getElementById('current-lang-mobile');if(cl)cl.textContent=l.toUpperCase();if(clm)clm.textContent=l.toUpperCase();document.querySelectorAll('.lang-option').forEach(op=>op.classList.toggle('active',op.getAttribute('data-lang')===l));localStorage.setItem('language',l);if(o)o.classList.remove('show');if(om)om.classList.remove('show');applyTranslations(l)}))})();
+let translations={};async function loadTranslations(){try{const r=await fetch('translations.json');translations=await r.json();const l=localStorage.getItem('language')||'fr';applyTranslations(l);const cl=document.getElementById('current-lang'),clm=document.getElementById('current-lang-mobile');if(cl)cl.textContent=l.toUpperCase();if(clm)clm.textContent=l.toUpperCase();document.querySelectorAll('.lang-option').forEach(o=>o.classList.toggle('active',o.getAttribute('data-lang')===l))}catch(e){console.error('Erreur:',e)}}
+function applyTranslations(l){if(!translations[l])return;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n').split('.');let v=translations[l];for(const p of k){if(v&&v[p]!==undefined)v=v[p];else{v=null;break}}if(v){if(el.tagName==='INPUT'||el.tagName==='TEXTAREA')el.placeholder=v;else el.innerHTML=v}})}
+document.addEventListener('DOMContentLoaded',loadTranslations);
 </script>
 </body>
 </html>

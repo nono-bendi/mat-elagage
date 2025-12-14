@@ -679,6 +679,68 @@
       .edge-glow {
         display: none;
       }
+      
+      /* Footer Responsive */
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 40px;
+        text-align: center;
+      }
+      .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-brand img {
+        margin: 0 auto 12px;
+      }
+      .footer-links {
+        text-align: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      footer {
+        padding: 40px 0 20px;
+      }
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 20px;
+      }
+      .footer-brand {
+        padding-bottom: 16px;
+      }
+      .footer-brand img {
+        width: 120px;
+        height: auto;
+      }
+      .footer-brand h3 {
+        font-size: 20px;
+      }
+      .footer-brand p {
+        font-size: 13px;
+      }
+      .footer-links h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .footer-links a {
+        font-size: 13px;
+      }
+      .footer-links li {
+        margin-bottom: 6px;
+      }
+      .footer-bottom {
+        font-size: 11px;
+      }
     }
     
     /* PARTICLES / FIREFLIES */
@@ -954,7 +1016,7 @@
             <i class="fa-solid fa-chevron-down faq-chevron"></i>
           </button>
           <div class="faq-answer">
-            <p data-i18n="faq.q6.answer">Oui, devis gratuit et sans engagement. Demandez-le via le <a href="index.html#contact">formulaire de contact</a> ou par téléphone. Réponse sous 24h garantie.</p>
+            <p data-i18n="faq.q6.answer">Oui, devis gratuit et sans engagement. Demandez-le via le <a href="index.html#contact" style="color:#7da87f;text-decoration:underline;font-weight:500">formulaire de contact</a> ou par téléphone. Réponse sous 24h garantie.</p>
           </div>
         </div>
 
@@ -1032,19 +1094,19 @@
           <h4 data-i18n="footer.contact_title">Contact</h4>
           <ul>
             <li><a href="tel:+33649982083">06 49 98 20 83</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#b7dad6c3dfdec499d2dbd6d0d6d0d2f7d0dad6dedb99d4d8da"><span class="__cf_email__" data-cfemail="e48985908c8d97ca81888583858381a48389858d88ca878b89">[email&#160;protected]</span></a></li>
+            <li><a href="mailto:mathis.elagage@gmail.com">mathis.elagage@gmail.com</a></li>
             <li data-i18n="footer.location">Côte d'Azur</li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p data-i18n="footer.copyright">&copy; 2025 ONE ÉLAGAGE - Tous droits réservés</p>
+        <p data-i18n="footer.copyright">&copy; 2025 ONE ÉLAGAGE - Tous droits réservés | Site by NOWA</p>
       </div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Accordéon FAQ (spécifique à cette page)
     (function() {
       const faqQuestions = document.querySelectorAll('.faq-question');
@@ -1113,6 +1175,130 @@
     }
   });
 })();
+
+// Language Selector - Desktop & Mobile
+(function() {
+  const langSelector = document.getElementById('lang-selector');
+  const langOptions = document.getElementById('lang-options');
+  const langSelectorMobile = document.getElementById('lang-selector-mobile');
+  const langOptionsMobile = document.getElementById('lang-options-mobile');
+  
+  // Desktop dropdown
+  if (langSelector && langOptions) {
+    langSelector.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (langOptionsMobile) langOptionsMobile.classList.remove('show');
+      langOptions.classList.toggle('show');
+    });
+    
+    langOptions.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+  
+  // Mobile dropdown
+  if (langSelectorMobile && langOptionsMobile) {
+    langSelectorMobile.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (langOptions) langOptions.classList.remove('show');
+      langOptionsMobile.classList.toggle('show');
+    });
+    
+    langOptionsMobile.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+  
+  // Fermer les dropdowns au clic extérieur
+  document.addEventListener('click', () => {
+    if (langOptions) langOptions.classList.remove('show');
+    if (langOptionsMobile) langOptionsMobile.classList.remove('show');
+  });
+  
+  // Gestion des boutons de langue
+  document.querySelectorAll('.lang-option').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const lang = button.getAttribute('data-lang');
+      
+      // Mettre à jour l'affichage de la langue
+      const currentLangEl = document.getElementById('current-lang');
+      const currentLangMobileEl = document.getElementById('current-lang-mobile');
+      if (currentLangEl) currentLangEl.textContent = lang.toUpperCase();
+      if (currentLangMobileEl) currentLangMobileEl.textContent = lang.toUpperCase();
+      
+      // Mettre à jour l'état actif
+      document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+      });
+      
+      // Sauvegarder la préférence
+      localStorage.setItem('language', lang);
+      
+      // Fermer les dropdowns
+      if (langOptions) langOptions.classList.remove('show');
+      if (langOptionsMobile) langOptionsMobile.classList.remove('show');
+      
+      // Appliquer les traductions
+      applyTranslations(lang);
+    });
+  });
+})();
+
+// Système de traduction
+let translations = {};
+
+async function loadTranslations() {
+  try {
+    const response = await fetch('translations.json');
+    translations = await response.json();
+    const savedLang = localStorage.getItem('language') || 'fr';
+    applyTranslations(savedLang);
+    
+    // Mettre à jour l'affichage de la langue actuelle
+    const currentLangEl = document.getElementById('current-lang');
+    const currentLangMobileEl = document.getElementById('current-lang-mobile');
+    if (currentLangEl) currentLangEl.textContent = savedLang.toUpperCase();
+    if (currentLangMobileEl) currentLangMobileEl.textContent = savedLang.toUpperCase();
+    
+    // Marquer le bouton actif
+    document.querySelectorAll('.lang-option').forEach(opt => {
+      opt.classList.toggle('active', opt.getAttribute('data-lang') === savedLang);
+    });
+  } catch (error) {
+    console.error('Erreur chargement traductions:', error);
+  }
+}
+
+function applyTranslations(lang) {
+  if (!translations[lang]) return;
+  
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const keys = key.split('.');
+    let value = translations[lang];
+    
+    for (const k of keys) {
+      if (value && value[k] !== undefined) {
+        value = value[k];
+      } else {
+        value = null;
+        break;
+      }
+    }
+    
+    if (value) {
+      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+        element.placeholder = value;
+      } else {
+        element.innerHTML = value;
+      }
+    }
+  });
+}
+
+// Charger les traductions au démarrage
+document.addEventListener('DOMContentLoaded', loadTranslations);
 </script>
 </body>
 </html>
