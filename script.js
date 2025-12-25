@@ -514,12 +514,15 @@ function getTranslation(key, lang) {
   });
 })();
 
-// ========== EMAILJS CONTACT FORM ==========
+// ========== EMAILJS CONTACT FORM + N8N DEVIS ==========
 const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'Cj5r-B8kK3ilWOkBS',
   SERVICE_ID: 'service_x0yag93',
   TEMPLATE_ID: 'template_cqtnzgy'
 };
+
+// N8N Webhook URL pour générer les devis
+const N8N_WEBHOOK_URL = 'https://nonobendi.app.n8n.cloud/webhook/42eb8a7e-4a44-4841-bc4d-3e7ad9c0159f';
 
 // Initialize EmailJS if available
 if (typeof emailjs !== 'undefined') {
@@ -528,26 +531,48 @@ if (typeof emailjs !== 'undefined') {
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     const submitButton = this.querySelector('button[type="submit"]');
     const originalButtonText = submitButton.innerHTML;
     submitButton.disabled = true;
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     
-    emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, this)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        showNotification('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.', 'success');
-        contactForm.reset();
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
-      }, function(error) {
-        console.log('FAILED...', error);
-        showNotification("Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement par téléphone.", 'error');
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
-      });
+    // Récupère les données du formulaire
+    const nom = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+    const telephone = document.getElementById('telephone').value;
+    const adresse = document.getElementById('adresse')?.value || 'Non renseignée';
+    const message = document.getElementById('message').value;
+    
+    try {
+      // 1. Envoie à n8n pour générer le devis automatiquement
+      const n8nData = {
+        description: `Client : ${nom}, Email : ${email}, Téléphone : ${telephone || 'Non renseigné'}, Adresse du chantier : ${adresse}, Demande : ${message}`
+      };
+      
+      fetch(N8N_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(n8nData)
+      }).catch(err => console.log('N8N webhook error:', err));
+      
+      // 2. Envoie aussi par EmailJS (backup)
+      await emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, this);
+      
+      console.log('SUCCESS! Message envoyé');
+      showNotification('Message envoyé avec succès ! Vous recevrez votre devis rapidement.', 'success');
+      contactForm.reset();
+      
+    } catch (error) {
+      console.log('FAILED...', error);
+      showNotification("Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement par téléphone.", 'error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+    }
   });
 }
 
@@ -564,8 +589,15 @@ function showNotification(message, type) {
     </button>
   `;
   document.body.appendChild(notification);
+  
+  // Ajoute la classe .show après un petit délai pour l'animation
   setTimeout(() => {
-    notification.style.opacity = '0';
+    notification.classList.add('show');
+  }, 10);
+  
+  // Ferme automatiquement après 5 secondes
+  setTimeout(() => {
+    notification.classList.remove('show');
     setTimeout(() => {
       notification.remove();
     }, 300);
