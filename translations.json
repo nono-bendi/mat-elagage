@@ -129,7 +129,7 @@
       "form": {
         "label_name": "Nom",
         "label_email": "Email",
-        "label_phone": "Téléphone",
+       "label_phone": "Téléphone (optionnel)",
         "label_message": "Message",
         "submit": "Envoyer Ma Demande"
       },
@@ -335,7 +335,7 @@
       "form": {
         "label_name": "Name",
         "label_email": "Email",
-        "label_phone": "Phone",
+        "label_phone": "Phone (optional)",
         "label_message": "Message",
         "submit": "Send My Request"
       },
@@ -747,7 +747,7 @@
       "form": {
         "label_name": "Name",
         "label_email": "E-Mail",
-        "label_phone": "Telefon",
+        "label_phone": "Telefon (optional)",
         "label_message": "Nachricht",
         "submit": "Anfrage senden"
       },
